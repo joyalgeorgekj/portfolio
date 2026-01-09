@@ -1,80 +1,36 @@
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# 🌐 Personal Portfolio – [joyalgeorgekj.com](https://joyalgeorgekj.com)
+## Getting Started
 
-This is my personal portfolio website built using modern frontend technologies like **React JS**, **Tailwind CSS**, **Appwrite**, **React Redux**, and **React Router DOM**. It showcases my projects, blog posts, and a little about me – all hosted seamlessly on **Vercel**.
-
-## 🛠️ Tech Stack
-
-- **React JS** – Component-based UI library
-- **Tailwind CSS** – Utility-first CSS for rapid styling
-- **Appwrite** – Backend-as-a-service for blogs/projects data
-- **React Redux** – State management
-- **React Router DOM** – Routing & navigation
-- **Vercel** – Deployment & hosting
-
-## 📁 Project Structure
-
-/src
-  ├── components      # Shared UI components
-  ├── pages           # Main pages like Home, Blog, Project, About, Post
-  ├── hooks           # Custom hooks (e.g., viewport check, Appwrite)
-  ├── styles          # Tailwind CSS & global styles
-  └── utils           # Utility functions
-
-## 🧭 Routes
-
-| Route            | Description                     |
-|------------------|---------------------------------|
-| `/`              | Home page                       |
-| `/blog`          | Blog listing                    |
-| `/project`       | Project showcase                |
-| `/about`         | About me                        |
-| `/:path/:id`     | Dynamic page for blog/project   |
-
-The dynamic route (`/:path/:id`) renders blog or project details via the `Post` component.
-
-## 📦 Installation
+First, run the development server:
 
 ```bash
-git clone https://github.com/Joyal-George-KJ/portfolio
-cd portfolio
-npm install
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-> ✅ Make sure to set up a `.env` file:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```env
-VITE_BASE_URL = "https://fra.cloud.appwrite.io/v1"
-VITE_STORE_URL = "Store Name"
-VITE_PROJECT_ID = "666************"
-VITE_DATABASE_ID = "666*************"
-VITE_PERSONAL_PROJECT_ID = "666***********"
-VITE_PERSONAL_BLOG_ID = "680*************"
-VITE_PERSONAL_EXPERIENCE_ID = "680***********"
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🧠 Features
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- 💡 Blog & project content powered by Appwrite
-- ⚡ Animations & responsive UI with Tailwind CSS
-- 📝 Markdown rendering with React Markdown
-- 🌙 Dark mode support
-- 🔄 Reusable components and modular architecture
+## Learn More
 
-## 📤 Deployment
+To learn more about Next.js, take a look at the following resources:
 
-- Deployed on **Vercel**
-- Continuous deployment via GitHub
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 📎 Useful Links
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- 🔗 **Live Site**: [joyalgeorgekj.com](https://joyalgeorgekj.com)
-- 🧑‍💻 **GitHub Repo**: [github.com/Joyal-George-KJ/portfolio](https://github.com/Joyal-George-KJ/portfolio)
+## Deploy on Vercel
 
-## 📬 Contact
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- 📧 Email: [joyalgeorgekj@gmail.com](mailto:joyalgeorgekj@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/joyalgeorgekj](https://www.linkedin.com/in/joyalgeorgekj/)
-
-> Made with ❤️ using React, Tailwind, and Appwrite.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
