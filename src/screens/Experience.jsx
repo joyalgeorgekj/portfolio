@@ -14,7 +14,7 @@ export default function ExperienceTimeline() {
                     Experience
                 </h1>
 
-                <div className="flex mt-6">
+                <div className="flex mt-6 justify-center">
                     <ul className="flex flex-col even:flex-col-reverse gap-4">
                         {data
                             .reverse()
