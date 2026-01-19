@@ -64,7 +64,7 @@ function ProjectCard({
                     <div className="flex w-full gap-4 pt-4">
                         <a
                             href={
-                                "https://github.com/Joyal-George-KJ" + codeLink
+                                "https://github.com/joyalgeorgekj" + codeLink
                             }
                             target="_blank"
                             rel="noreferrer"
