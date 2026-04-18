@@ -29,30 +29,6 @@ body {
   --color: #171717;
   --bg-color: transparent;
   background-color: #353535;
-  background-image: linear-gradient(
-      to right,
-      var(--bg-color) 24%,
-      var(--color) 25%,
-      var(--color) 26%,
-      var(--bg-color) 27%,
-      var(--bg-color) 74%,
-      var(--color) 75%,
-      var(--color) 76%,
-      var(--bg-color) 77%,
-      var(--bg-color) 100%
-    ),
-    linear-gradient(
-      to top,
-      var(--bg-color) 24%,
-      var(--color) 25%,
-      var(--color) 26%,
-      var(--bg-color) 27%,
-      var(--bg-color) 74%,
-      var(--color) 75%,
-      var(--color) 76%,
-      var(--bg-color) 77%,
-      var(--bg-color) 100%
-    );
   background-size: 48px 48px;
 }
 
