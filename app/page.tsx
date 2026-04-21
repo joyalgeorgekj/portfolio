@@ -67,40 +67,30 @@ export default function Home() {
     ];
 
     return (
-        <main className="relative overflow-hidden bg-black text-white">
-            {/* Background Effects */}
-            <div className="pointer-events-none absolute inset-0">
-                <div className="absolute -left-30 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
-                <div className="absolute -right-25 top-40 h-80 w-80 rounded-full bg-violet-500/10 blur-3xl" />
-                <div className="absolute bottom-10 left-1/3 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
-
-                {/* Grid */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.03)_1px,transparent_1px)] bg-size-[40px_40px]" />
-            </div>
-
+        <>
             {/* Hero */}
-            <section className="relative mx-auto grid min-h-screen max-w-7xl items-center gap-14 px-4 py-28 md:grid-cols-2 md:px-6">
+            <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-28 md:grid-cols-2 md:px-6">
                 {/* Left Content */}
-                <div>
-                    <p className="mb-4 inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300">
+                <div className="grid gap-4 *:w-fit">
+                    <p className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300">
                         Available for Frontend Opportunities
                     </p>
 
                     <h1 className="text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
                         Joyal George K J <br />
-                        <span className="bg-linear-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
-                            Product-Focused Frontend Engineer
-                        </span>
                     </h1>
+                    <h2 className="text-3xl bg-linear-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
+                        Product-Focused Frontend Engineer
+                    </h2>
 
-                    <p className="mt-6 max-w-xl text-base leading-7 text-zinc-400 md:text-lg">
+                    <p className=" max-w-xl text-base leading-7 text-zinc-400 md:text-lg">
                         Building scalable, performant, and production-ready web
                         experiences using React, Next.js, and TypeScript.
                         Helping teams ship polished products users love.
                     </p>
 
                     {/* CTA */}
-                    <div className="mt-8 flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-4">
                         <Link
                             href="/portfolio"
                             className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
@@ -110,14 +100,14 @@ export default function Home() {
 
                         <Link
                             href="/portfolio#projects"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5"
+                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent"
                         >
                             View Projects
                         </Link>
 
                         <Link
                             href="/contact"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5"
+                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent"
                         >
                             Contact Me
                         </Link>
@@ -126,7 +116,7 @@ export default function Home() {
 
                 {/* Right Visual */}
                 <div className="relative">
-                    <div className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl shadow-2xl">
+                    <div className="rounded-3xl border border-white/10  p-5 backdrop-blur-xl shadow-2xl">
                         {/* Fake Browser Top */}
                         <div className="mb-5 flex items-center gap-2">
                             <span className="h-3 w-3 rounded-full bg-red-400" />
@@ -136,18 +126,17 @@ export default function Home() {
 
                         {/* Mock Dashboard */}
                         <div className="space-y-4">
-                            <div className="rounded-2xl border border-white/10 bg-zinc-900 p-4">
+                            <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                 <p className="text-xs uppercase tracking-widest text-zinc-500">
                                     Current Stack
                                 </p>
                                 <p className="mt-2 text-sm text-zinc-200">
-                                    React · Next.js · TypeScript · JavaScript ·
-                                    Tailwind
+                                    {stack.join(", ")}
                                 </p>
                             </div>
 
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="rounded-2xl border border-white/10 bg-zinc-900 p-4">
+                                <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                     <p className="text-xs uppercase tracking-widest text-zinc-500">
                                         Weekly Users
                                     </p>
@@ -156,7 +145,7 @@ export default function Home() {
                                     </p>
                                 </div>
 
-                                <div className="rounded-2xl border border-white/10 bg-zinc-900 p-4">
+                                <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                     <p className="text-xs uppercase tracking-widest text-zinc-500">
                                         OSS Repos
                                     </p>
@@ -166,7 +155,7 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div className="rounded-2xl border border-white/10 bg-zinc-900 p-4">
+                            <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                 <p className="text-xs uppercase tracking-widest text-zinc-500">
                                     Featured Project
                                 </p>
@@ -242,40 +231,41 @@ export default function Home() {
 
             {/* Bottom CTA */}
             <section className="mx-auto max-w-7xl px-4 pb-28 md:px-6">
-                <div className="rounded-3xl border border-white/10 bg-linear-to-br from-white/5 to-white/2 p-8 md:p-12">
-                    <div className="max-w-2xl">
+                <div className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 md:p-12">
+                    <div className="max-w-2xl flex flex-col gap-4">
                         <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
                             Let’s Build
                         </p>
 
-                        <h3 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+                        <h3 className="text-3xl font-semibold tracking-tight md:text-5xl">
                             Need a frontend engineer who ships real products?
                         </h3>
 
-                        <p className="mt-5 text-zinc-400">
+                        <p className="text-zinc-400">
                             I help startups, founders, and teams build scalable
                             interfaces, modern web apps, and polished product
                             experiences.
                         </p>
 
-                        <div className="mt-8 flex flex-wrap gap-4">
+                        <div className="flex flex-wrap gap-4">
                             <Link
-                                href="/contact"
+                                href="mailto:joyalgeorgekj@gmail.com"
                                 className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-medium text-black"
                             >
-                                Start a Conversation
+                                Email Me
                             </Link>
 
                             <Link
-                                href="/portfolio"
+                                href="https://linkedin.com/in/joyalgeorgekj"
+                                target="_blank"
                                 className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5"
                             >
-                                View Work
+                                LinkedIn
                             </Link>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
+        </>
     );
 }
