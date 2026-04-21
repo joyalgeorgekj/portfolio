@@ -17,6 +17,16 @@ export default function Home() {
         "Production React Apps",
     ];
 
+    const stack = [
+        "Typescript",
+        "Javascript",
+        "React.js",
+        "Next.js",
+        "Node.js",
+        "Express.js",
+        "Tailwind CSS",
+    ];
+
     const highlights = [
         {
             title: "Featured Projects",
