@@ -1,5 +1,13 @@
 // app/page.tsx
 import Link from "next/link";
+import {
+    FlaskConicalIcon,
+    GitPullRequestIcon,
+    LibraryBigIcon,
+    LuggageIcon,
+    StarsIcon,
+    WrenchIcon,
+} from "lucide-react";
 
 export default function Home() {
     const stats = [
@@ -12,27 +20,39 @@ export default function Home() {
     const highlights = [
         {
             title: "Featured Projects",
+            icon: StarsIcon,
             desc: "Scalable products, polished UI systems, real-world impact.",
+            route: "/portfolio#projects",
         },
         {
             title: "Open Source",
+            icon: GitPullRequestIcon,
             desc: "Contributions to Appwrite, Docker Docs, BuildKit and more.",
+            route: "/portfolio#opensource",
         },
         {
             title: "Skills",
+            icon: WrenchIcon,
             desc: "React, Next.js, TypeScript, Performance, Architecture.",
+            route: "/portfolio#skills",
         },
         {
             title: "Experience",
+            icon: LuggageIcon,
             desc: "Freelance, contract, production-focused frontend delivery.",
+            route: "/portfolio#experience",
         },
         {
             title: "Blog",
+            icon: LibraryBigIcon,
             desc: "Engineering insights, architecture, frontend workflows.",
+            route: "/blog",
         },
         {
             title: "Lab",
+            icon: FlaskConicalIcon,
             desc: "Experiments, mini games, interactive playground.",
+            route: "/lab",
         },
     ];
 
@@ -183,21 +203,28 @@ export default function Home() {
                     {highlights.map((item) => (
                         <div
                             key={item.title}
-                            className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/8"
+                            className="group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/8 cursor-pointer flex flex-col gap-4"
                         >
-                            <div className="mb-4 h-10 w-10 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20" />
+                            <item.icon
+                                height={24}
+                                width={24}
+                                className="rounded-2xl hover:text-cyan-400"
+                            />
 
                             <h3 className="text-lg font-semibold text-white">
                                 {item.title}
                             </h3>
 
-                            <p className="mt-3 text-sm leading-6 text-zinc-400">
+                            <p className="text-sm leading-6 text-zinc-400">
                                 {item.desc}
                             </p>
 
-                            <div className="mt-6 text-sm text-cyan-300 transition group-hover:translate-x-1">
+                            <Link
+                                href={item.route}
+                                className="text-sm text-cyan-300 transition group-hover:translate-x-1"
+                            >
                                 Explore →
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>
