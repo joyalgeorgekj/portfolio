@@ -112,18 +112,6 @@ export default function Home() {
                             Contact Me
                         </Link>
                     </div>
-
-                    {/* Stats */}
-                    <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-                        {stats.map((item) => (
-                            <div
-                                key={item}
-                                className="rounded-2xl border border-white/20 bg-white/5 px-4 py-4 text-sm text-zinc-300 backdrop-blur-md"
-                            >
-                                {item}
-                            </div>
-                        ))}
-                    </div>
                 </div>
 
                 {/* Right Visual */}
@@ -179,6 +167,18 @@ export default function Home() {
                                     To index human technological progress as a
                                     version-controlled, functional library.
                                 </p>
+                            </div>
+
+                            {/* Stats */}
+                            <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
+                                {stats.map((item) => (
+                                    <div
+                                        key={item}
+                                        className="rounded-2xl border border-white/10 bg-transparent px-4 py-4 text-sm text-zinc-300 backdrop-blur-md"
+                                    >
+                                        {item}
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>
