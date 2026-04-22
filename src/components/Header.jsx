@@ -122,8 +122,8 @@ function Header() {
                         </li>
                         <li className="cursor-pointer">
                             <a
-                                href={`${origin}/JoyalGeorgeKJ.pdf`}
-                                download={"Joyal George K J.pdf"}
+                                href={`${origin}/Joyal_George_K_J-Software_Developer_Web.pdf`}
+                                download={"Joyal_George_K_J-Software_Developer_Web.pdf"}
                                 className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
                             >
                                 Resume
