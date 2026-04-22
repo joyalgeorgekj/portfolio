@@ -13,15 +13,14 @@ function About() {
                         Joyal George K J 🚀
                     </h2>
                     <p className="dark:text-gray-400 text-gray-600 text-lg font-medium">
-                        React.js Developer | Problem Solver | Aspiring
-                        Entrepreneur
+                        Software Engineer | JavaScript / React / Node.js | Web Applications
                     </p>
                 </div>
 
                 <p className="mt-6 dark:text-gray-300 text-gray-800 leading-relaxed">
                     I am a passionate{" "}
                     <span className="dark:text-blue-400 text-blue-600 font-semibold">
-                        React.js developer
+                        Javascript/Typescript developer
                     </span>{" "}
                     dedicated to building high-performance and scalable web
                     applications. My journey into development was
