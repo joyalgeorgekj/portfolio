@@ -1,5 +1,6 @@
 // app/portfolio/page.tsx
 import Link from "next/link";
+import Section from "./Section";
 
 export default function Portfolio() {
     const navItems = [
@@ -31,7 +32,7 @@ export default function Portfolio() {
         {
             title: "PatchMyResume",
             stack: ["React", "Redux", "Tailwind"],
-            desc: "ATS-friendly AI-assisted resume generation platform.",
+            desc: "ATS-friendly AI-assisted resume generation platform using Gemini AI.",
             metric: "Beta product",
         },
         {
@@ -139,13 +140,9 @@ export default function Portfolio() {
                 </section>
 
                 {/* Skills */}
-                <section
-                    id="skills"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                <Section id="skills" link="https://www.linkedin.com/in/joyalgeorgekj/details/projects/"
+                    heading="Skills" container="mt-6 grid gap-5 md:grid-cols-2"
                 >
-                    <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">Skills</h2>
-
-                    <div className="mt-6 grid gap-5 md:grid-cols-2">
                         {Object.entries(skills).map(([group, items]) => (
                             <div
                                 key={group}
@@ -167,106 +164,61 @@ export default function Portfolio() {
                                 </div>
                             </div>
                         ))}
-                    </div>
-                </section>
+                </Section>
 
                 {/* Projects */}
-                <section
-                    id="projects"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                <Section id="projects" link="https://www.linkedin.com/in/joyalgeorgekj/details/projects/"
+                    heading="Featured Projects" container="mt-6 grid gap-5 md:grid-cols-2"
                 >
-                    <div className="flex items-center justify-between gap-4">
-                        <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                            Featured Projects
-                        </h2>
-                        <Link
-                            href="/projects"
-                            className="text-sm text-cyan-300 hover:text-cyan-200"
-                        >
-                            View All →
-                        </Link>
-                    </div>
-
-                    <div className="mt-6 grid gap-5 md:grid-cols-2">
                         {projects.map((project) => (
                             <div
                                 key={project.title}
-                                className="rounded-2xl border border-white/10 bg-black/30 p-5"
+                                className="rounded-2xl border border-white/10 bg-black/30 p-5 flex flex-col gap-2 h-fit"
                             >
                                 <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
                                     {project.metric}
                                 </p>
 
-                                <h3 className="mt-3 text-lg font-semibold">
+                                <h3 className="text-xl font-semibold">
                                     {project.title}
                                 </h3>
 
-                                <p className="mt-2 text-sm text-zinc-400">
+                                <p className="text-sm text-zinc-500">
                                     {project.stack.join(", ")}
                                 </p>
 
-                                <p className="mt-4 text-sm leading-6 text-zinc-400">
+                                <p className="text-sm leading-6 text-zinc-400">
                                     {project.desc}
                                 </p>
-
-                                <div className="mt-5 text-sm text-cyan-300">
-                                    Case Study →
-                                </div>
                             </div>
                         ))}
-                    </div>
-                </section>
+                </Section>
 
                 {/* Experience */}
-                <section
-                    id="experience"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                <Section id="experience" link="https://www.linkedin.com/in/joyalgeorgekj/details/experience/"
+                    heading="Experience"
                 >
-                    <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">Experience</h2>
-
-                    <div className="mt-6 space-y-5">
-                        <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
+                    <div className="rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2">
                             <p className="text-sm text-zinc-500">
                                 2023 — Present
                             </p>
-                            <h3 className="mt-2 text-lg font-semibold">
+                            <h3 className="ext-lg font-semibold">
                                 Freelance & Contract Frontend Developer
                             </h3>
-                            <p className="mt-3 text-sm leading-6 text-zinc-400">
+                            <p className="text-sm leading-6 text-zinc-400">
                                 Built and maintained React / Next.js
                                 applications, integrated APIs, improved
                                 performance, and collaborated with product /
                                 backend teams on production releases.
                             </p>
                         </div>
-
-                        <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
-                            <p className="text-sm text-zinc-500">
-                                Earlier Experience
-                            </p>
-                            <h3 className="mt-2 text-lg font-semibold">
-                                Operations + Problem Solving Roles
-                            </h3>
-                            <p className="mt-3 text-sm leading-6 text-zinc-400">
-                                Identified workflow inefficiencies and
-                                independently built internal tools to reduce
-                                friction and recurring errors.
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                </Section>
 
                 {/* Open Source */}
-                <section
-                    id="opensource"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                <Section id="opensource" link="https://www.linkedin.com/in/joyalgeorgekj/details/volunteering-experiences/"
+                    heading="Open Source Contributions" container="mt-6 grid gap-5 md:grid-cols-2"
                 >
-                    <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                        Open Source Contributions
-                    </h2>
-
-                    <div className="mt-6 grid gap-4 md:grid-cols-3">
-                        {oss.map((repo) => (
+                    {oss.map((repo) => (
                             <div
                                 key={repo}
                                 className="rounded-2xl border border-white/10 bg-black/30 p-5"
@@ -278,18 +230,13 @@ export default function Portfolio() {
                                 </p>
                             </div>
                         ))}
-                    </div>
-                </section>
+                </Section>
 
                 {/* Achievements */}
-                <section
-                    id="achievements"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                <Section id="achievements" linkNeeded={false}
+                    heading="Achievements" container="mt-6 grid gap-5 md:grid-cols-2"
                 >
-                    <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">Achievements</h2>
-
-                    <div className="mt-6 grid gap-4 md:grid-cols-2">
-                        {[
+                    {[
                             "Hacktoberfest 2025 Super Contributor",
                             "Winner - Web Designing Competition",
                             "Built 5+ real-world applications",
@@ -302,77 +249,59 @@ export default function Portfolio() {
                                 {item}
                             </div>
                         ))}
-                    </div>
-                </section>
+                </Section>
 
                 {/* Testimonials */}
-                <section
-                    id="testimonials"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                <Section id="testimonials" linkNeeded={false}
+                    heading="Testimonials"
                 >
-                    <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">Testimonials</h2>
-
-                    <div className="mt-6 grid gap-5 md:grid-cols-2">
-                        {[
-                            "Reliable developer who delivers polished UI quickly.",
-                            "Strong ownership and problem-solving mindset.",
-                        ].map((quote) => (
-                            <div
-                                key={quote}
-                                className="rounded-2xl border border-white/10 bg-black/30 p-5"
-                            >
-                                <p className="leading-7 text-zinc-300">
-                                    “{quote}”
-                                </p>
-                                <p className="mt-4 text-sm text-zinc-500">
-                                    — Client / Collaborator
-                                </p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                    {[
+                        "Reliable developer who delivers polished UI quickly.",
+                        "Strong ownership and problem-solving mindset.",
+                    ].map((quote) => (
+                        <div
+                            key={quote}
+                            className="rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2"
+                        >
+                            <p className="leading-7 text-zinc-300">“{quote}”</p>
+                            <p className="text-sm text-zinc-500">
+                                — Client / Collaborator
+                            </p>
+                        </div>
+                    ))}
+                </Section>
 
                 {/* Blog */}
-                <section
-                    id="blog"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                <Section
+                    link="https://www.linkedin.com/in/joyalgeorgekj/recent-activity/all/"
+                    heading="Latest Writing"
+                    id="blog" container="mt-6 grid gap-5 md:grid-cols-2"
                 >
-                    <div className="flex items-center justify-between">
-                        <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-                            Latest Writing
-                        </h2>
-                        <Link href="/blog" className="text-sm text-cyan-300">
-                            View All →
-                        </Link>
-                    </div>
-
-                    <div className="mt-6 space-y-3">
-                        {posts.map((post) => (
-                            <div
-                                key={post}
-                                className="rounded-2xl border border-white/10 bg-black/30 px-5 py-4 text-zinc-300"
-                            >
-                                {post}
-                            </div>
-                        ))}
-                    </div>
-                </section>
+                    {posts.map((post) => (
+                        <div
+                            key={post}
+                            className="rounded-2xl border border-white/10 bg-black/30 px-5 py-4 text-zinc-300"
+                        >
+                            {post}
+                        </div>
+                    ))}
+                </Section>
 
                 {/* Contact */}
                 <section
                     id="contact"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28"
+                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28 grid gap-4"
                 >
                     <h2 className="text-3xl font-semibold">
                         Need a frontend engineer who ships?
                     </h2>
 
-                    <p className="mt-4 max-w-2xl text-zinc-400">
+                    <p className="max-w-2xl text-zinc-400">
                         Available for frontend engineering roles, freelance
                         work, product collaboration, and startup opportunities.
                     </p>
 
-                    <div className="mt-8 flex flex-wrap gap-4">
+                    <div className="flex flex-wrap gap-4">
                         <Link
                             href="mailto:joyalgeorgekj@gmail.com"
                             className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black"
@@ -389,6 +318,7 @@ export default function Portfolio() {
                         </Link>
                     </div>
                 </section>
+
             </div>
         </div>
     );
