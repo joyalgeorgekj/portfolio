@@ -375,7 +375,7 @@ export default function Portfolio() {
                     <div className="mt-8 flex flex-wrap gap-4">
                         <Link
                             href="mailto:joyalgeorgekj@gmail.com"
-                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-medium text-black"
+                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black"
                         >
                             Email Me
                         </Link>
