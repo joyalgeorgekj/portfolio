@@ -68,7 +68,7 @@ export default function Portfolio() {
     return (
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-[260px_1fr] md:px-6">
             {/* Sidebar */}
-            <aside className="top-28 h-fit sticky self-start">
+            <aside className="top-28 h-fit md:sticky self-start">
                 <div className="rounded-3xl border border-white/10 bg-transparent p-5 backdrop-blur-xl">
                     <p className="mb-5 text-xs uppercase tracking-[0.25em] text-zinc-500">
                         Portfolio
