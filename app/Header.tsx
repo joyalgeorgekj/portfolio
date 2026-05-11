@@ -98,7 +98,7 @@ export default function Header() {
 
             <div className="border-t border-white/10 pt-6">
               <Link
-                href="/contact"
+                href="mailto:joyalgeorgekj@gmail.com"
                 className="inline-flex rounded-full bg-cyan-400 px-5 py-2 text-sm font-medium text-black"
               >
                 Hire Me
