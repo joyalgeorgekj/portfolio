@@ -82,7 +82,7 @@ export default function BlogPage() {
           </p>
         </div>
 
-        {/* Search + Filters */}
+        {/* Search + Filters
         <div className="mt-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <input
             type="text"
@@ -100,7 +100,7 @@ export default function BlogPage() {
               </button>
             ))}
           </div>
-        </div>
+        </div> */}
 
         {/* Featured Post */}
         <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
