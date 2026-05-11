@@ -93,7 +93,7 @@ export default function Home() {
                     <div className="flex flex-wrap gap-4">
                         <Link
                             href="/portfolio"
-                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]"
+                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black transition hover:scale-[1.02]"
                         >
                             Explore Portfolio
                         </Link>
@@ -106,7 +106,7 @@ export default function Home() {
                         </Link>
 
                         <Link
-                            href="/contact"
+                            href="mailto:joyalgeorgekj@gmail.com"
                             className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent"
                         >
                             Contact Me
