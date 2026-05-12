@@ -1,22 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
     title: "Joyal George K J",
     description: "React/Next js Developer Portfolio - 2026, Joyal George K J",
+    creator: "Joyal George K J",
+    category: "portfolio developer",
+    keywords: ["frontend", "developer", "portfolio", "javascript", "typescript", "app developer", "website developer", "site developer", "web developer", "programming", "coding"],
 };
 
 export default function RootLayout({
@@ -27,7 +19,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased w-[99dvw]`}
+                className={`antialiased w-[99dvw]`}
             >
                 <Header />
                 <main className="relative w-full bg-black text-white">
