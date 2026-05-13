@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ReactNode } from "react";
-import { Url } from "url";
 
 export default function Section({
     children, link, heading, linkNeeded = true, id, container = "mt-6 space-y-3"
