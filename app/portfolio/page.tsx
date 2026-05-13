@@ -1,11 +1,11 @@
 // app/portfolio/page.tsx
 import Link from "next/link";
 import Section from "./Section";
-import type { Metadata } from 'next'
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-}
+    title: "Portfolio",
+};
 
 export default function Portfolio() {
     const navItems = [
@@ -84,8 +84,7 @@ export default function Portfolio() {
                             <a
                                 key={item.id}
                                 href={`#${item.id}`}
-                                className="block rounded-xl px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/5 hover:text-white"
-                            >
+                                className="block rounded-xl px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/5 hover:text-white">
                                 {item.label}
                             </a>
                         ))}
@@ -105,8 +104,7 @@ export default function Portfolio() {
                 {/* Hero */}
                 <section
                     id="about"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28 flex flex-col gap-4"
-                >
+                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28 flex flex-col gap-4">
                     <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
                         About
                     </p>
@@ -136,8 +134,7 @@ export default function Portfolio() {
                         ].map((item) => (
                             <div
                                 key={item}
-                                className="card rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-zinc-300"
-                            >
+                                className="card rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-zinc-300">
                                 &gt; {item}
                             </div>
                         ))}
@@ -145,129 +142,131 @@ export default function Portfolio() {
                 </section>
 
                 {/* Skills */}
-                <Section id="skills" link="https://www.linkedin.com/in/joyalgeorgekj/details/skills/"
-                    heading="Skills" container="mt-6 grid gap-5 md:grid-cols-2"
-                >
-                        {Object.entries(skills).map(([group, items]) => (
-                            <div
-                                key={group}
-                            className="group card rounded-2xl border border-white/10 bg-black/30 p-5"
-                            >
-                                <h3 className="capitalize text-sm font-semibold text-zinc-300">
-                                    {group}
-                                </h3>
+                <Section
+                    id="skills"
+                    link="https://www.linkedin.com/in/joyalgeorgekj/details/skills/"
+                    heading="Skills"
+                    container="mt-6 grid gap-5 md:grid-cols-2">
+                    {Object.entries(skills).map(([group, items]) => (
+                        <div
+                            key={group}
+                            className="group card rounded-2xl border border-white/10 bg-black/30 p-5">
+                            <h3 className="capitalize text-sm font-semibold text-zinc-300">
+                                {group}
+                            </h3>
 
-                                <div className="mt-4 flex flex-wrap gap-2">
-                                    {items.map((item) => (
-                                        <span
-                                            key={item}
-                                        className="group-hover:border-cyan-400/30 rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer"
-                                        >
-                                            {item}
-                                        </span>
-                                    ))}
-                                </div>
+                            <div className="mt-4 flex flex-wrap gap-2">
+                                {items.map((item) => (
+                                    <span
+                                        key={item}
+                                        className="group-hover:border-cyan-400/30 rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer">
+                                        {item}
+                                    </span>
+                                ))}
                             </div>
-                        ))}
+                        </div>
+                    ))}
                 </Section>
 
                 {/* Projects */}
-                <Section id="projects" link="https://www.linkedin.com/in/joyalgeorgekj/details/projects/"
-                    heading="Featured Projects" container="mt-6 grid gap-5 md:grid-cols-2"
-                >
-                        {projects.map((project) => (
-                            <div
-                                key={project.title}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 flex flex-col gap-2 h-fit"
-                            >
-                                <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                                    {project.metric}
-                                </p>
+                <Section
+                    id="projects"
+                    link="https://www.linkedin.com/in/joyalgeorgekj/details/projects/"
+                    heading="Featured Projects"
+                    container="mt-6 grid gap-5 md:grid-cols-2">
+                    {projects.map((project) => (
+                        <div
+                            key={project.title}
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 flex flex-col gap-2 h-fit">
+                            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                                {project.metric}
+                            </p>
 
-                                <h3 className="text-xl font-semibold">
-                                    {project.title}
-                                </h3>
+                            <h3 className="text-xl font-semibold">
+                                {project.title}
+                            </h3>
 
-                                <p className="text-sm text-zinc-500">
-                                    {project.stack.join(", ")}
-                                </p>
+                            <p className="text-sm text-zinc-500">
+                                {project.stack.join(", ")}
+                            </p>
 
-                                <p className="text-sm leading-6 text-zinc-400">
-                                    {project.desc}
-                                </p>
-                            </div>
-                        ))}
+                            <p className="text-sm leading-6 text-zinc-400">
+                                {project.desc}
+                            </p>
+                        </div>
+                    ))}
                 </Section>
 
                 {/* Experience */}
-                <Section id="experience" link="https://www.linkedin.com/in/joyalgeorgekj/details/experience/"
-                    heading="Experience"
-                >
+                <Section
+                    id="experience"
+                    link="https://www.linkedin.com/in/joyalgeorgekj/details/experience/"
+                    heading="Experience">
                     <div className="rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2">
-                            <p className="text-sm text-zinc-500">
-                                2023 — Present
-                            </p>
-                            <h3 className="ext-lg font-semibold">
-                                Freelance & Contract Frontend Developer
-                            </h3>
-                            <p className="text-sm leading-6 text-zinc-400">
-                                Built and maintained React / Next.js
-                                applications, integrated APIs, improved
-                                performance, and collaborated with product /
-                                backend teams on production releases.
-                            </p>
-                        </div>
+                        <p className="text-sm text-zinc-500">2023 — Present</p>
+                        <h3 className="ext-lg font-semibold">
+                            Freelance & Contract Frontend Developer
+                        </h3>
+                        <p className="text-sm leading-6 text-zinc-400">
+                            Built and maintained React / Next.js applications,
+                            integrated APIs, improved performance, and
+                            collaborated with product / backend teams on
+                            production releases.
+                        </p>
+                    </div>
                 </Section>
 
                 {/* Open Source */}
-                <Section id="opensource" link="https://www.linkedin.com/in/joyalgeorgekj/details/volunteering-experiences/"
-                    heading="Open Source Contributions" container="mt-6 grid gap-5 md:grid-cols-2"
-                >
+                <Section
+                    id="opensource"
+                    link="https://www.linkedin.com/in/joyalgeorgekj/details/volunteering-experiences/"
+                    heading="Open Source Contributions"
+                    container="mt-6 grid gap-5 md:grid-cols-2">
                     {oss.map((repo) => (
-                            <div
-                                key={repo}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5"
-                            >
-                                <h3 className="font-medium">{repo}</h3>
-                                <p className="mt-2 text-sm text-zinc-400">
-                                    Fixes, UI improvements, documentation, issue
-                                    resolution.
-                                </p>
-                            </div>
-                        ))}
+                        <div
+                            key={repo}
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5">
+                            <h3 className="font-medium">{repo}</h3>
+                            <p className="mt-2 text-sm text-zinc-400">
+                                Fixes, UI improvements, documentation, issue
+                                resolution.
+                            </p>
+                        </div>
+                    ))}
                 </Section>
 
                 {/* Achievements */}
-                <Section id="achievements" linkNeeded={false}
-                    heading="Achievements" container="mt-6 grid gap-5 md:grid-cols-2"
-                >
+                <Section
+                    id="achievements"
+                    linkNeeded={false}
+                    heading="Achievements"
+                    container="mt-6 grid gap-5 md:grid-cols-2">
                     {[
-                            "Hacktoberfest 2025 Super Contributor",
-                            "Winner - Web Designing Competition",
-                            "Built 5+ real-world applications",
-                            "1000+ weekly active npm users",
-                        ].map((item) => (
-                            <div
-                                key={item}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 text-zinc-300"
-                            >
-                                {item}
-                            </div>
-                        ))}
+                        "Hacktoberfest 2025 Super Contributor",
+                        "Winner - Web Designing Competition",
+                        "Built 5+ real-world applications",
+                        "1000+ weekly active npm users",
+                    ].map((item) => (
+                        <div
+                            key={item}
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 text-zinc-300">
+                            {item}
+                        </div>
+                    ))}
                 </Section>
 
                 {/* Testimonials */}
-                <Section id="testimonials" linkNeeded={false}
-                    heading="Testimonials"
-                >
+                <Section
+                    id="testimonials"
+                    linkNeeded={false}
+                    heading="Testimonials">
                     {[
                         "Reliable developer who delivers polished UI quickly.",
                         "Strong ownership and problem-solving mindset.",
                     ].map((quote) => (
                         <div
                             key={quote}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2"
-                        >
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2">
                             <p className="leading-7 text-zinc-300">“{quote}”</p>
                             <p className="text-sm text-zinc-500">
                                 — Client / Collaborator
@@ -280,13 +279,12 @@ export default function Portfolio() {
                 <Section
                     link="https://www.linkedin.com/in/joyalgeorgekj/recent-activity/all/"
                     heading="Latest Writing"
-                    id="blog" container="mt-6 grid gap-5 md:grid-cols-2"
-                >
+                    id="blog"
+                    container="mt-6 grid gap-5 md:grid-cols-2">
                     {posts.map((post) => (
                         <div
                             key={post}
-                            className="card rounded-2xl border border-white/10 bg-black/30 px-5 py-4 text-zinc-300"
-                        >
+                            className="card rounded-2xl border border-white/10 bg-black/30 px-5 py-4 text-zinc-300">
                             {post}
                         </div>
                     ))}
@@ -295,8 +293,7 @@ export default function Portfolio() {
                 {/* Contact */}
                 <section
                     id="contact"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28 grid gap-4"
-                >
+                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28 grid gap-4">
                     <h2 className="text-3xl font-semibold">
                         Need a frontend engineer who ships?
                     </h2>
@@ -309,21 +306,18 @@ export default function Portfolio() {
                     <div className="flex flex-wrap gap-4">
                         <Link
                             href="mailto:joyalgeorgekj@gmail.com"
-                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black"
-                        >
+                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black">
                             Email Me
                         </Link>
 
                         <Link
                             href="https://linkedin.com/in/joyalgeorgekj"
                             target="_blank"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5"
-                        >
+                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5">
                             LinkedIn
                         </Link>
                     </div>
                 </section>
-
             </div>
         </div>
     );

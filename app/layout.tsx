@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
+import Header from "./Header";
+import Footer from "./Footer";
+import "./globals.css";
+
 const baseUrl = process.env.HOSTED_URL
     ? `https://${process.env.HOSTED_URL}`
-    : 'http://localhost:3000'
+    : "http://localhost:3000";
 
 export const metadata: Metadata = {
     metadataBase: new URL(baseUrl),
@@ -123,9 +128,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`antialiased w-[99dvw]`}
-            >
+            <body className={`antialiased w-[99dvw]`}>
                 <Header />
                 <main className="relative w-full bg-black text-white">
                     {/* Background Effects */}

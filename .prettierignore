@@ -1,5 +1,5 @@
-node_modules
-.next
-public
-dist
-package-lock.json
+# Ignore everything
+/*
+
+# Except the app folder
+!/app

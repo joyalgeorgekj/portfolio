@@ -95,22 +95,19 @@ export default function Home() {
                     <div className="flex flex-wrap gap-4">
                         <Link
                             href="/portfolio"
-                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black transition hover:scale-[1.02]"
-                        >
+                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black transition hover:scale-[1.02]">
                             Explore Portfolio
                         </Link>
 
                         <Link
                             href="/portfolio#projects"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent"
-                        >
+                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent">
                             View Projects
                         </Link>
 
                         <Link
                             href="mailto:joyalgeorgekj@gmail.com"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent"
-                        >
+                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent">
                             Contact Me
                         </Link>
                     </div>
@@ -175,8 +172,7 @@ export default function Home() {
                                 {stats.map((item) => (
                                     <div
                                         key={item}
-                                        className="card rounded-2xl border border-white/10 bg-transparent px-4 py-4 text-sm text-zinc-300 backdrop-blur-md"
-                                    >
+                                        className="card rounded-2xl border border-white/10 bg-transparent px-4 py-4 text-sm text-zinc-300 backdrop-blur-md">
                                         {item}
                                     </div>
                                 ))}
@@ -204,8 +200,7 @@ export default function Home() {
                     {highlights.map((item) => (
                         <div
                             key={item.title}
-                            className="card group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-md  flex flex-col gap-4"
-                        >
+                            className="card group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-md  flex flex-col gap-4">
                             <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20 flex justify-center items-center">
                                 <item.icon
                                     height={24}
@@ -224,8 +219,7 @@ export default function Home() {
 
                             <Link
                                 href={item.route}
-                                className="text-sm text-cyan-300 transition group-hover:translate-x-1"
-                            >
+                                className="text-sm text-cyan-300 transition group-hover:translate-x-1">
                                 Explore →
                             </Link>
                         </div>
@@ -254,16 +248,14 @@ export default function Home() {
                         <div className="flex flex-wrap gap-4">
                             <Link
                                 href="mailto:joyalgeorgekj@gmail.com"
-                                className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black"
-                            >
+                                className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black">
                                 Email Me
                             </Link>
 
                             <Link
                                 href="https://linkedin.com/in/joyalgeorgekj"
                                 target="_blank"
-                                className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5"
-                            >
+                                className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5">
                                 LinkedIn
                             </Link>
                         </div>
