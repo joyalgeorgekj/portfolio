@@ -25,3 +25,7 @@ div.clip-div {
   clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
   /* Vendor prefixes might be needed for older browser support */
 }
+
+.card {
+  @apply transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30;
+}
