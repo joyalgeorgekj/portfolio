@@ -145,7 +145,7 @@ export default function Portfolio() {
                 </section>
 
                 {/* Skills */}
-                <Section id="skills" link="https://www.linkedin.com/in/joyalgeorgekj/details/projects/"
+                <Section id="skills" link="https://www.linkedin.com/in/joyalgeorgekj/details/skills/"
                     heading="Skills" container="mt-6 grid gap-5 md:grid-cols-2"
                 >
                         {Object.entries(skills).map(([group, items]) => (
