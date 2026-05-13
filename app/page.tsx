@@ -8,6 +8,7 @@ import {
     StarsIcon,
     WrenchIcon,
 } from "lucide-react";
+import MouseTrack from "./MouseTrack";
 
 export default function Home() {
     const stats = [
