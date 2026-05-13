@@ -1,6 +1,11 @@
 // app/portfolio/page.tsx
 import Link from "next/link";
 import Section from "./Section";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+}
 
 export default function Portfolio() {
     const navItems = [

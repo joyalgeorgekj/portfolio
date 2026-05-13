@@ -1,5 +1,11 @@
 // app/blog/page.tsx
 import Link from "next/link";
+import type { Metadata } from 'next'
+
+ 
+export const metadata: Metadata = {
+  title: 'Blog',
+}
 
 export default function BlogPage() {
   const featuredPost = {
@@ -50,15 +56,15 @@ export default function BlogPage() {
     },
   ];
 
-  const categories = [
-    "All",
-    "Architecture",
-    "Performance",
-    "Career",
-    "Case Study",
-    "Open Source",
-    "UI Engineering",
-  ];
+  // const categories = [
+  //   "All",
+  //   "Architecture",
+  //   "Performance",
+  //   "Career",
+  //   "Case Study",
+  //   "Open Source",
+  //   "UI Engineering",
+  // ];
 
   return (
 
