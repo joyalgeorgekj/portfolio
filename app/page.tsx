@@ -72,6 +72,7 @@ export default function Home() {
             {/* Hero */}
             <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-28 md:grid-cols-2 md:px-6">
                 {/* Left Content */}
+                <MouseTrack />
                 <div className="grid gap-4 *:w-fit">
                     <p className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300">
                         Available for Frontend Opportunities
