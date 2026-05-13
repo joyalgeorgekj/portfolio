@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import Header from "./Header";
-import Footer from "./Footer";
-import "./globals.css";
+const baseUrl = process.env.HOSTED_URL
+    ? `https://${process.env.HOSTED_URL}`
+    : 'http://localhost:3000'
 
 export const metadata: Metadata = {
+    metadataBase: new URL(baseUrl),
     title: {
         default: "Joyal George K J - JavaScript / TypeScript Developer",
         template: "%s | Joyal George K J",

@@ -118,17 +118,17 @@ export default function Home() {
 
                 {/* Right Visual */}
                 <div className="relative">
-                    <div className="rounded-3xl border border-white/10  p-5 backdrop-blur-xl shadow-2xl">
+                    <div className="group card rounded-3xl border border-white/10  p-5 backdrop-blur-xl shadow-2xl">
                         {/* Fake Browser Top */}
                         <div className="mb-5 flex items-center gap-2">
-                            <span className="h-3 w-3 rounded-full bg-red-400" />
-                            <span className="h-3 w-3 rounded-full bg-yellow-400" />
-                            <span className="h-3 w-3 rounded-full bg-green-400" />
+                            <span className="group-hover:animate-pulse h-3 w-3 rounded-full bg-red-400" />
+                            <span className="group-hover:animate-pulse h-3 w-3 rounded-full bg-yellow-400" />
+                            <span className="group-hover:animate-pulse h-3 w-3 rounded-full bg-green-400" />
                         </div>
 
                         {/* Mock Dashboard */}
                         <div className="space-y-4">
-                            <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
+                            <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                 <p className="text-xs uppercase tracking-widest text-zinc-500">
                                     Current Stack
                                 </p>
@@ -138,7 +138,7 @@ export default function Home() {
                             </div>
 
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
+                                <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                     <p className="text-xs uppercase tracking-widest text-zinc-500">
                                         Weekly Users
                                     </p>
@@ -147,7 +147,7 @@ export default function Home() {
                                     </p>
                                 </div>
 
-                                <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
+                                <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                     <p className="text-xs uppercase tracking-widest text-zinc-500">
                                         OSS Repos
                                     </p>
@@ -157,11 +157,11 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div className="rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
+                            <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
                                 <p className="text-xs uppercase tracking-widest text-zinc-500">
                                     Featured Project
                                 </p>
-                                <p className="mt-2 text-sm font-medium text-white">
+                                <p className="mt-2 text-lg font-semibold text-white">
                                     Senku.io
                                 </p>
                                 <p className="mt-1 text-sm text-zinc-400">
@@ -175,7 +175,7 @@ export default function Home() {
                                 {stats.map((item) => (
                                     <div
                                         key={item}
-                                        className="rounded-2xl border border-white/10 bg-transparent px-4 py-4 text-sm text-zinc-300 backdrop-blur-md"
+                                        className="card rounded-2xl border border-white/10 bg-transparent px-4 py-4 text-sm text-zinc-300 backdrop-blur-md"
                                     >
                                         {item}
                                     </div>
@@ -204,13 +204,15 @@ export default function Home() {
                     {highlights.map((item) => (
                         <div
                             key={item.title}
-                            className="group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 hover:bg-white/8 cursor-pointer flex flex-col gap-4"
+                            className="card group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-md  flex flex-col gap-4"
                         >
-                            <item.icon
-                                height={24}
-                                width={24}
-                                className="rounded-2xl hover:text-cyan-400"
-                            />
+                            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20 flex justify-center items-center">
+                                <item.icon
+                                    height={24}
+                                    width={24}
+                                    className="rounded-2xl group-hover:text-cyan-400"
+                                />
+                            </div>
 
                             <h3 className="text-lg font-semibold text-white">
                                 {item.title}

@@ -136,7 +136,7 @@ export default function Portfolio() {
                         ].map((item) => (
                             <div
                                 key={item}
-                                className="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-zinc-300"
+                                className="card rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-zinc-300"
                             >
                                 &gt; {item}
                             </div>
@@ -151,7 +151,7 @@ export default function Portfolio() {
                         {Object.entries(skills).map(([group, items]) => (
                             <div
                                 key={group}
-                                className="rounded-2xl border border-white/10 bg-black/30 p-5"
+                            className="group card rounded-2xl border border-white/10 bg-black/30 p-5"
                             >
                                 <h3 className="capitalize text-sm font-semibold text-zinc-300">
                                     {group}
@@ -161,7 +161,7 @@ export default function Portfolio() {
                                     {items.map((item) => (
                                         <span
                                             key={item}
-                                            className="rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer"
+                                        className="group-hover:border-cyan-400/30 rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer"
                                         >
                                             {item}
                                         </span>
@@ -178,7 +178,7 @@ export default function Portfolio() {
                         {projects.map((project) => (
                             <div
                                 key={project.title}
-                                className="rounded-2xl border border-white/10 bg-black/30 p-5 flex flex-col gap-2 h-fit"
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 flex flex-col gap-2 h-fit"
                             >
                                 <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
                                     {project.metric}
@@ -226,7 +226,7 @@ export default function Portfolio() {
                     {oss.map((repo) => (
                             <div
                                 key={repo}
-                                className="rounded-2xl border border-white/10 bg-black/30 p-5"
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5"
                             >
                                 <h3 className="font-medium">{repo}</h3>
                                 <p className="mt-2 text-sm text-zinc-400">
@@ -249,7 +249,7 @@ export default function Portfolio() {
                         ].map((item) => (
                             <div
                                 key={item}
-                                className="rounded-2xl border border-white/10 bg-black/30 p-5 text-zinc-300"
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 text-zinc-300"
                             >
                                 {item}
                             </div>
@@ -266,7 +266,7 @@ export default function Portfolio() {
                     ].map((quote) => (
                         <div
                             key={quote}
-                            className="rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2"
+                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2"
                         >
                             <p className="leading-7 text-zinc-300">“{quote}”</p>
                             <p className="text-sm text-zinc-500">
@@ -285,7 +285,7 @@ export default function Portfolio() {
                     {posts.map((post) => (
                         <div
                             key={post}
-                            className="rounded-2xl border border-white/10 bg-black/30 px-5 py-4 text-zinc-300"
+                            className="card rounded-2xl border border-white/10 bg-black/30 px-5 py-4 text-zinc-300"
                         >
                             {post}
                         </div>

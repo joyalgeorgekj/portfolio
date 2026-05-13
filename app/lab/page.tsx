@@ -107,14 +107,13 @@ export default function Lab() {
             </button>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-2 h-fit">
-            {experiments.map((item) => (
-              <div
-                key={item.title}
-                className="group rounded-3xl border border-white/10 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 grid gap-3"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20" />
+                                <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20 flex justify-center items-center">
+                                    <Gamepad2Icon
+                                        height={24}
+                                        width={24}
+                                        className="rounded-2xl group-hover:text-cyan-400"
+                                    />
+                                </div>
 
                   <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-300">
                     {item.status}
@@ -147,15 +146,13 @@ export default function Lab() {
             Mini Games
           </h2>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
-            {miniGames.map((game) => (
-              <div
-                key={game.title}
-                className="group rounded-3xl border border-white/10 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-violet-400/30"
-              >
-                <div className="h-14 w-14 rounded-2xl bg-linear-to-br from-violet-400/20 to-cyan-400/20" />
-
-                <h3 className="mt-5 text-xl font-semibold">{game.title}</h3>
+                            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20 flex justify-center items-center">
+                                <Gamepad2Icon
+                                    height={24}
+                                    width={24}
+                                    className="rounded-2xl group-hover:text-cyan-400"
+                                />
+                            </div>
 
                 <p className="mt-3 leading-7 text-zinc-400">
                   {game.desc}
