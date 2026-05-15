@@ -1,3 +1,4 @@
+import MouseTrack from "./MouseTrack";
 import type { Metadata } from "next";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -140,6 +141,10 @@ export default function RootLayout({
                         {/* Grid */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,.03)_1px,transparent_1px)] bg-size-[40px_40px]" />
                     </div>
+
+                    {/* Mouse Tracer */}
+                    <MouseTrack />
+
                     {children}
                 </main>
                 <Footer />

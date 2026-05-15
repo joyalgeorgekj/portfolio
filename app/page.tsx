@@ -72,7 +72,6 @@ export default function Home() {
             {/* Hero */}
             <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6">
                 {/* Left Content */}
-                <MouseTrack />
                 <div className="grid gap-4 *:w-fit">
                     <p className="inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-sm text-primary">
                         <span className="animate-pulse bg-primary w-2 h-2 rounded-full"></span> Available for Frontend Opportunities
