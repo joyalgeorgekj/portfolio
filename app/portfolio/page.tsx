@@ -113,7 +113,7 @@ export default function Portfolio() {
                         Joyal George K J
                     </h1>
 
-                    <p className="text-lg text-cyan-300">
+                    <p className="text-lg text-primary">
                         Product-Focused Frontend Engineer
                     </p>
 
@@ -306,14 +306,14 @@ export default function Portfolio() {
                     <div className="flex flex-wrap gap-4">
                         <Link
                             href="mailto:joyalgeorgekj@gmail.com"
-                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black">
+                            className="btn btn-primary">
                             Email Me
                         </Link>
 
                         <Link
                             href="https://linkedin.com/in/joyalgeorgekj"
                             target="_blank"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5">
+                            className="btn btn-common">
                             LinkedIn
                         </Link>
                     </div>

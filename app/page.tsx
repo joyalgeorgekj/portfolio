@@ -74,14 +74,14 @@ export default function Home() {
                 {/* Left Content */}
                 <MouseTrack />
                 <div className="grid gap-4 *:w-fit">
-                    <p className="inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-300">
-                        Available for Frontend Opportunities
+                    <p className="inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-sm text-primary">
+                        <span className="animate-pulse bg-primary w-2 h-2 rounded-full"></span> Available for Frontend Opportunities
                     </p>
 
                     <h1 className="text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
                         Joyal George K J <br />
                     </h1>
-                    <h2 className="text-3xl bg-linear-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
+                    <h2 className="text-3xl bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
                         Product-Focused Frontend Engineer
                     </h2>
 
@@ -95,19 +95,19 @@ export default function Home() {
                     <div className="flex flex-wrap gap-4">
                         <Link
                             href="/portfolio"
-                            className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black transition hover:scale-[1.02]">
+                            className="btn btn-primary">
                             Explore Portfolio
                         </Link>
 
                         <Link
                             href="/portfolio#projects"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent">
+                            className="btn btn-common">
                             View Projects
                         </Link>
 
                         <Link
                             href="mailto:joyalgeorgekj@gmail.com"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5 backdrop-blur-xl bg-transparent">
+                            className="btn btn-common">
                             Contact Me
                         </Link>
                     </div>
@@ -139,7 +139,7 @@ export default function Home() {
                                     <p className="text-xs uppercase tracking-widest text-zinc-500">
                                         Weekly Users
                                     </p>
-                                    <p className="mt-2 text-3xl font-semibold text-cyan-300">
+                                    <p className="mt-2 text-3xl font-semibold text-primary">
                                         1000+
                                     </p>
                                 </div>
@@ -201,11 +201,11 @@ export default function Home() {
                         <div
                             key={item.title}
                             className="card group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-md  flex flex-col gap-4">
-                            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20 flex justify-center items-center">
+                            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                                 <item.icon
                                     height={24}
                                     width={24}
-                                    className="rounded-2xl group-hover:text-cyan-400"
+                                    className="rounded-2xl group-hover:text-primary"
                                 />
                             </div>
 
@@ -219,7 +219,7 @@ export default function Home() {
 
                             <Link
                                 href={item.route}
-                                className="text-sm text-cyan-300 transition group-hover:translate-x-1">
+                                className="text-sm text-primary transition group-hover:translate-x-1">
                                 Explore →
                             </Link>
                         </div>
@@ -248,14 +248,14 @@ export default function Home() {
                         <div className="flex flex-wrap gap-4">
                             <Link
                                 href="mailto:joyalgeorgekj@gmail.com"
-                                className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black">
+                                className="btn btn-primary">
                                 Email Me
                             </Link>
 
                             <Link
                                 href="https://linkedin.com/in/joyalgeorgekj"
                                 target="_blank"
-                                className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5">
+                                className="btn btn-common">
                                 LinkedIn
                             </Link>
                         </div>

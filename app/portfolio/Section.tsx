@@ -25,7 +25,7 @@ export default function Section({
                     {heading}
                 </h2>
                 {linkNeeded && link && (
-                    <Link href={link} className="text-sm text-cyan-300">
+                    <Link href={link} className="text-sm text-primary">
                         View More
                     </Link>
                 )}

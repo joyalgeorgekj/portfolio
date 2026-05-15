@@ -22,7 +22,7 @@ export default function Header() {
                     <Link
                         href="/"
                         className="text-lg font-semibold tracking-tight text-white">
-                        Joyal<span className="text-cyan-400">.</span>
+                        Joyal<span className="text-primary">.</span>
                     </Link>
 
                     {/* Desktop Nav */}
@@ -55,7 +55,7 @@ export default function Header() {
 
                         <Link
                             href="mailto:joyalgeorgekj@gmail.com"
-                            className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300 transition hover:bg-cyan-400/20">
+                            className="btn btn-secondary">
                             Hire Me
                         </Link>
                     </div>
@@ -91,7 +91,7 @@ export default function Header() {
                         <div className="border-t border-white/10 pt-6">
                             <Link
                                 href="mailto:joyalgeorgekj@gmail.com"
-                                className="inline-flex rounded-full bg-cyan-400 px-5 py-2 text-sm font-medium text-black">
+                                className="inline-flex rounded-full bg-primary px-5 py-2 text-sm font-medium text-black">
                                 Hire Me
                             </Link>
                         </div>

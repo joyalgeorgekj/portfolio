@@ -56,7 +56,7 @@ export default function Lab() {
     ];
 
     return (
-        <section className="relative mx-auto max-w-7xl px-4 py-24 md:px-6 flex flex-col gap-18">
+        <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6 flex flex-col gap-10">
             {/* Hero */}
             <div className="max-w-3xl">
                 <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
@@ -65,7 +65,7 @@ export default function Lab() {
 
                 <h1 className="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">
                     The{" "}
-                    <span className="bg-linear-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
+                    <span className="bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent">
                         Lab
                     </span>
                 </h1>
@@ -79,11 +79,11 @@ export default function Lab() {
                 <div className="mt-8 flex flex-wrap gap-4">
                     <Link
                         href="/portfolio"
-                        className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white transition hover:border-white/20 hover:bg-white/5">
+                        className="btn btn-common">
                         Back to Portfolio
                     </Link>
 
-                    <button className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black transition hover:scale-[1.02]">
+                    <button className="btn btn-primary">
                         Explore Experiments
                     </button>
                 </div>
@@ -111,17 +111,17 @@ export default function Lab() {
                     {experiments.map((item) => (
                         <div
                             key={item.title}
-                            className="group rounded-3xl border border-white/10 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30 grid gap-3">
+                            className="group rounded-3xl border border-white/10 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/30 grid gap-3">
                             <div className="flex items-start justify-between gap-4">
-                                <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20 flex justify-center items-center">
+                                <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                                     <Gamepad2Icon
                                         height={24}
                                         width={24}
-                                        className="rounded-2xl group-hover:text-cyan-400"
+                                        className="rounded-2xl group-hover:text-primary"
                                     />
                                 </div>
 
-                                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-cyan-300">
+                                <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs text-primary">
                                     {item.status}
                                 </span>
                             </div>
@@ -136,7 +136,7 @@ export default function Lab() {
 
                             <Link
                                 href={""}
-                                className="text-sm text-cyan-300 transition group-hover:translate-x-1">
+                                className="text-sm text-primary transition group-hover:translate-x-1">
                                 Open Experiment
                             </Link>
                         </div>
@@ -159,11 +159,11 @@ export default function Lab() {
                         <div
                             key={game.title}
                             className="group rounded-3xl border border-white/10 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-violet-400/30">
-                            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20 flex justify-center items-center">
+                            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                                 <Gamepad2Icon
                                     height={24}
                                     width={24}
-                                    className="rounded-2xl group-hover:text-cyan-400"
+                                    className="rounded-2xl group-hover:text-primary"
                                 />
                             </div>
                             <h3 className="mt-5 text-xl font-semibold">
@@ -196,10 +196,10 @@ export default function Lab() {
                     {tools.map((tool) => (
                         <button
                             key={tool}
-                            className="flex items-center justify-between rounded-2xl border backdrop-blur-xl border-white/10 px-5 py-4 text-left text-zinc-300 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
+                            className="flex items-center justify-between rounded-2xl border backdrop-blur-xl border-white/10 px-5 py-4 text-left text-zinc-300 transition duration-300 hover:-translate-y-1 hover:border-primary/30">
                             <span>{tool}</span>
 
-                            <span className="text-cyan-300">↗</span>
+                            <span className="text-primary">↗</span>
                         </button>
                     ))}
                 </div>
@@ -225,7 +225,7 @@ export default function Lab() {
             </p>
 
             <div>
-              <span className="text-cyan-300">$</span>{" "}
+              <span className="text-primary">$</span>{" "}
               <span className="text-zinc-300">help</span>
             </div>
 
@@ -239,7 +239,7 @@ export default function Lab() {
             </div>
 
             <div>
-              <span className="text-cyan-300">$</span>{" "}
+              <span className="text-primary">$</span>{" "}
               <span className="animate-pulse text-zinc-300">_</span>
             </div>
           </div>
@@ -262,13 +262,13 @@ export default function Lab() {
                     </p>
 
                     <div className="mt-4 flex flex-wrap gap-4">
-                        <button className="rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-black">
+                        <button className="btn btn-primary">
                             Start Exploring
                         </button>
 
                         <Link
                             href="/portfolio"
-                            className="rounded-full border border-white/10 px-6 py-3 text-sm font-medium text-white hover:bg-white/5">
+                            className="btn btn-common">
                             Portfolio
                         </Link>
                     </div>

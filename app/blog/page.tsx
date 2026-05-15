@@ -75,7 +75,7 @@ export default function BlogPage() {
 
                 <h1 className="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">
                     Engineering Thoughts,{" "}
-                    <span className="bg-linear-to-r from-cyan-300 via-blue-400 to-violet-400 bg-clip-text text-transparent">
+                    <span className="bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent">
                         Lessons & Systems
                     </span>
                 </h1>
@@ -109,7 +109,7 @@ export default function BlogPage() {
 
             {/* Featured Post */}
             <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
-                <p className="text-sm uppercase tracking-[0.2em] text-cyan-300">
+                <p className="text-sm uppercase tracking-[0.2em] text-primary">
                     Featured Article
                 </p>
 
@@ -131,7 +131,7 @@ export default function BlogPage() {
 
                 <Link
                     href="/blog/building-scalable-frontend-systems"
-                    className="mt-8 inline-flex rounded-full bg-cyan-400 px-6 py-3 text-sm font-medium text-black transition hover:scale-[1.02]">
+                    className="btn btn-primary">
                     Read Article
                 </Link>
             </section>
@@ -160,7 +160,7 @@ export default function BlogPage() {
 
                         <Link
                             href="#"
-                            className="mt-6 inline-flex text-sm text-cyan-300 transition group-hover:translate-x-1">
+                            className="mt-6 inline-flex text-sm text-primary transition group-hover:translate-x-1">
                             Read More →
                         </Link>
                     </article>
@@ -190,7 +190,7 @@ export default function BlogPage() {
                             className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-white outline-none placeholder:text-zinc-500"
                         />
 
-                        <button className="rounded-2xl bg-cyan-400 px-6 py-3 text-sm font-medium text-black">
+                        <button className="btn btn-primary">
                             Subscribe
                         </button>
                     </div>

@@ -7,7 +7,7 @@ export default function Footer() {
                 {/* Brand */}
                 <div>
                     <h3 className="text-lg font-semibold text-white">
-                        Joyal<span className="text-cyan-400">.</span>
+                        Joyal<span className="text-primary">.</span>
                     </h3>
                     <p className="mt-4 text-sm leading-6 text-zinc-400">
                         Building performant, scalable, and polished digital
@@ -85,7 +85,7 @@ export default function Footer() {
 
                     <Link
                         href="mailto:joyalgeorgekj@gmail.com"
-                        className="mt-5 inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-sm font-medium text-cyan-300 transition hover:bg-cyan-400/20">
+                        className="btn btn-secondary">
                         Contact Me
                     </Link>
                 </div>
