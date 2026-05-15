@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     category: "Technology",
 
     keywords: [
+        "Joyal",
         "Joyal George",
         "Joyal George K J",
         "Frontend Engineer",
