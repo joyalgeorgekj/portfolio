@@ -71,10 +71,10 @@ export default function Portfolio() {
     ];
 
     return (
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 md:grid-cols-[260px_1fr] md:px-6">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 md:grid-cols-[260px_1fr] md:px-6">
             {/* Sidebar */}
             <aside className="top-28 h-fit md:sticky self-start">
-                <div className="rounded-3xl border border-white/10 bg-transparent p-5 backdrop-blur-xl">
+                <div className="rounded-3xl bg-transparent p-5 backdrop-blur-xl">
                     <p className="mb-5 text-xs uppercase tracking-[0.25em] text-zinc-500">
                         Portfolio
                     </p>
@@ -100,11 +100,11 @@ export default function Portfolio() {
             </aside>
 
             {/* Content */}
-            <div className="space-y-6">
+            <div className="space-y-10">
                 {/* Hero */}
                 <section
                     id="about"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28 flex flex-col gap-4">
+                    className="rounded-3xl backdrop-blur-xl bg-transparent p-8 flex flex-col gap-4">
                     <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
                         About
                     </p>
@@ -134,7 +134,7 @@ export default function Portfolio() {
                         ].map((item) => (
                             <div
                                 key={item}
-                                className="card rounded-2xl border border-white/10 bg-black/30 px-4 py-4 text-sm text-zinc-300">
+                                className="card rounded-2xl border border-white/10 px-4 py-4 text-sm text-zinc-300">
                                 &gt; {item}
                             </div>
                         ))}
@@ -148,9 +148,7 @@ export default function Portfolio() {
                     heading="Skills"
                     container="mt-6 grid gap-5 md:grid-cols-2">
                     {Object.entries(skills).map(([group, items]) => (
-                        <div
-                            key={group}
-                            className="group card rounded-2xl border border-white/10 bg-black/30 p-5">
+                        <div key={group} className="group card rounded-2xl p-5">
                             <h3 className="capitalize text-sm font-semibold text-zinc-300">
                                 {group}
                             </h3>

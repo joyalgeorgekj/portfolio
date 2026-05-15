@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="border-t border-white/10 backdrop-blur-xl bg-black">
+        <footer className="border-t border-white/10 backdrop-blur-xl">
             <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-4 md:px-6">
                 {/* Brand */}
                 <div>
@@ -74,11 +74,11 @@ export default function Footer() {
                 </div>
 
                 {/* CTA */}
-                <div>
+                <div className="flex flex-col gap-4">
                     <h4 className="text-sm font-semibold text-white">
                         Let’s Build
                     </h4>
-                    <p className="mt-4 text-sm text-zinc-400">
+                    <p className="text-sm text-zinc-400">
                         Have a project in mind? Let’s discuss and create
                         something impactful.
                     </p>

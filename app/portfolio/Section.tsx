@@ -19,7 +19,7 @@ export default function Section({
     return (
         <section
             id={id}
-            className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28">
+            className="rounded-3xl backdrop-blur-xl bg-transparent p-8 scroll-mt-28">
             <div className="flex items-center justify-between">
                 <h2 className="text-sm uppercase tracking-[0.2em] text-zinc-500">
                     {heading}

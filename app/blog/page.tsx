@@ -66,7 +66,7 @@ export default function BlogPage() {
     // ];
 
     return (
-        <section className="relative mx-auto max-w-7xl px-4 py-24 md:px-6">
+        <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
             {/* Hero */}
             <div className="max-w-3xl">
                 <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
@@ -88,7 +88,7 @@ export default function BlogPage() {
             </div>
 
             {/* Search + Filters
-        <div className="mt-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <input
             type="text"
             placeholder="Search articles..."
@@ -99,7 +99,7 @@ export default function BlogPage() {
             {categories.map((item) => (
               <button
                 key={item}
-                className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-400 transition hover:border-cyan-400/30 hover:text-white"
+                className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-400 transition hover:border-primary/30 hover:text-white"
               >
                 {item}
               </button>
@@ -108,20 +108,20 @@ export default function BlogPage() {
         </div> */}
 
             {/* Featured Post */}
-            <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl">
+            <section className="mt-10 rounded-3xl border border-white/10 bg-transparent p-8 backdrop-blur-xl grid gap-4">
                 <p className="text-sm uppercase tracking-[0.2em] text-primary">
                     Featured Article
                 </p>
 
-                <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
+                <h2 className="max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
                     {featuredPost.title}
                 </h2>
 
-                <p className="mt-5 max-w-2xl leading-7 text-zinc-400">
+                <p className="max-w-2xl leading-7 text-zinc-400">
                     {featuredPost.excerpt}
                 </p>
 
-                <div className="mt-6 flex flex-wrap gap-4 text-sm text-zinc-500">
+                <div className="flex flex-wrap gap-4 text-sm text-zinc-500">
                     <span>{featuredPost.category}</span>
                     <span>•</span>
                     <span>{featuredPost.readTime}</span>
@@ -141,8 +141,8 @@ export default function BlogPage() {
                 {posts.map((post) => (
                     <article
                         key={post.title}
-                        className="group rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-cyan-400/30">
-                        <div className="mb-5 h-12 w-12 rounded-2xl bg-linear-to-br from-cyan-400/20 to-violet-400/20" />
+                        className="group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/30">
+                        <div className="mb-5 h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20" />
 
                         <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">
                             {post.category}
@@ -168,7 +168,7 @@ export default function BlogPage() {
             </section>
 
             {/* Newsletter */}
-            <section className="mt-14 rounded-3xl border border-white/10 bg-linear-to-br from-white/5 to-white/2 p-8 md:p-10">
+            <section className="mt-14 rounded-3xl border border-white/10 bg-transparent backdrop-blur-xl p-8 md:p-10">
                 <div className="max-w-2xl">
                     <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
                         Newsletter

@@ -70,7 +70,7 @@ export default function Home() {
     return (
         <>
             {/* Hero */}
-            <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-28 md:grid-cols-2 md:px-6">
+            <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6">
                 {/* Left Content */}
                 <MouseTrack />
                 <div className="grid gap-4 *:w-fit">
