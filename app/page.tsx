@@ -8,7 +8,8 @@ import {
     StarsIcon,
     WrenchIcon,
 } from "lucide-react";
-import MouseTrack from "./MouseTrack";
+import { PROJECTS } from "@/data/projects";
+import ProjectCard from "./ProjectCard";
 
 export default function Home() {
     const stats = [
@@ -153,18 +154,9 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
-                                <p className="text-xs uppercase tracking-widest text-zinc-500">
-                                    Featured Project
-                                </p>
-                                <p className="mt-2 text-lg font-semibold text-white">
-                                    Senku.io
-                                </p>
-                                <p className="mt-1 text-sm text-zinc-400">
-                                    To index human technological progress as a
-                                    version-controlled, functional library.
-                                </p>
-                            </div>
+                            {
+                                PROJECTS.filter(val => val.featured).map(val => <ProjectCard project={val} key={val.title.replaceAll(" ", "").toLowerCase()} />)
+                            }
 
                             {/* Stats */}
                             <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
