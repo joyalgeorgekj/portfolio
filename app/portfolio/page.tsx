@@ -3,6 +3,17 @@ import Link from "next/link";
 import Section from "./Section";
 import type { Metadata } from "next";
 
+import { PROJECTS } from "@/data/projects";
+import { posts } from "@/data/posts";
+import { skills } from "@/data/skills";
+import { OPENSOURCE } from "@/data/oss";
+import ProjectCard from "../ProjectCard";
+import { EXPERIENCE } from "@/data/experience";
+import ExperienceCard from "./ExperienceCard";
+import { ACHIEVEMENTS } from "@/data/achievements";
+import { BLOGS } from "@/data/blog";
+import BlogCard from "./BlogCard";
+
 export const metadata: Metadata = {
     title: "Portfolio",
 };
@@ -15,59 +26,8 @@ export default function Portfolio() {
         { label: "Experience", id: "experience" },
         { label: "Open Source", id: "opensource" },
         { label: "Achievements", id: "achievements" },
-        { label: "Testimonials", id: "testimonials" },
         { label: "Blog", id: "blog" },
         { label: "Contact", id: "contact" },
-    ];
-
-    const skills = {
-        frontend: ["React", "Next.js", "TypeScript", "Redux", "JavaScript"],
-        styling: ["Tailwind CSS", "shadcn/ui", "Framer Motion", "GSAP"],
-        quality: ["Performance", "Accessibility", "SEO", "Responsive UI"],
-        tooling: ["Git", "Docker", "Appwrite", "Linux", "Vercel"],
-    };
-
-    const projects = [
-        {
-            title: "Markdown Input Display",
-            stack: ["React", "Redux", "TypeScript"],
-            desc: "Reusable markdown editor package with live preview and keyboard shortcuts.",
-            metric: "1000+ weekly npm users",
-        },
-        {
-            title: "PatchMyResume",
-            stack: ["React", "Redux", "Tailwind"],
-            desc: "ATS-friendly AI-assisted resume generation platform using Gemini AI.",
-            metric: "Beta product",
-        },
-        {
-            title: "Internal Operations Calculator",
-            stack: ["React", "Redux", "Tailwind"],
-            desc: "Internal tool reducing recurring calculation mistakes and manual effort.",
-            metric: "Used by staff",
-        },
-        {
-            title: "Senku.io",
-            stack: ["Next.js", "Appwrite"],
-            desc: "Open-source decentralized knowledge archive and dependency engine.",
-            metric: "Founder Project",
-        },
-    ];
-
-    const oss = [
-        "Appwrite",
-        "Docker Docs",
-        "Moby BuildKit",
-        "React Bits",
-        "Self.so",
-        "devFind",
-    ];
-
-    const posts = [
-        "Building scalable frontend systems",
-        "How to optimize React performance",
-        "Shipping products as a solo developer",
-        "Lessons from open source contributions",
     ];
 
     return (
@@ -155,11 +115,24 @@ export default function Portfolio() {
 
                             <div className="mt-4 flex flex-wrap gap-2">
                                 {items.map((item) => (
-                                    <span
-                                        key={item}
-                                        className="group-hover:border-cyan-400/30 rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer">
-                                        {item}
-                                    </span>
+                                    <div
+                                        key={item.title}
+                                        className="bg-white/5 p-4 rounded border border-white/10 flex justify-center items-center group-hover:border-primary/30 "
+                                        title={item.title}>
+                                        {item.icon ? (
+                                            <img
+                                                src={
+                                                    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
+                                                    item.icon
+                                                }
+                                                className="w-8 h-8 rounded"
+                                            />
+                                        ) : (
+                                            <span className="rounded-full border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer">
+                                                {item.title}
+                                            </span>
+                                        )}
+                                    </div>
                                 ))}
                             </div>
                         </div>
@@ -172,26 +145,13 @@ export default function Portfolio() {
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/projects/"
                     heading="Featured Projects"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {projects.map((project) => (
-                        <div
-                            key={project.title}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 flex flex-col gap-2 h-fit">
-                            <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                                {project.metric}
-                            </p>
-
-                            <h3 className="text-xl font-semibold">
-                                {project.title}
-                            </h3>
-
-                            <p className="text-sm text-zinc-500">
-                                {project.stack.join(", ")}
-                            </p>
-
-                            <p className="text-sm leading-6 text-zinc-400">
-                                {project.desc}
-                            </p>
-                        </div>
+                    {PROJECTS.map((project) => (
+                        <ProjectCard
+                            project={project}
+                            key={project.title
+                                .replaceAll(" ", "")
+                                .toLowerCase()}
+                        />
                     ))}
                 </Section>
 
@@ -200,17 +160,18 @@ export default function Portfolio() {
                     id="experience"
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/experience/"
                     heading="Experience">
-                    <div className="rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2">
-                        <p className="text-sm text-zinc-500">2023 — Present</p>
-                        <h3 className="ext-lg font-semibold">
-                            Freelance & Contract Frontend Developer
-                        </h3>
-                        <p className="text-sm leading-6 text-zinc-400">
-                            Built and maintained React / Next.js applications,
-                            integrated APIs, improved performance, and
-                            collaborated with product / backend teams on
-                            production releases.
-                        </p>
+                    <div className="relative">
+                        {/* Timeline Line */}
+                        <div className="absolute left-2.75 top-0 h-full w-px bg-white/10" />
+
+                        <div className="space-y-8">
+                            {EXPERIENCE.map((experience) => (
+                                <ExperienceCard
+                                    experience={experience}
+                                    key={experience.id}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </Section>
 
@@ -220,16 +181,42 @@ export default function Portfolio() {
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/volunteering-experiences/"
                     heading="Open Source Contributions"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {oss.map((repo) => (
+                    {OPENSOURCE.map((contribution) => (
                         <div
-                            key={repo}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5">
-                            <h3 className="font-medium">{repo}</h3>
-                            <p className="mt-2 text-sm text-zinc-400">
-                                Fixes, UI improvements, documentation, issue
-                                resolution.
+                            key={contribution.project}
+                            className="card rounded-2xl border border-white/10 p-5 flex flex-col gap-2">
+                            <div className="flex flex-wrap items-center gap-3">
+                                <h3 className="text-xl font-semibold">
+                                    {contribution.project}
+                                </h3>
+
+                                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-primary">
+                                    {contribution.type}
+                                </span>
+                            </div>
+                            <p className="text-sm text-zinc-500">
+                                {contribution.stack?.join(", ")}
+                            </p>
+                            <p className="text-sm leading-6 text-zinc-400">
+                                {contribution.description}
                             </p>
                         </div>
+                        // <div
+                        //     key={contribution.id}
+                        //     className="card rounded-2xl border border-white/10 p-5">
+                        //     <div className="flex flex-wrap items-center gap-3">
+                        //         <h3 className="text-xl font-semibold">
+                        //             {contribution.project}
+                        //         </h3>
+
+                        //         <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-primary">
+                        //             {contribution.type}
+                        //         </span>
+                        //     </div>
+                        //     <p className="mt-2 text-sm text-zinc-400">
+                        //         {contribution.description}
+                        //     </p>
+                        // </div>
                     ))}
                 </Section>
 
@@ -238,37 +225,35 @@ export default function Portfolio() {
                     id="achievements"
                     linkNeeded={false}
                     heading="Achievements"
-                    container="mt-6 grid gap-5 md:grid-cols-2">
-                    {[
-                        "Hacktoberfest 2025 Super Contributor",
-                        "Winner - Web Designing Competition",
-                        "Built 5+ real-world applications",
-                        "1000+ weekly active npm users",
-                    ].map((item) => (
+                    container="mt-6 grid gap-5 md:grid-cols-1">
+                    {ACHIEVEMENTS.map((item) => (
                         <div
-                            key={item}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 text-zinc-300">
-                            {item}
-                        </div>
-                    ))}
-                </Section>
+                            key={item.id}
+                            className="card rounded-2xl border border-white/10 p-5 flex flex-col gap-2">
+                            {/* Left */}
+                            <div className="max-w-2xl flex flex-col gap-2">
+                                {item.organization && (
+                                    <p className="text-sm text-zinc-500 uppercase">
+                                        {item.organization}
+                                    </p>
+                                )}
 
-                {/* Testimonials */}
-                <Section
-                    id="testimonials"
-                    linkNeeded={false}
-                    heading="Testimonials">
-                    {[
-                        "Reliable developer who delivers polished UI quickly.",
-                        "Strong ownership and problem-solving mindset.",
-                    ].map((quote) => (
-                        <div
-                            key={quote}
-                            className="card rounded-2xl border border-white/10 bg-black/30 p-5 grid gap-2">
-                            <p className="leading-7 text-zinc-300">“{quote}”</p>
-                            <p className="text-sm text-zinc-500">
-                                — Client / Collaborator
-                            </p>
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <h3 className="text-lg font-semibold">
+                                        {item.title}
+                                    </h3>
+
+                                    <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-primary">
+                                        {item.type}
+                                    </span>
+                                </div>
+
+                                {item.description && (
+                                    <p className="leading-7 text-zinc-400">
+                                        {item.description}
+                                    </p>
+                                )}
+                            </div>
                         </div>
                     ))}
                 </Section>
@@ -279,12 +264,8 @@ export default function Portfolio() {
                     heading="Latest Writing"
                     id="blog"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {posts.map((post) => (
-                        <div
-                            key={post}
-                            className="card rounded-2xl border border-white/10 bg-black/30 px-5 py-4 text-zinc-300">
-                            {post}
-                        </div>
+                    {BLOGS.map((blog) => (
+                        <BlogCard key={blog.id} post={blog} />
                     ))}
                 </Section>
 
