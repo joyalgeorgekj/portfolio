@@ -130,6 +130,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <link
+                    rel="stylesheet"
+                    type="text/css"
+                    href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+                />
+            </head>
             <body className={`antialiased w-[99dvw]`}>
                 <Header />
                 <main className="relative w-full text-white">
