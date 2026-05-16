@@ -1,4 +1,4 @@
-import { Experience } from "@/types/experience";
+import { Experience } from "@/types/experience.type";
 import Link from "next/link";
 
 export default function ExperienceCard({

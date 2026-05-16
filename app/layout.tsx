@@ -1,7 +1,7 @@
-import MouseTrack from "./MouseTrack";
+import MouseTrack from "../components/ui/MouseTrack";
 import type { Metadata } from "next";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import "./globals.css";
 
 const baseUrl = process.env.HOSTED_URL

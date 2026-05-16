@@ -8,8 +8,8 @@ import {
     StarsIcon,
     WrenchIcon,
 } from "lucide-react";
-import { PROJECTS } from "@/data/projects";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../components/cards/ProjectCard";
+import { PROJECTS } from "@/content/projects/projects";
 
 export default function Home() {
     const stats = [

@@ -1,18 +1,17 @@
 // app/portfolio/page.tsx
 import Link from "next/link";
-import Section from "./Section";
+import Section from "../../components/layout/Section";
 import type { Metadata } from "next";
+import { SKILLS } from "@/content/skills/skills";
+import { PROJECTS } from "@/content/projects/projects";
+import ProjectCard from "@/components/cards/ProjectCard";
+import { EXPERIENCE } from "@/content/experience/experience";
+import ExperienceCard from "@/components/cards/ExperienceCard";
+import { OPENSOURCE } from "@/content/oss/oss";
+import { ACHIEVEMENTS } from "@/content/achievements/achievements";
+import { BLOGS } from "@/content/blog/blog";
+import BlogCard from "@/components/cards/BlogCard";
 
-import { PROJECTS } from "@/data/projects";
-import { posts } from "@/data/posts";
-import { skills } from "@/data/skills";
-import { OPENSOURCE } from "@/data/oss";
-import ProjectCard from "../ProjectCard";
-import { EXPERIENCE } from "@/data/experience";
-import ExperienceCard from "./ExperienceCard";
-import { ACHIEVEMENTS } from "@/data/achievements";
-import { BLOGS } from "@/data/blog";
-import BlogCard from "./BlogCard";
 
 export const metadata: Metadata = {
     title: "Portfolio",
@@ -107,7 +106,7 @@ export default function Portfolio() {
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/skills/"
                     heading="Skills"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {Object.entries(skills).map(([group, items]) => (
+                    {Object.entries(SKILLS).map(([group, items]) => (
                         <div key={group} className="group card rounded-2xl p-5">
                             <h3 className="capitalize text-sm font-semibold text-zinc-300">
                                 {group}
@@ -201,22 +200,6 @@ export default function Portfolio() {
                                 {contribution.description}
                             </p>
                         </div>
-                        // <div
-                        //     key={contribution.id}
-                        //     className="card rounded-2xl border border-white/10 p-5">
-                        //     <div className="flex flex-wrap items-center gap-3">
-                        //         <h3 className="text-xl font-semibold">
-                        //             {contribution.project}
-                        //         </h3>
-
-                        //         <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-primary">
-                        //             {contribution.type}
-                        //         </span>
-                        //     </div>
-                        //     <p className="mt-2 text-sm text-zinc-400">
-                        //         {contribution.description}
-                        //     </p>
-                        // </div>
                     ))}
                 </Section>
 

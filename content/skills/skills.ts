@@ -1,4 +1,4 @@
-export const skills = {
+export const SKILLS = {
     frontend: [
         {
             title: "React",
