@@ -147,6 +147,9 @@ export default function RootLayout({
                         <div className="absolute bottom-10 left-1/3 h-64 w-64 rounded-full bg-blue-900/30 blur-3xl" />
                     </div>
 
+                    {/* Background Image */}
+                    <div className="effects fixed w-full h-screen top-0 left-0 pointer-events-none"></div>
+
                     {/* Mouse Tracer */}
                     <MouseTrack />
 
