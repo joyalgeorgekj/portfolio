@@ -77,9 +77,7 @@ export default function Lab() {
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
-                    <Link
-                        href="/portfolio"
-                        className="btn btn-common">
+                    <Link href="/portfolio" className="btn btn-common">
                         Back to Portfolio
                     </Link>
 
@@ -266,9 +264,7 @@ export default function Lab() {
                             Start Exploring
                         </button>
 
-                        <Link
-                            href="/portfolio"
-                            className="btn btn-common">
+                        <Link href="/portfolio" className="btn btn-common">
                             Portfolio
                         </Link>
                     </div>

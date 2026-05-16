@@ -75,7 +75,8 @@ export default function Home() {
                 {/* Left Content */}
                 <div className="grid gap-4 *:w-fit">
                     <p className="inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-sm text-primary">
-                        <span className="animate-pulse bg-primary w-2 h-2 rounded-full"></span> Available for Frontend Opportunities
+                        <span className="animate-pulse bg-primary w-2 h-2 rounded-full"></span>{" "}
+                        Available for Frontend Opportunities
                     </p>
 
                     <h1 className="text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
@@ -93,9 +94,7 @@ export default function Home() {
 
                     {/* CTA */}
                     <div className="flex flex-wrap gap-4">
-                        <Link
-                            href="/portfolio"
-                            className="btn btn-primary">
+                        <Link href="/portfolio" className="btn btn-primary">
                             Explore Portfolio
                         </Link>
 
@@ -154,9 +153,16 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            {
-                                PROJECTS.filter(val => val.featured).map(val => <ProjectCard project={val} key={val.title.replaceAll(" ", "").toLowerCase()} />)
-                            }
+                            {PROJECTS.filter((val) => val.featured).map(
+                                (val) => (
+                                    <ProjectCard
+                                        project={val}
+                                        key={val.title
+                                            .replaceAll(" ", "")
+                                            .toLowerCase()}
+                                    />
+                                )
+                            )}
 
                             {/* Stats */}
                             <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">

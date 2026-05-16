@@ -11,7 +11,7 @@ import { OPENSOURCE } from "@/content/oss/oss";
 import { ACHIEVEMENTS } from "@/content/achievements/achievements";
 import { BLOGS } from "@/content/blog/blog";
 import BlogCard from "@/components/cards/BlogCard";
-
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Portfolio",
@@ -119,7 +119,10 @@ export default function Portfolio() {
                                         className="bg-white/5 p-4 rounded border border-white/10 flex justify-center items-center group-hover:border-primary/30 "
                                         title={item.title}>
                                         {item.icon ? (
-                                            <img
+                                            <Image
+                                                width={32}
+                                                height={32}
+                                                alt={item.title}
                                                 src={
                                                     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
                                                     item.icon

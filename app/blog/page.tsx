@@ -190,9 +190,7 @@ export default function BlogPage() {
                             className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-white outline-none placeholder:text-zinc-500"
                         />
 
-                        <button className="btn btn-primary">
-                            Subscribe
-                        </button>
+                        <button className="btn btn-primary">Subscribe</button>
                     </div>
                 </div>
             </section>
