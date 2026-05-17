@@ -3,28 +3,50 @@ import Link from "next/link";
 
 interface Props {
     post: Blog;
+    body?: string;
 }
 
-export default function BlogCard({ post }: Props) {
+export default function BlogCard({ post, body }: Props) {
     return (
-        <article className="group card rounded-2xl border border-white/10 p-5 flex flex-col gap-2">
-            <Link href={`/blog/${post.id}`} className="block">
-                <div className="flex items-center gap-3 text-sm text-zinc-500">
-                    {[post.category, post.readingTime, post.publishedAt].map(
-                        (val, ind) => (
-                            <span key={ind}>{val}</span>
-                        )
-                    )}
-                </div>
+        <article
+            key={post.title}
+            className="group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/30 flex flex-col gap-4">
+            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20" />
 
-                <h3 className="mt-4 text-2xl font-semibold leading-tight transition group-hover:text-primary">
-                    {post.title}
-                </h3>
+            <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">
+                {post.category}
+            </p>
 
-                <p className="mt-4 max-w-2xl leading-7 text-zinc-400">
-                    {post.description}
+            <h3 className="text-2xl font-semibold leading-tight transition group-hover:text-primary">
+                {post.title}
+            </h3>
+
+            {body ? (
+                <div
+                    className="markdown-body"
+                    dangerouslySetInnerHTML={{
+                        __html: body,
+                    }}
+                />
+            ) : (
+                <p className="max-w-2xl leading-7 text-zinc-400">
+                    {post.prevDescription}
                 </p>
-            </Link>
+            )}
+
+            <div className="flex items-center gap-3 text-sm text-zinc-500">
+                <span>{post.readingTime}</span>
+                <span>•</span>
+                <span>{post.publishedAt}</span>
+            </div>
+
+            {!body && (
+                <Link
+                    href={"blog/" + post.id}
+                    className="inline-flex text-sm text-primary transition group-hover:translate-x-1">
+                    Read More →
+                </Link>
+            )}
         </article>
     );
 }
