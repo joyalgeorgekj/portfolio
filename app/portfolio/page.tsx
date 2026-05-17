@@ -7,7 +7,7 @@ import { PROJECTS } from "@/content/projects/projects";
 import ProjectCard from "@/components/cards/ProjectCard";
 import { EXPERIENCE } from "@/content/experience/experience";
 import ExperienceCard from "@/components/cards/ExperienceCard";
-import { OPENSOURCE } from "@/content/oss/oss";
+import { OPENSOURCE } from "@/content/opensource/opensource";
 import { ACHIEVEMENTS } from "@/content/achievements/achievements";
 import { BLOGS } from "@/content/blog/blog";
 import BlogCard from "@/components/cards/BlogCard";
@@ -106,7 +106,7 @@ export default function Portfolio() {
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/skills/"
                     heading="Skills"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {Object.entries(SKILLS).map(([group, items]) => (
+                    {Object.entries(SKILLS).slice(1).map(([group, items]) => (
                         <div key={group} className="group card rounded-2xl p-5">
                             <h3 className="capitalize text-sm font-semibold text-zinc-300">
                                 {group}
