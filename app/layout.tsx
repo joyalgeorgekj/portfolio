@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import "./globals.css";
+import "./cursor.css";
 
 const baseUrl = process.env.HOSTED_URL
     ? `https://${process.env.HOSTED_URL}`
@@ -14,26 +15,19 @@ export const metadata: Metadata = {
         default: "Joyal George K J - JavaScript / TypeScript Developer",
         template: "%s | Joyal George K J",
     },
-
     description:
         "JavaScript / TypeScript Developer specializing in React.js, Next.js, scalable web applications, frontend architecture, UI engineering, and performance optimization.",
-
     applicationName: "Joyal George K J Portfolio",
-
     referrer: "origin-when-cross-origin",
-
     authors: [
         {
             name: "Joyal George K J",
             url: "https://www.joyalgeorgekj.com",
         },
     ],
-
     creator: "Joyal George K J",
     publisher: "Joyal George K J",
-
     category: "Technology",
-
     keywords: [
         "Joyal",
         "Joyal George",
@@ -60,18 +54,14 @@ export const metadata: Metadata = {
         "Software Engineer",
         "Freelance Frontend Developer",
     ],
-
     openGraph: {
         type: "website",
         locale: "en_US",
         url: "https://www.joyalgeorgekj.com",
         siteName: "Joyal George K J Portfolio",
-
         title: "Joyal George K J - Javascript/Typescript Developer",
-
         description:
             "JavaScript / TypeScript Developer building scalable and performant web applications using React.js and Next.js.",
-
         images: [
             {
                 url: "/og-image.png",
@@ -81,24 +71,18 @@ export const metadata: Metadata = {
             },
         ],
     },
-
     twitter: {
         card: "summary_large_image",
-
         title: "Joyal George K J - JavaScript / TypeScript Developer",
-
         description:
             "JavaScript / TypeScript Developer building scalable and performant web applications using React.js and Next.js.",
         creator: "@joyalgeorgekj",
-
         images: ["/og-image.png"],
     },
-
     robots: {
         index: true,
         follow: true,
         nocache: false,
-
         googleBot: {
             index: true,
             follow: true,
@@ -107,17 +91,14 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
-
     alternates: {
         canonical: "https://www.joyalgeorgekj.com",
     },
-
     icons: {
         icon: "/favicon.ico",
         shortcut: "/favicon.ico",
         apple: "/favicon.png",
     },
-
     verification: {
         google: "google-site-verification-code",
     },
