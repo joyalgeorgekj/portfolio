@@ -1,6 +1,8 @@
 // app/blog/page.tsx
 import Link from "next/link";
 import type { Metadata } from "next";
+import BlogCard from "@/components/cards/BlogCard";
+import { Blog } from "@/types/blog.type";
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -16,42 +18,60 @@ export default function BlogPage() {
         date: "Jan 2026",
     };
 
-    const posts = [
+    const posts: Blog[] = [
         {
             title: "Optimizing React Performance Without Premature Complexity",
             category: "Performance",
-            readTime: "6 min read",
-            date: "Jan 2026",
+            readingTime: "6 min read",
+            publishedAt: "Jan 2026",
+            prevDescription: "",
+            id: "something",
+            slug: ""
         },
         {
             title: "What Freelance Work Taught Me About Product Thinking",
             category: "Career",
-            readTime: "5 min read",
-            date: "Dec 2025",
+            readingTime: "5 min read",
+            publishedAt: "Dec 2025",
+            prevDescription: "",
+            id: "something",
+            slug: ""
         },
         {
             title: "How I Built an Internal Tool That Solved Real Problems",
             category: "Case Study",
-            readTime: "7 min read",
-            date: "Dec 2025",
+            readingTime: "7 min read",
+            publishedAt: "Dec 2025",
+            prevDescription: "",
+            id: "something",
+            slug: ""
         },
         {
             title: "Open Source Contributions as a Growth Strategy",
             category: "Open Source",
-            readTime: "5 min read",
-            date: "Nov 2025",
+            readingTime: "5 min read",
+            publishedAt: "Nov 2025",
+            prevDescription: "",
+            id: "something",
+            slug: ""
         },
         {
             title: "Designing Better UI Systems With Components",
-            category: "UI Engineering",
-            readTime: "9 min read",
-            date: "Nov 2025",
+            category: "Architecture",
+            readingTime: "9 min read",
+            publishedAt: "Nov 2025",
+            prevDescription: "",
+            id: "something",
+            slug: ""
         },
         {
             title: "Why Tailwind + Next.js Is Still a Strong Stack",
-            category: "Stack",
-            readTime: "4 min read",
-            date: "Oct 2025",
+            category: "Frontend",
+            readingTime: "4 min read",
+            publishedAt: "Oct 2025",
+            prevDescription: "",
+            id: "something",
+            slug: ""
         },
     ];
 
@@ -108,7 +128,7 @@ export default function BlogPage() {
         </div> */}
 
             {/* Featured Post */}
-            <section className="mt-10 rounded-3xl border border-white/10 bg-transparent p-8 backdrop-blur-xl grid gap-4">
+            <section className="card mt-10 rounded-3xl border border-white/10 bg-transparent p-8 backdrop-blur-xl grid gap-4">
                 <p className="text-sm uppercase tracking-[0.2em] text-primary">
                     Featured Article
                 </p>
@@ -138,32 +158,7 @@ export default function BlogPage() {
 
             {/* Posts Grid */}
             <section className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {posts.map((post) => (
-                    <article
-                        key={post.title}
-                        className="group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/30">
-                        <div className="mb-5 h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20" />
-
-                        <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">
-                            {post.category}
-                        </p>
-
-                        <h3 className="mt-3 text-xl font-semibold leading-snug">
-                            {post.title}
-                        </h3>
-
-                        <div className="mt-5 flex items-center gap-3 text-sm text-zinc-500">
-                            <span>{post.readTime}</span>
-                            <span>•</span>
-                            <span>{post.date}</span>
-                        </div>
-
-                        <Link
-                            href="#"
-                            className="mt-6 inline-flex text-sm text-primary transition group-hover:translate-x-1">
-                            Read More →
-                        </Link>
-                    </article>
+                {posts.map((post, ind) => (<BlogCard post={post} key={ind} />
                 ))}
             </section>
 
