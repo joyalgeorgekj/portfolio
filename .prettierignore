@@ -3,3 +3,7 @@
 
 # Except the app folder
 !/app
+!/components
+!/content
+!/lib
+!/types
