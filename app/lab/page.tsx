@@ -57,6 +57,29 @@ export default function Lab() {
 
     return (
         <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6 flex flex-col gap-10">
+            {/* Under Development */}
+            <div className="w-full h-screen fixed top-0 left-0 z-10 flex flex-col justify-center items-center gap-2 bg-black/80 *:bg-black *:p-2">
+                <h4 className="text-xl uppercase tracking-[0.2em] text-white font-bold">Under Development</h4>
+                <p>
+                    Sorry for the Inconvineance, Meanwhile explore other
+                    sections in the Portfolio.
+                </p>
+                {/* <nav className="hidden items-center gap-8 md:flex mt-2">
+                    {[
+                        { label: "Home", href: "/" },
+                        { label: "Portfolio", href: "/portfolio" },
+                        { label: "Blog", href: "/blog" },
+                    ].map((item) => (
+                        <Link
+                            key={item.label}
+                            href={item.href}
+                            className="btn btn-common">
+                            {item.label}
+                        </Link>
+                    ))}
+                </nav> */}
+            </div>
+
             {/* Hero */}
             <div className="max-w-3xl">
                 <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
