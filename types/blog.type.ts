@@ -1,7 +1,7 @@
 export interface Blog {
   id: string;
   title: string;
-  description: string;
+  prevDescription: string;
   category:
     | "Frontend"
     | "Performance"
