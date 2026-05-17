@@ -10,10 +10,13 @@ import {
 } from "lucide-react";
 import ProjectCard from "../components/cards/ProjectCard";
 import { PROJECTS } from "@/content/projects/projects";
+import { SKILLS } from "@/content/skills/skills";
+import { Skill } from "@/types/skill.type";
+import SkillCard from "@/components/cards/SkillCard";
 
 export default function Home() {
     const stats = [
-        "3+ Years Experience",
+        ((new Date()).getFullYear() - (new Date("2023")).getFullYear()) + "+ Years Experience",
         "1000+ Weekly npm Users",
         "Open Source Contributor",
         "Production React Apps",
@@ -105,8 +108,8 @@ export default function Home() {
                 </div>
 
                 {/* Right Visual */}
-                <div className="relative">
-                    <div className="group card rounded-3xl border border-white/10  p-5 backdrop-blur-xl shadow-2xl">
+                <div className="relative custom-cursor">
+                    <div className="card rounded-3xl border border-white/10  p-5 backdrop-blur-xl shadow-2xl">
                         {/* Fake Browser Top */}
                         <div className="mb-5 flex items-center gap-2">
                             <span className="group-hover:animate-pulse h-3 w-3 rounded-full bg-red-400" />
@@ -120,9 +123,9 @@ export default function Home() {
                                 <p className="text-xs uppercase tracking-widest text-zinc-500">
                                     Current Stack
                                 </p>
-                                <p className="mt-2 text-sm text-zinc-200">
-                                    {stack.join(", ")}
-                                </p>
+                                <div className="mt-2 flex justify-between text-sm text-zinc-200">
+                                    {stack.map(skill => <SkillCard skill={skill} key={skill.title} />)}
+                                </div>
                             </div>
 
                             <div className="grid gap-4 md:grid-cols-2">
@@ -170,7 +173,7 @@ export default function Home() {
                     </div>
 
                     {/* Glow Ring */}
-                    <div className="absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl" />
+                    <div className="absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
                 </div>
             </section>
 
