@@ -1,4 +1,37 @@
-export const SKILLS = {
+import { SkillCategory } from "@/types/skill.type";
+
+
+export const SKILLS: SkillCategory = {
+    core: [
+        {
+            title: "React",
+            icon: "react/react-original.svg"
+        },
+        {
+            title: "Next.js",
+            icon: "nextjs/nextjs-original.svg"
+        },
+        {
+            title: "TypeScript",
+            icon: "typescript/typescript-original.svg"
+        },
+        {
+            title: "JavaScript",
+            icon: "javascript/javascript-original.svg"
+        },
+        {
+            title: "Tailwind CSS",
+            icon: "tailwindcss/tailwindcss-original.svg"
+        },
+        {
+            title: "Git",
+            icon: "git/git-original.svg"
+        },
+        {
+            title: "Docker",
+            icon: "docker/docker-original.svg"
+        },
+    ],
     frontend: [
         {
             title: "React",

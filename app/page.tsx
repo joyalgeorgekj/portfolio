@@ -19,15 +19,7 @@ export default function Home() {
         "Production React Apps",
     ];
 
-    const stack = [
-        "Typescript",
-        "Javascript",
-        "React.js",
-        "Next.js",
-        "Node.js",
-        "Express.js",
-        "Tailwind CSS",
-    ];
+    const stack: Skill[] = SKILLS.core;
 
     const highlights = [
         {
