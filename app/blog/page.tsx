@@ -26,7 +26,7 @@ export default function BlogPage() {
             publishedAt: "Jan 2026",
             prevDescription: "",
             id: "something",
-            slug: ""
+            slug: "",
         },
         {
             title: "What Freelance Work Taught Me About Product Thinking",
@@ -35,7 +35,7 @@ export default function BlogPage() {
             publishedAt: "Dec 2025",
             prevDescription: "",
             id: "something",
-            slug: ""
+            slug: "",
         },
         {
             title: "How I Built an Internal Tool That Solved Real Problems",
@@ -44,7 +44,7 @@ export default function BlogPage() {
             publishedAt: "Dec 2025",
             prevDescription: "",
             id: "something",
-            slug: ""
+            slug: "",
         },
         {
             title: "Open Source Contributions as a Growth Strategy",
@@ -53,7 +53,7 @@ export default function BlogPage() {
             publishedAt: "Nov 2025",
             prevDescription: "",
             id: "something",
-            slug: ""
+            slug: "",
         },
         {
             title: "Designing Better UI Systems With Components",
@@ -62,7 +62,7 @@ export default function BlogPage() {
             publishedAt: "Nov 2025",
             prevDescription: "",
             id: "something",
-            slug: ""
+            slug: "",
         },
         {
             title: "Why Tailwind + Next.js Is Still a Strong Stack",
@@ -71,7 +71,7 @@ export default function BlogPage() {
             publishedAt: "Oct 2025",
             prevDescription: "",
             id: "something",
-            slug: ""
+            slug: "",
         },
     ];
 
@@ -158,7 +158,8 @@ export default function BlogPage() {
 
             {/* Posts Grid */}
             <section className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                {posts.map((post, ind) => (<BlogCard post={post} key={ind} />
+                {posts.map((post, ind) => (
+                    <BlogCard post={post} key={ind} />
                 ))}
             </section>
 

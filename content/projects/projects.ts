@@ -3,13 +3,8 @@ import { Project } from "@/types/projects.type";
 export const PROJECTS: Project[] = [
     {
         title: "Markdown Input Display",
-        desc:
-        "Reusable markdown editor component with live preview, keyboard shortcuts and no external dependency.",
-        stack: [
-        "React",
-        "Redux",
-        "TypeScript",
-        ],
+        desc: "Reusable markdown editor component with live preview, keyboard shortcuts and no external dependency.",
+        stack: ["React", "Redux", "TypeScript"],
         url: "https://github.com/joyalgeorgekj/project",
         metric: "1500+ Downloads",
     },
@@ -33,6 +28,6 @@ export const PROJECTS: Project[] = [
         desc: "Open-source decentralized knowledge archive and dependency engine.",
         metric: "Founder Project",
         url: "https://github.com/joyalgeorgekj/project",
-        featured: true
-    }
+        featured: true,
+    },
 ];

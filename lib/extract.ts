@@ -5,7 +5,9 @@ import { render } from "./render";
 
 export function extractor(path: string) {
     console.log("Path: ", path);
-    
-    const md = readFileSync(join(cwd(), "content/markdown/", path), {encoding: 'utf-8'});
-    return render(md); 
+
+    const md = readFileSync(join(cwd(), "content/markdown/", path), {
+        encoding: "utf-8",
+    });
+    return render(md);
 }

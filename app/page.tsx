@@ -16,7 +16,9 @@ import SkillCard from "@/components/cards/SkillCard";
 
 export default function Home() {
     const stats = [
-        ((new Date()).getFullYear() - (new Date("2023")).getFullYear()) + "+ Years Experience",
+        new Date().getFullYear() -
+            new Date("2023").getFullYear() +
+            "+ Years Experience",
         "1000+ Weekly npm Users",
         "Open Source Contributor",
         "Production React Apps",
@@ -124,7 +126,12 @@ export default function Home() {
                                     Current Stack
                                 </p>
                                 <div className="mt-2 flex justify-between text-sm text-zinc-200">
-                                    {stack.map(skill => <SkillCard skill={skill} key={skill.title} />)}
+                                    {stack.map((skill) => (
+                                        <SkillCard
+                                            skill={skill}
+                                            key={skill.title}
+                                        />
+                                    ))}
                                 </div>
                             </div>
 

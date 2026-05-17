@@ -94,7 +94,10 @@ export default function Footer() {
             {/* Bottom Bar */}
             <div className="border-t border-white/10">
                 <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-5 text-xs text-zinc-500 md:flex-row md:items-center md:justify-between md:px-6">
-                    <p>© {(new Date()).getFullYear()} Joyal George K J. All rights reserved.</p>
+                    <p>
+                        © {new Date().getFullYear()} Joyal George K J. All
+                        rights reserved.
+                    </p>
                     <p>Built with Next.js · Tailwind CSS v4</p>
                 </div>
             </div>

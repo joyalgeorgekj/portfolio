@@ -22,6 +22,6 @@ export const ACHIEVEMENTS: Achievement[] = [
         title: "Winner — Web Designing Competition",
         organization: "Tecza Inter-University Fest",
         type: "Competition",
-        description: ""
+        description: "",
     },
 ];

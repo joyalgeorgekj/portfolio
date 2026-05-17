@@ -59,7 +59,9 @@ export default function Lab() {
         <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6 flex flex-col gap-10">
             {/* Under Development */}
             <div className="w-full h-screen fixed top-0 left-0 z-10 flex flex-col justify-center items-center gap-2 bg-black/80 *:bg-black *:p-2">
-                <h4 className="text-xl uppercase tracking-[0.2em] text-white font-bold">Under Development</h4>
+                <h4 className="text-xl uppercase tracking-[0.2em] text-white font-bold">
+                    Under Development
+                </h4>
                 <p>
                     Sorry for the Inconvineance, Meanwhile explore other
                     sections in the Portfolio.

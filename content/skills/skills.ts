@@ -1,114 +1,114 @@
 import { SkillCategory } from "@/types/skill.type";
 
-
 export const SKILLS: SkillCategory = {
     core: [
         {
             title: "React",
-            icon: "react/react-original.svg"
+            icon: "react/react-original.svg",
         },
         {
             title: "Next.js",
-            icon: "nextjs/nextjs-original.svg"
+            icon: "nextjs/nextjs-original.svg",
         },
         {
             title: "TypeScript",
-            icon: "typescript/typescript-original.svg"
+            icon: "typescript/typescript-original.svg",
         },
         {
             title: "JavaScript",
-            icon: "javascript/javascript-original.svg"
+            icon: "javascript/javascript-original.svg",
         },
         {
             title: "Tailwind CSS",
-            icon: "tailwindcss/tailwindcss-original.svg"
+            icon: "tailwindcss/tailwindcss-original.svg",
         },
         {
             title: "Git",
-            icon: "git/git-original.svg"
+            icon: "git/git-original.svg",
         },
         {
             title: "Docker",
-            icon: "docker/docker-original.svg"
+            icon: "docker/docker-original.svg",
         },
     ],
     frontend: [
         {
             title: "React",
-            icon: "react/react-original.svg"
+            icon: "react/react-original.svg",
         },
         {
             title: "Next.js",
-            icon: "nextjs/nextjs-original.svg"
+            icon: "nextjs/nextjs-original.svg",
         },
         {
             title: "TypeScript",
-            icon: "typescript/typescript-original.svg"
+            icon: "typescript/typescript-original.svg",
         },
         {
             title: "Redux",
-            icon: "redux/redux-original.svg"
+            icon: "redux/redux-original.svg",
         },
         {
             title: "JavaScript",
-            icon: "javascript/javascript-original.svg"
-        }
+            icon: "javascript/javascript-original.svg",
+        },
     ],
     styling: [
         {
             title: "Tailwind CSS",
-            icon: "tailwindcss/tailwindcss-original.svg"
+            icon: "tailwindcss/tailwindcss-original.svg",
         },
         {
             title: "shadcn/ui",
-            icon: ""
+            icon: "",
         },
         {
             title: "Framer Motion",
-            icon: "framermotion/framermotion-original.svg"
+            icon: "framermotion/framermotion-original.svg",
         },
         {
             title: "GSAP",
-            icon: ""
-        }
+            icon: "",
+        },
     ],
     quality: [
         {
             title: "Performance",
-            icon: ""
+            icon: "",
         },
         {
             title: "Accessibility",
-            icon: ""
+            icon: "",
         },
         {
             title: "SEO",
-            icon: ""
+            icon: "",
         },
         {
             title: "Responsive UI",
-            icon: ""
-        }
+            icon: "",
+        },
     ],
     tooling: [
         {
             title: "Git",
-            icon: "git/git-original.svg"
+            icon: "git/git-original.svg",
         },
         {
             title: "Docker",
-            icon: "docker/docker-original.svg"
+            icon: "docker/docker-original.svg",
         },
         {
             title: "Appwrite",
-            icon: "appwrite/appwrite-original.svg"
+            icon: "appwrite/appwrite-original.svg",
         },
         {
             title: "Linux",
-            icon: "linux/linux-original.svg"
+            icon: "linux/linux-original.svg",
         },
         {
             title: "Vercel",
-            icon: "vercel/vercel-original.svg"
-        }]
-    };
+            icon: "vercel/vercel-original.svg",
+        },
+    ],
+};

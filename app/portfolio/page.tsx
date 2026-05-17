@@ -106,39 +106,43 @@ export default function Portfolio() {
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/skills/"
                     heading="Skills"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {Object.entries(SKILLS).slice(1).map(([group, items]) => (
-                        <div key={group} className="group card rounded-2xl p-5">
-                            <h3 className="capitalize text-sm font-semibold text-zinc-300">
-                                {group}
-                            </h3>
+                    {Object.entries(SKILLS)
+                        .slice(1)
+                        .map(([group, items]) => (
+                            <div
+                                key={group}
+                                className="group card rounded-2xl p-5">
+                                <h3 className="capitalize text-sm font-semibold text-zinc-300">
+                                    {group}
+                                </h3>
 
-                            <div className="mt-4 flex flex-wrap gap-2">
-                                {items.map((item) => (
-                                    <div
-                                        key={item.title}
-                                        className="bg-white/5 p-4 rounded border border-white/10 flex justify-center items-center group-hover:border-primary/30 "
-                                        title={item.title}>
-                                        {item.icon ? (
-                                            <Image
-                                                width={32}
-                                                height={32}
-                                                alt={item.title}
-                                                src={
-                                                    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
-                                                    item.icon
-                                                }
-                                                className="w-8 h-8 rounded"
-                                            />
-                                        ) : (
-                                            <span className="rounded-full border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer">
-                                                {item.title}
-                                            </span>
-                                        )}
-                                    </div>
-                                ))}
+                                <div className="mt-4 flex flex-wrap gap-2">
+                                    {items.map((item) => (
+                                        <div
+                                            key={item.title}
+                                            className="bg-white/5 p-4 rounded border border-white/10 flex justify-center items-center group-hover:border-primary/30 "
+                                            title={item.title}>
+                                            {item.icon ? (
+                                                <Image
+                                                    width={32}
+                                                    height={32}
+                                                    alt={item.title}
+                                                    src={
+                                                        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
+                                                        item.icon
+                                                    }
+                                                    className="w-8 h-8 rounded"
+                                                />
+                                            ) : (
+                                                <span className="rounded-full border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer">
+                                                    {item.title}
+                                                </span>
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
                 </Section>
 
                 {/* Projects */}
