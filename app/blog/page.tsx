@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-    const featuredPost: Blog = BLOGS.filter(val => val.featured)[0];
+    const featuredPost: Blog = BLOGS.filter((val) => val.featured)[0];
 
-    const posts: Blog[] = BLOGS.filter(val => !val.featured);
+    const posts: Blog[] = BLOGS.filter((val) => !val.featured);
 
     // const categories = [
     //   "All",

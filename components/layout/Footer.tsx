@@ -36,10 +36,14 @@ export default function Footer() {
                             className="block hover:text-typography">
                             Experience
                         </Link>
-                        <Link href="/blog" className="block hover:text-typography">
+                        <Link
+                            href="/blog"
+                            className="block hover:text-typography">
                             Blog
                         </Link>
-                        <Link href="/lab" className="block hover:text-typography">
+                        <Link
+                            href="/lab"
+                            className="block hover:text-typography">
                             Lab
                         </Link>
                     </div>

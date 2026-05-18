@@ -1,4 +1,7 @@
-import { personStructuredData, websiteStructuredData } from "@/lib/structured-data";
+import {
+    personStructuredData,
+    websiteStructuredData,
+} from "@/lib/structured-data";
 import MouseTrack from "../components/ui/MouseTrack";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";

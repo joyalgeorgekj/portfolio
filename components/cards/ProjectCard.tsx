@@ -15,8 +15,12 @@ export default function ProjectCard({ project }: Props) {
                 {project.metric}
             </p>
             <h3 className="text-xl font-semibold">{project.title}</h3>
-            <p className="text-sm text-typography/75">{project.stack.join(", ")}</p>
-            <p className="text-sm leading-6 text-typography/75">{project.desc}</p>
+            <p className="text-sm text-typography/75">
+                {project.stack.join(", ")}
+            </p>
+            <p className="text-sm leading-6 text-typography/75">
+                {project.desc}
+            </p>
         </Link>
     );
 }

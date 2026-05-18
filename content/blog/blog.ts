@@ -10,7 +10,7 @@ export const BLOGS: Blog[] = [
         publishedAt: "Jan 2026",
         readingTime: "8 min read",
         featured: true,
-        tags: ["React", "Architecture", "Frontend"]
+        tags: ["React", "Architecture", "Frontend"],
     },
     {
         id: "react-performance",

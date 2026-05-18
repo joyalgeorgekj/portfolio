@@ -17,9 +17,7 @@ export default function Section({
     linkNeeded?: boolean;
 }>) {
     return (
-        <section
-            id={id}
-            className="rounded-3xl bg-background p-8 scroll-mt-28">
+        <section id={id} className="rounded-3xl bg-background p-8 scroll-mt-28">
             <div className="flex items-center justify-between">
                 <h2 className="text-sm uppercase tracking-[0.2em] text-typography/75">
                     {heading}
