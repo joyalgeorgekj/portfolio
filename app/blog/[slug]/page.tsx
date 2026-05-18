@@ -37,9 +37,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             title: blog.title,
             description: blog.prevDescription,
             url: `${baseUrl}/blog/${blog.id}`,
-            images: [
-                `${baseUrl}/blog/${blog.id}/opengraph-image`,
-            ],
         },
     };
 }
