@@ -1,3 +1,4 @@
+import { personStructuredData, websiteStructuredData } from "@/lib/structured-data";
 import MouseTrack from "../components/ui/MouseTrack";
 import type { Metadata } from "next";
 import Header from "../components/layout/Header";
@@ -137,6 +138,20 @@ export default function RootLayout({
                     <div className="isolate">{children}</div>
                 </main>
                 <Footer />
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(websiteStructuredData()),
+                    }}
+                />
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify(personStructuredData()),
+                    }}
+                />
             </body>
         </html>
     );

@@ -1,0 +1,3 @@
+Contact: mailto:joyalgeorgekj@gmail.com
+Preferred-Languages: en
+Canonical: https://joyalgeorgekj.com/.well-known/security.txt
