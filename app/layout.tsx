@@ -11,7 +11,7 @@ import "./globals.css";
 import "./cursor.css";
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://portfolio-git-dev-2026-kj-oss.vercel.app"),
+    metadataBase: new URL(baseUrl),
     title: {
         default: "Joyal George K J - JavaScript / TypeScript Developer",
         template: "%s | Joyal George K J",
