@@ -254,7 +254,7 @@ export default function Portfolio() {
                     heading="Latest Writing"
                     id="blog"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {BLOGS.map((blog) => (
+                    {BLOGS.slice().splice(Math.floor(Math.random() * (BLOGS.length - 4)), 4).map((blog) => (
                         <BlogCard key={blog.id} post={blog} />
                     ))}
                 </Section>
