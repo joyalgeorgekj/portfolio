@@ -1,14 +1,11 @@
 import { personStructuredData, websiteStructuredData } from "@/lib/structured-data";
 import MouseTrack from "../components/ui/MouseTrack";
-import type { Metadata } from "next";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
+import { baseUrl } from "@/constants/base";
+import type { Metadata } from "next";
 import "./globals.css";
 import "./cursor.css";
-
-const baseUrl = process.env.HOSTED_URL
-    ? `https://${process.env.HOSTED_URL}`
-    : "http://localhost:3000";
 
 export const metadata: Metadata = {
     metadataBase: new URL(baseUrl),
