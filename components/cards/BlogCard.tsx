@@ -1,6 +1,7 @@
 import { Blog } from "@/types/blog.type";
 import { BookOpenIcon } from "lucide-react";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 interface Props {
     post: Blog;
@@ -8,6 +9,8 @@ interface Props {
 }
 
 export default function BlogCard({ post, body }: Props) {
+    if (!post || body === "") notFound();
+
     return (
         <article
             key={post.title}

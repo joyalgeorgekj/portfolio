@@ -4,10 +4,11 @@ import { cwd } from "node:process";
 import { render } from "./render";
 
 export function extractor(path: string) {
-    console.log("Path: ", path);
-
-    const md = readFileSync(join(cwd(), "content/markdown/", path), {
-        encoding: "utf-8",
-    });
-    return render(md);
+    try {
+        const md = readFileSync(join(cwd(), "content/markdown", path), "utf-8");
+        return render(md);
+    } catch (error) {
+        console.log(`Failed to load markdown\nPath: ${path}`, error);
+        return render("");
+    }
 }
