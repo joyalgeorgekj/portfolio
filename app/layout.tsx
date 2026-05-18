@@ -11,7 +11,7 @@ import "./globals.css";
 import "./cursor.css";
 
 export const metadata: Metadata = {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(baseUrl.replace("https://", "")),
     title: {
         default: "Joyal George K J - JavaScript / TypeScript Developer",
         template: "%s | Joyal George K J",
