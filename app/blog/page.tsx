@@ -3,77 +3,16 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BlogCard from "@/components/cards/BlogCard";
 import { Blog } from "@/types/blog.type";
+import { BLOGS } from "@/content/blog/blog";
 
 export const metadata: Metadata = {
     title: "Blog",
 };
 
 export default function BlogPage() {
-    const featuredPost = {
-        title: "Building Scalable Frontend Systems in 2026",
-        excerpt:
-            "How to structure modern React applications for growth, maintainability, performance, and real product velocity.",
-        category: "Architecture",
-        readTime: "8 min read",
-        date: "Jan 2026",
-    };
+    const featuredPost: Blog = BLOGS.filter(val => val.featured)[0];
 
-    const posts: Blog[] = [
-        {
-            title: "Optimizing React Performance Without Premature Complexity",
-            category: "Performance",
-            readingTime: "6 min read",
-            publishedAt: "Jan 2026",
-            prevDescription: "",
-            id: "something",
-            slug: "",
-        },
-        {
-            title: "What Freelance Work Taught Me About Product Thinking",
-            category: "Career",
-            readingTime: "5 min read",
-            publishedAt: "Dec 2025",
-            prevDescription: "",
-            id: "something",
-            slug: "",
-        },
-        {
-            title: "How I Built an Internal Tool That Solved Real Problems",
-            category: "Case Study",
-            readingTime: "7 min read",
-            publishedAt: "Dec 2025",
-            prevDescription: "",
-            id: "something",
-            slug: "",
-        },
-        {
-            title: "Open Source Contributions as a Growth Strategy",
-            category: "Open Source",
-            readingTime: "5 min read",
-            publishedAt: "Nov 2025",
-            prevDescription: "",
-            id: "something",
-            slug: "",
-        },
-        {
-            title: "Designing Better UI Systems With Components",
-            category: "Architecture",
-            readingTime: "9 min read",
-            publishedAt: "Nov 2025",
-            prevDescription: "",
-            id: "something",
-            slug: "",
-        },
-        {
-            title: "Why Tailwind + Next.js Is Still a Strong Stack",
-            category: "Frontend",
-            readingTime: "4 min read",
-            publishedAt: "Oct 2025",
-            prevDescription: "",
-            id: "something",
-            slug: "",
-        },
-    ];
+    const posts: Blog[] = BLOGS.filter(val => !val.featured);
 
     // const categories = [
     //   "All",
@@ -89,7 +28,7 @@ export default function BlogPage() {
         <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
             {/* Hero */}
             <div className="max-w-3xl">
-                <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
+                <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
                     Writing
                 </p>
 
@@ -100,7 +39,7 @@ export default function BlogPage() {
                     </span>
                 </h1>
 
-                <p className="mt-6 text-base leading-7 text-zinc-400 md:text-lg">
+                <p className="mt-6 text-base leading-7 text-typography/75 md:text-lg">
                     Notes on frontend engineering, scalable architecture,
                     performance, product thinking, open source, and building
                     real software.
@@ -112,14 +51,14 @@ export default function BlogPage() {
           <input
             type="text"
             placeholder="Search articles..."
-            className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-white outline-none placeholder:text-zinc-500 md:max-w-sm"
+            className="w-full rounded-2xl border border-typography/10 bg-white/5 px-5 py-3 text-sm text-typography outline-none placeholder:text-typography/75 md:max-w-sm"
           />
 
           <div className="flex flex-wrap gap-2">
             {categories.map((item) => (
               <button
                 key={item}
-                className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-400 transition hover:border-primary/30 hover:text-white"
+                className="rounded-full border border-typography/10 px-4 py-2 text-sm text-typography/75 transition hover:border-primary/30 hover:text-typography"
               >
                 {item}
               </button>
@@ -128,7 +67,7 @@ export default function BlogPage() {
         </div> */}
 
             {/* Featured Post */}
-            <section className="card mt-10 rounded-3xl border border-white/10 bg-transparent p-8 backdrop-blur-xl grid gap-4">
+            <section className="card mt-10 rounded-3xl border border-typography/10 bg-background p-8 grid gap-4">
                 <p className="text-sm uppercase tracking-[0.2em] text-primary">
                     Featured Article
                 </p>
@@ -137,20 +76,20 @@ export default function BlogPage() {
                     {featuredPost.title}
                 </h2>
 
-                <p className="max-w-2xl leading-7 text-zinc-400">
-                    {featuredPost.excerpt}
+                <p className="max-w-2xl leading-7 text-typography/75">
+                    {featuredPost.prevDescription}
                 </p>
 
-                <div className="flex flex-wrap gap-4 text-sm text-zinc-500">
+                <div className="flex flex-wrap gap-4 text-sm text-typography/75">
                     <span>{featuredPost.category}</span>
                     <span>•</span>
-                    <span>{featuredPost.readTime}</span>
+                    <span>{featuredPost.readingTime}</span>
                     <span>•</span>
-                    <span>{featuredPost.date}</span>
+                    <span>{featuredPost.publishedAt}</span>
                 </div>
 
                 <Link
-                    href="/blog/building-scalable-frontend-systems"
+                    href={"blog/" + featuredPost.id}
                     className="btn btn-primary">
                     Read Article
                 </Link>
@@ -164,9 +103,9 @@ export default function BlogPage() {
             </section>
 
             {/* Newsletter */}
-            <section className="mt-14 rounded-3xl border border-white/10 bg-transparent backdrop-blur-xl p-8 md:p-10">
+            <section className="mt-14 rounded-3xl border border-typography/10 bg-background p-8 md:p-10">
                 <div className="max-w-2xl">
-                    <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
+                    <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
                         Newsletter
                     </p>
 
@@ -174,7 +113,7 @@ export default function BlogPage() {
                         Get practical frontend insights occasionally.
                     </h3>
 
-                    <p className="mt-4 text-zinc-400">
+                    <p className="mt-4 text-typography/75">
                         No spam. Only valuable notes on frontend systems,
                         performance, architecture, and building products.
                     </p>
@@ -183,7 +122,7 @@ export default function BlogPage() {
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-white outline-none placeholder:text-zinc-500"
+                            className="w-full rounded-2xl border border-typography/10 bg-white/5 px-5 py-3 text-sm text-typography outline-none placeholder:text-typography/75"
                         />
 
                         <button className="btn btn-primary">Subscribe</button>
