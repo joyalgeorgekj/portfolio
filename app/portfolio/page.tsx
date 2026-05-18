@@ -29,6 +29,8 @@ export default function Portfolio() {
         { label: "Contact", id: "contact" },
     ];
 
+    const startIndex = new Date().getDate() % Math.max(BLOGS.length - 4, 1);
+
     return (
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 md:grid-cols-[260px_1fr] md:px-6">
             {/* Sidebar */}
@@ -50,7 +52,9 @@ export default function Portfolio() {
                     </nav>
 
                     <div className="mt-6 border-t border-typography/10 pt-5">
-                        <p className="text-xs text-typography/75">Current Focus</p>
+                        <p className="text-xs text-typography/75">
+                            Current Focus
+                        </p>
                         <p className="mt-2 text-sm text-typography/75">
                             Product UI, scalable frontend systems, open source.
                         </p>
@@ -254,7 +258,7 @@ export default function Portfolio() {
                     heading="Latest Writing"
                     id="blog"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {BLOGS.slice().splice(Math.floor(Math.random() * (BLOGS.length - 4)), 4).map((blog) => (
+                    {BLOGS.slice(startIndex, (startIndex) + 4).map((blog) => (
                         <BlogCard key={blog.id} post={blog} />
                     ))}
                 </Section>
