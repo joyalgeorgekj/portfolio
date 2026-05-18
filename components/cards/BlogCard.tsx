@@ -1,4 +1,5 @@
 import { Blog } from "@/types/blog.type";
+import { BookOpenIcon } from "lucide-react";
 import Link from "next/link";
 
 interface Props {
@@ -11,7 +12,9 @@ export default function BlogCard({ post, body }: Props) {
         <article
             key={post.title}
             className="group rounded-3xl border border-typography/10 bg-background p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 flex flex-col gap-4">
-            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20" />
+            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex flex-col justify-center items-center">
+                <BookOpenIcon width={24} height={24} />
+            </div>
 
             <p className="text-xs uppercase tracking-[0.18em] text-typography/75">
                 {post.category}
