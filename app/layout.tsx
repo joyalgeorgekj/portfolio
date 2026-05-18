@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     authors: [
         {
             name: "Joyal George K J",
-            url: "https://www.joyalgeorgekj.com",
+            url: baseUrl,
         },
     ],
     creator: "Joyal George K J",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: "https://www.joyalgeorgekj.com",
+        url: baseUrl,
         siteName: "Joyal George K J Portfolio",
         title: "Joyal George K J - Javascript/Typescript Developer",
         description:
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: "https://www.joyalgeorgekj.com",
+        canonical: baseUrl,
     },
     icons: {
         icon: "/favicon.ico",
