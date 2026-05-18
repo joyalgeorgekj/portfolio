@@ -58,8 +58,8 @@ export default function Lab() {
     return (
         <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6 flex flex-col gap-10">
             {/* Under Development */}
-            <div className="w-full h-screen fixed top-0 left-0 z-10 flex flex-col justify-center items-center gap-2 bg-black/80 *:bg-black *:p-2">
-                <h4 className="text-xl uppercase tracking-[0.2em] text-white font-bold">
+            <div className="w-full h-screen fixed top-0 left-0 z-10 flex flex-col justify-center items-center gap-2 bg-background/80 *:bg-background *:p-2">
+                <h4 className="text-xl uppercase tracking-[0.2em] text-typography font-bold">
                     Under Development
                 </h4>
                 <p>
@@ -84,7 +84,7 @@ export default function Lab() {
 
             {/* Hero */}
             <div className="max-w-3xl">
-                <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
+                <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
                     Experimental Space
                 </p>
 
@@ -95,7 +95,7 @@ export default function Lab() {
                     </span>
                 </h1>
 
-                <p className="mt-6 text-base leading-7 text-zinc-400 md:text-lg">
+                <p className="mt-6 text-base leading-7 text-typography/75 md:text-lg">
                     A playground for experiments, prototypes, mini games,
                     developer tools, interaction concepts, and ideas that don’t
                     belong in the main portfolio.
@@ -116,7 +116,7 @@ export default function Lab() {
             <section>
                 <div className="flex items-center justify-between">
                     <div>
-                        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                        <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                             Featured
                         </p>
 
@@ -125,7 +125,7 @@ export default function Lab() {
                         </h2>
                     </div>
 
-                    <button className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-300 hover:bg-white/5">
+                    <button className="rounded-full border border-typography/10 px-4 py-2 text-sm text-typography/75 hover:bg-white/5">
                         View All
                     </button>
                 </div>
@@ -134,7 +134,7 @@ export default function Lab() {
                     {experiments.map((item) => (
                         <div
                             key={item.title}
-                            className="group rounded-3xl border border-white/10 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/30 grid gap-3">
+                            className="group rounded-3xl border border-typography/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 grid gap-3">
                             <div className="flex items-start justify-between gap-4">
                                 <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                                     <Gamepad2Icon
@@ -153,7 +153,7 @@ export default function Lab() {
                                 {item.title}
                             </h3>
 
-                            <p className="leading-7 text-zinc-400">
+                            <p className="leading-7 text-typography/75">
                                 {item.desc}
                             </p>
 
@@ -169,7 +169,7 @@ export default function Lab() {
 
             {/* Mini Games */}
             <section>
-                <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                     Interactive
                 </p>
 
@@ -181,7 +181,7 @@ export default function Lab() {
                     {miniGames.map((game) => (
                         <div
                             key={game.title}
-                            className="group rounded-3xl border border-white/10 p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-violet-400/30">
+                            className="group rounded-3xl border border-typography/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-violet-400/30">
                             <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                                 <Gamepad2Icon
                                     height={24}
@@ -193,11 +193,11 @@ export default function Lab() {
                                 {game.title}
                             </h3>
 
-                            <p className="mt-3 leading-7 text-zinc-400">
+                            <p className="mt-3 leading-7 text-typography/75">
                                 {game.desc}
                             </p>
 
-                            <button className="mt-3 rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-300 hover:bg-white/5 cursor-pointer group-hover:translate-x-1 transition group-hover:bg-white/2">
+                            <button className="mt-3 rounded-full border border-typography/10 px-4 py-2 text-sm text-typography/75 hover:bg-white/5 cursor-pointer group-hover:translate-x-1 transition group-hover:bg-white/2">
                                 Play
                             </button>
                         </div>
@@ -207,7 +207,7 @@ export default function Lab() {
 
             {/* Tools */}
             <section>
-                <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                     Utilities
                 </p>
 
@@ -219,7 +219,7 @@ export default function Lab() {
                     {tools.map((tool) => (
                         <button
                             key={tool}
-                            className="flex items-center justify-between rounded-2xl border backdrop-blur-xl border-white/10 px-5 py-4 text-left text-zinc-300 transition duration-300 hover:-translate-y-1 hover:border-primary/30">
+                            className="flex items-center justify-between rounded-2xl border border-typography/10 px-5 py-4 text-left text-typography/75 transition duration-300 hover:-translate-y-1 hover:border-primary/30">
                             <span>{tool}</span>
 
                             <span className="text-primary">↗</span>
@@ -229,30 +229,30 @@ export default function Lab() {
             </section>
 
             {/* Terminal Section */}
-            {/* <section className="mt-18 rounded-3xl border border-white/10 bg-[#050505] p-6 shadow-2xl"> */}
+            {/* <section className="mt-18 rounded-3xl border border-typography/10 bg-[#050505] p-6 shadow-2xl"> */}
             {/* Terminal Header */}
-            {/* <div className="flex items-center gap-2 border-b border-white/10 pb-4">
+            {/* <div className="flex items-center gap-2 border-b border-typography/10 pb-4">
             <span className="h-3 w-3 rounded-full bg-red-400" />
             <span className="h-3 w-3 rounded-full bg-yellow-400" />
             <span className="h-3 w-3 rounded-full bg-green-400" />
 
-            <p className="ml-4 text-sm text-zinc-500">
+            <p className="ml-4 text-sm text-typography/75">
               terminal@joyal.dev
             </p>
           </div> */}
 
             {/* Terminal Body */}
             {/* <div className="mt-6 space-y-4 font-mono text-sm">
-            <p className="text-zinc-500">
+            <p className="text-typography/75">
               Type commands to explore hidden features.
             </p>
 
             <div>
               <span className="text-primary">$</span>{" "}
-              <span className="text-zinc-300">help</span>
+              <span className="text-typography/75">help</span>
             </div>
 
-            <div className="grid gap-2 text-zinc-400 md:grid-cols-2">
+            <div className="grid gap-2 text-typography/75 md:grid-cols-2">
               <p>projects</p>
               <p>skills</p>
               <p>opensource</p>
@@ -263,15 +263,15 @@ export default function Lab() {
 
             <div>
               <span className="text-primary">$</span>{" "}
-              <span className="animate-pulse text-zinc-300">_</span>
+              <span className="animate-pulse text-typography/75">_</span>
             </div>
           </div>
         </section> */}
 
             {/* CTA */}
-            <section className="rounded-3xl backdrop-blur-xl border border-white/10 p-8 md:p-12">
+            <section className="rounded-3xl border border-typography/10 p-8 md:p-12">
                 <div className="max-w-2xl">
-                    <p className="text-sm uppercase tracking-[0.22em] text-zinc-500">
+                    <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
                         Build Something Interesting
                     </p>
 
@@ -279,7 +279,7 @@ export default function Lab() {
                         Ideas deserve prototypes.
                     </h2>
 
-                    <p className="mt-3 leading-7 text-zinc-400">
+                    <p className="mt-3 leading-7 text-typography/75">
                         The lab is where concepts become experiments and
                         experiments become products.
                     </p>

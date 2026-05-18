@@ -68,7 +68,7 @@ export default function Home() {
     return (
         <>
             {/* Hero */}
-            <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6">
+            <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6 ">
                 {/* Left Content */}
                 <div className="grid gap-4 *:w-fit">
                     <p className="inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-sm text-primary">
@@ -83,7 +83,7 @@ export default function Home() {
                         Product-Focused Frontend Engineer
                     </h2>
 
-                    <p className=" max-w-xl text-base leading-7 text-zinc-400 md:text-lg">
+                    <p className=" max-w-xl text-base leading-7 text-typography/75 md:text-lg">
                         Building scalable, performant, and production-ready web
                         experiences using React, Next.js, and TypeScript.
                         Helping teams ship polished products users love.
@@ -111,7 +111,7 @@ export default function Home() {
 
                 {/* Right Visual */}
                 <div className="relative custom-cursor">
-                    <div className="card rounded-3xl border border-white/10  p-5 backdrop-blur-xl shadow-2xl">
+                    <div className="card bg-background rounded-3xl border border-typography/10 p-5 shadow-2xl">
                         {/* Fake Browser Top */}
                         <div className="mb-5 flex items-center gap-2">
                             <span className="group-hover:animate-pulse h-3 w-3 rounded-full bg-red-400" />
@@ -121,8 +121,8 @@ export default function Home() {
 
                         {/* Mock Dashboard */}
                         <div className="space-y-4">
-                            <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
-                                <p className="text-xs uppercase tracking-widest text-zinc-500">
+                            <div className="card rounded-2xl border border-typography/10 bg-background p-4">
+                                <p className="text-xs uppercase tracking-widest text-typography/75">
                                     Current Stack
                                 </p>
                                 <div className="mt-2 flex justify-between text-sm text-zinc-200">
@@ -136,8 +136,8 @@ export default function Home() {
                             </div>
 
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
-                                    <p className="text-xs uppercase tracking-widest text-zinc-500">
+                                <div className="card rounded-2xl border border-typography/10 bg-background p-4">
+                                    <p className="text-xs uppercase tracking-widest text-typography/75">
                                         Weekly Users
                                     </p>
                                     <p className="mt-2 text-3xl font-semibold text-primary">
@@ -145,8 +145,8 @@ export default function Home() {
                                     </p>
                                 </div>
 
-                                <div className="card rounded-2xl border border-white/10 backdrop-blur-xl bg-transparent p-4">
-                                    <p className="text-xs uppercase tracking-widest text-zinc-500">
+                                <div className="card rounded-2xl border border-typography/10 bg-background p-4">
+                                    <p className="text-xs uppercase tracking-widest text-typography/75">
                                         OSS Repos
                                     </p>
                                     <p className="mt-2 text-3xl font-semibold text-violet-300">
@@ -171,7 +171,7 @@ export default function Home() {
                                 {stats.map((item) => (
                                     <div
                                         key={item}
-                                        className="card rounded-2xl border border-white/10 bg-transparent px-4 py-4 text-sm text-zinc-300 backdrop-blur-md">
+                                        className="card rounded-2xl border border-typography/10 bg-background px-4 py-4 text-sm text-typography/75 ">
                                         {item}
                                     </div>
                                 ))}
@@ -187,7 +187,7 @@ export default function Home() {
             {/* Preview Sections */}
             <section className="relative mx-auto max-w-7xl px-4 pb-24 md:px-6">
                 <div className="mb-10">
-                    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                    <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                         Explore
                     </p>
                     <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
@@ -199,7 +199,7 @@ export default function Home() {
                     {highlights.map((item) => (
                         <div
                             key={item.title}
-                            className="card group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-md  flex flex-col gap-4">
+                            className="card group rounded-3xl border border-typography/10 bg-background p-6  flex flex-col gap-4">
                             <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                                 <item.icon
                                     height={24}
@@ -208,11 +208,11 @@ export default function Home() {
                                 />
                             </div>
 
-                            <h3 className="text-lg font-semibold text-white">
+                            <h3 className="text-lg font-semibold text-typography">
                                 {item.title}
                             </h3>
 
-                            <p className="text-sm leading-6 text-zinc-400">
+                            <p className="text-sm leading-6 text-typography/75">
                                 {item.desc}
                             </p>
 
@@ -228,9 +228,9 @@ export default function Home() {
 
             {/* Bottom CTA */}
             <section className="mx-auto max-w-7xl px-4 pb-28 md:px-6">
-                <div className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 md:p-12">
+                <div className="rounded-3xl border border-typography/10 bg-background p-8 md:p-12">
                     <div className="max-w-2xl flex flex-col gap-4">
-                        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                        <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                             Let’s Build
                         </p>
 
@@ -238,7 +238,7 @@ export default function Home() {
                             Need a frontend engineer who ships real products?
                         </h3>
 
-                        <p className="text-zinc-400">
+                        <p className="text-typography/75">
                             I help startups, founders, and teams build scalable
                             interfaces, modern web apps, and polished product
                             experiences.

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function Portfolio() {
     const navItems = [
-        { label: "About", id: "about" },
+        { label: "About", id: "" },
         { label: "Skills", id: "skills" },
         { label: "Projects", id: "projects" },
         { label: "Experience", id: "experience" },
@@ -33,8 +33,8 @@ export default function Portfolio() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 md:grid-cols-[260px_1fr] md:px-6">
             {/* Sidebar */}
             <aside className="top-28 h-fit md:sticky self-start">
-                <div className="rounded-3xl bg-transparent p-5 backdrop-blur-xl">
-                    <p className="mb-5 text-xs uppercase tracking-[0.25em] text-zinc-500">
+                <div className="rounded-3xl bg-background p-5 ">
+                    <p className="mb-5 text-xs uppercase tracking-[0.25em] text-typography/75">
                         Portfolio
                     </p>
 
@@ -43,15 +43,15 @@ export default function Portfolio() {
                             <a
                                 key={item.id}
                                 href={`#${item.id}`}
-                                className="block rounded-xl px-3 py-2 text-sm text-zinc-400 transition hover:bg-white/5 hover:text-white">
+                                className="block rounded-xl px-3 py-2 text-sm text-typography/75 transition hover:bg-white/5 hover:text-typography">
                                 {item.label}
                             </a>
                         ))}
                     </nav>
 
-                    <div className="mt-6 border-t border-white/10 pt-5">
-                        <p className="text-xs text-zinc-500">Current Focus</p>
-                        <p className="mt-2 text-sm text-zinc-300">
+                    <div className="mt-6 border-t border-typography/10 pt-5">
+                        <p className="text-xs text-typography/75">Current Focus</p>
+                        <p className="mt-2 text-sm text-typography/75">
                             Product UI, scalable frontend systems, open source.
                         </p>
                     </div>
@@ -63,8 +63,8 @@ export default function Portfolio() {
                 {/* Hero */}
                 <section
                     id="about"
-                    className="rounded-3xl backdrop-blur-xl bg-transparent p-8 flex flex-col gap-4">
-                    <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
+                    className="rounded-3xl bg-background p-8 flex flex-col gap-4">
+                    <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                         About
                     </p>
 
@@ -76,7 +76,7 @@ export default function Portfolio() {
                         Product-Focused Frontend Engineer
                     </p>
 
-                    <p className="max-w-3xl leading-7 text-zinc-400">
+                    <p className="max-w-3xl leading-7 text-typography/75">
                         Frontend engineer with 3+ years of experience building
                         scalable, performant, and maintainable React / Next.js
                         applications. Strong focus on UI architecture, product
@@ -93,7 +93,7 @@ export default function Portfolio() {
                         ].map((item) => (
                             <div
                                 key={item}
-                                className="card rounded-2xl border border-white/10 px-4 py-4 text-sm text-zinc-300">
+                                className="card rounded-2xl border border-typography/10 px-4 py-4 text-sm text-typography/75">
                                 &gt; {item}
                             </div>
                         ))}
@@ -112,7 +112,7 @@ export default function Portfolio() {
                             <div
                                 key={group}
                                 className="group card rounded-2xl p-5">
-                                <h3 className="capitalize text-sm font-semibold text-zinc-300">
+                                <h3 className="capitalize text-sm font-semibold text-typography/75">
                                     {group}
                                 </h3>
 
@@ -120,7 +120,7 @@ export default function Portfolio() {
                                     {items.map((item) => (
                                         <div
                                             key={item.title}
-                                            className="bg-white/5 p-4 rounded border border-white/10 flex justify-center items-center group-hover:border-primary/30 "
+                                            className="bg-white/5 p-4 rounded border border-typography/10 flex justify-center items-center group-hover:border-primary/30 "
                                             title={item.title}>
                                             {item.icon ? (
                                                 <Image
@@ -134,7 +134,7 @@ export default function Portfolio() {
                                                     className="w-8 h-8 rounded"
                                                 />
                                             ) : (
-                                                <span className="rounded-full border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer">
+                                                <span className="rounded-full border-typography/10 px-3 py-1 text-sm text-typography/75 cursor-pointer">
                                                     {item.title}
                                                 </span>
                                             )}
@@ -190,20 +190,20 @@ export default function Portfolio() {
                     {OPENSOURCE.map((contribution) => (
                         <div
                             key={contribution.project}
-                            className="card rounded-2xl border border-white/10 p-5 flex flex-col gap-2">
+                            className="card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2">
                             <div className="flex flex-wrap items-center gap-3">
                                 <h3 className="text-xl font-semibold">
                                     {contribution.project}
                                 </h3>
 
-                                <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-primary">
+                                <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs text-primary">
                                     {contribution.type}
                                 </span>
                             </div>
-                            <p className="text-sm text-zinc-500">
+                            <p className="text-sm text-typography/75">
                                 {contribution.stack?.join(", ")}
                             </p>
-                            <p className="text-sm leading-6 text-zinc-400">
+                            <p className="text-sm leading-6 text-typography/75">
                                 {contribution.description}
                             </p>
                         </div>
@@ -219,11 +219,11 @@ export default function Portfolio() {
                     {ACHIEVEMENTS.map((item) => (
                         <div
                             key={item.id}
-                            className="card rounded-2xl border border-white/10 p-5 flex flex-col gap-2">
+                            className="card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2">
                             {/* Left */}
                             <div className="max-w-2xl flex flex-col gap-2">
                                 {item.organization && (
-                                    <p className="text-sm text-zinc-500 uppercase">
+                                    <p className="text-sm text-typography/75 uppercase">
                                         {item.organization}
                                     </p>
                                 )}
@@ -233,13 +233,13 @@ export default function Portfolio() {
                                         {item.title}
                                     </h3>
 
-                                    <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs text-primary">
+                                    <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs text-primary">
                                         {item.type}
                                     </span>
                                 </div>
 
                                 {item.description && (
-                                    <p className="leading-7 text-zinc-400">
+                                    <p className="leading-7 text-typography/75">
                                         {item.description}
                                     </p>
                                 )}
@@ -262,12 +262,12 @@ export default function Portfolio() {
                 {/* Contact */}
                 <section
                     id="contact"
-                    className="rounded-3xl border border-white/10 backdrop-blur-xl bg-transparent p-8 scroll-mt-28 grid gap-4">
+                    className="rounded-3xl border border-typography/10 bg-background p-8 scroll-mt-28 grid gap-4 sticky">
                     <h2 className="text-3xl font-semibold">
                         Need a frontend engineer who ships?
                     </h2>
 
-                    <p className="max-w-2xl text-zinc-400">
+                    <p className="max-w-2xl text-typography/75">
                         Available for frontend engineering roles, freelance
                         work, product collaboration, and startup opportunities.
                     </p>

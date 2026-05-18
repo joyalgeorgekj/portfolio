@@ -5,7 +5,7 @@ export default function SkillCard({ skill }: { skill: Skill }) {
     return (
         <div
             key={skill.title}
-            className="bg-white/5 p-4 rounded border border-white/10 flex justify-center items-center group-hover:border-primary/30"
+            className="bg-white/5 p-4 rounded border border-typography/10 flex justify-center items-center group-hover:border-primary/30"
             title={skill.title}>
             {skill.icon ? (
                 <Image
@@ -19,7 +19,7 @@ export default function SkillCard({ skill }: { skill: Skill }) {
                     className="w-8 h-8 rounded"
                 />
             ) : (
-                <span className="rounded-full border-white/10 px-3 py-1 text-sm text-zinc-400 cursor-pointer">
+                <span className="rounded-full border-typography/10 px-3 py-1 text-sm text-typography/75 cursor-pointer">
                     {skill.title}
                 </span>
             )}

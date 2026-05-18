@@ -10,10 +10,10 @@ export default function BlogCard({ post, body }: Props) {
     return (
         <article
             key={post.title}
-            className="group rounded-3xl border border-white/10 bg-transparent p-6 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-primary/30 flex flex-col gap-4">
+            className="group rounded-3xl border border-typography/10 bg-background p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 flex flex-col gap-4">
             <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20" />
 
-            <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">
+            <p className="text-xs uppercase tracking-[0.18em] text-typography/75">
                 {post.category}
             </p>
 
@@ -29,12 +29,12 @@ export default function BlogCard({ post, body }: Props) {
                     }}
                 />
             ) : (
-                <p className="max-w-2xl leading-7 text-zinc-400">
+                <p className="max-w-2xl leading-7 text-typography/75">
                     {post.prevDescription}
                 </p>
             )}
 
-            <div className="flex items-center gap-3 text-sm text-zinc-500">
+            <div className="flex items-center gap-3 text-sm text-typography/75">
                 <span>{post.readingTime}</span>
                 <span>•</span>
                 <span>{post.publishedAt}</span>

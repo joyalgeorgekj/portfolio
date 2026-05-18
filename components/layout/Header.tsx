@@ -16,12 +16,12 @@ export default function Header() {
     return (
         <>
             <header
-                className={`sticky top-0 inset-x-0 z-50 transition-all duration-300 border-b border-white/10 backdrop-blur-xl bg-transparent`}>
+                className="sticky top-0 inset-x-0 z-50 transition-all duration-300 border-b border-typography/10 bg-background">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 md:px-6">
                     {/* Logo */}
                     <Link
                         href="/"
-                        className="text-lg font-semibold tracking-tight text-white">
+                        className="text-lg font-semibold tracking-tight text-typography">
                         Joyal<span className="text-primary">.</span>
                     </Link>
 
@@ -31,7 +31,7 @@ export default function Header() {
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className="text-sm text-zinc-300 transition hover:text-white">
+                                className="text-sm text-typography/75 transition hover:text-typography">
                                 {item.label}
                             </Link>
                         ))}
@@ -42,14 +42,14 @@ export default function Header() {
                         <Link
                             href="https://github.com/joyalgeorgekj"
                             target="_blank"
-                            className="text-sm text-zinc-400 transition hover:text-white">
+                            className="text-sm text-typography/75 transition hover:text-typography">
                             GitHub
                         </Link>
 
                         <Link
                             href="https://linkedin.com/in/joyalgeorgekj"
                             target="_blank"
-                            className="text-sm text-zinc-400 transition hover:text-white">
+                            className="text-sm text-typography/75 transition hover:text-typography">
                             LinkedIn
                         </Link>
 
@@ -76,7 +76,7 @@ export default function Header() {
 
             {/* Mobile Drawer */}
             {mobileOpen && (
-                <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-xl md:hidden">
+                <div className="fixed inset-0 z-40 bg-background/80 md:hidden">
                     <div className="mt-20 space-y-6 px-6">
                         {navLinks.map((item) => (
                             <Link
@@ -88,7 +88,7 @@ export default function Header() {
                             </Link>
                         ))}
 
-                        <div className="border-t border-white/10 pt-6">
+                        <div className="border-t border-typography/10 pt-6">
                             <Link
                                 href="mailto:joyalgeorgekj@gmail.com"
                                 className="inline-flex rounded-full bg-primary px-5 py-2 text-sm font-medium text-black">

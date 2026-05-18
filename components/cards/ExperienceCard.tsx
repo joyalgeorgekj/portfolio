@@ -14,12 +14,12 @@ export default function ExperienceCard({
             </div>
 
             {/* Card */}
-            <div className="card flex flex-col gap-4 rounded-3xl border border-white/10 p-6 backdrop-blur-xl">
+            <div className="card flex flex-col gap-4 rounded-3xl border border-typography/10 p-6 ">
                 {/* Top Row */}
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                     <div>
                         <div className="flex flex-wrap items-center gap-3">
-                            <h3 className="text-xl font-semibold text-white">
+                            <h3 className="text-xl font-semibold text-typography">
                                 {experience.role}
                             </h3>
 
@@ -28,12 +28,12 @@ export default function ExperienceCard({
                             </span>
                         </div>
 
-                        <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-400">
+                        <div className="flex flex-wrap items-center gap-2 text-sm text-typography/75">
                             {experience.url ? (
                                 <Link
                                     href={experience.url}
                                     target="_blank"
-                                    className="transition hover:text-white">
+                                    className="transition hover:text-typography">
                                     {experience.company}
                                 </Link>
                             ) : (
@@ -49,14 +49,14 @@ export default function ExperienceCard({
                         </div>
                     </div>
 
-                    <div className="rounded-full border border-white/10 px-4 py-2 text-sm text-zinc-400">
+                    <div className="rounded-full border border-typography/10 px-4 py-2 text-sm text-typography/75">
                         {experience.startDate} —{" "}
                         {experience.endDate || "Present"}
                     </div>
                 </div>
 
                 {/* Description */}
-                <p className="leading-7 text-zinc-400">
+                <p className="leading-7 text-typography/75">
                     {experience.description}
                 </p>
 
@@ -64,7 +64,7 @@ export default function ExperienceCard({
                 {experience.achievements &&
                     experience.achievements.length > 0 && (
                         <div className="">
-                            <p className="mb-3 text-sm font-medium text-zinc-300">
+                            <p className="mb-3 text-sm font-medium text-typography/75">
                                 Key Contributions
                             </p>
 
@@ -72,7 +72,7 @@ export default function ExperienceCard({
                                 {experience.achievements.map((achievement) => (
                                     <li
                                         key={achievement}
-                                        className="flex gap-3 text-sm leading-6 text-zinc-400">
+                                        className="flex gap-3 text-sm leading-6 text-typography/75">
                                         <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
 
                                         <span>{achievement}</span>
@@ -88,7 +88,7 @@ export default function ExperienceCard({
                         {experience.stack.map((tech) => (
                             <span
                                 key={tech}
-                                className="rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-400">
+                                className="rounded-full border border-typography/10 px-3 py-1 text-xs text-typography/75">
                                 {tech}
                             </span>
                         ))}
