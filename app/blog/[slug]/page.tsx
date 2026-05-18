@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             canonical: `/blog/${blog.id}`,
         },
         twitter: {
-            images: `${baseUrl.replace("https://", "")}/blog/${blog.id}/opengraph-image`,
+            images: `/blog/${blog.id}/opengraph-image`,
             card: "summary_large_image",
             creator: "joyalgeorgekj",
             title: blog.title,
