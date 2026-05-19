@@ -119,21 +119,15 @@ export default function RootLayout({
                     href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
                 />
             </head>
-            <body className={`antialiased w-[99dvw]`}>
+            <body className={`antialiased`}>
                 <Header />
                 <main className="relative w-full text-typography">
                     {/* Background Effects */}
-                    <div className="pointer-events-none absolute inset-0 w-full">
+                    <div className="effects-wrapper">
                         <div className="sticky left-0 top-[20%] h-72 w-72 rounded-full bg-cyan-900/30 blur-3xl" />
                         <div className="sticky left-[95%] top-[40%] h-80 w-80 rounded-full bg-violet-900/30 blur-3xl" />
                         <div className="absolute bottom-10 left-1/3 h-64 w-64 rounded-full bg-blue-900/30 blur-3xl" />
                     </div>
-
-                    {/* Mouse Tracer */}
-                    <MouseTrack />
-
-                    {/* Background Image */}
-                    <div className="effects fixed w-full h-screen top-0 left-0 pointer-events-none"></div>
 
                     <div className="isolate">{children}</div>
                 </main>

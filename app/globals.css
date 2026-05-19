@@ -36,8 +36,13 @@ body {
     background-color: var(--background);
 }
 
-body div.effects {
+body div.effects-wrapper {
     background-image: var(--image);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: clip;
+    isolation: isolate;
 }
 
 .container {
