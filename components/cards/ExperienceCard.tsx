@@ -1,13 +1,20 @@
+"use client";
+
+import useViewportCheck from "@/hooks/useViewportCheck";
 import { Experience } from "@/types/experience.type";
 import Link from "next/link";
+import { useRef } from "react";
 
 export default function ExperienceCard({
     experience,
 }: {
     experience: Experience;
 }) {
+    const cardRef = useRef<HTMLDivElement | null>(null);
+    const isVisible = useViewportCheck(cardRef);
+
     return (
-        <div className="relative pl-10">
+        <div className={`relative pl-10 opacity-0 fade-in ${isVisible ? "in-view" : ""}`} ref={cardRef}>
             {/* Timeline Dot */}
             <div className="absolute left-0 top-2 h-5.5 w-5.5 rounded-full border border-primary/30 p-1">
                 <div className="h-full w-full rounded-full bg-primary" />

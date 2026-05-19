@@ -27,7 +27,7 @@ export default function Section({
     return (
         <section
             id={id}
-            className={`${sectionClass ? sectionClass : "rounded-3xl bg-background p-8 scroll-mt-28"} opacity-0 fadeIn ${isVisible ? "in-view" : ""}`}
+            className={`${sectionClass ? sectionClass : "rounded-3xl bg-background p-8 scroll-mt-28"} opacity-0 fade-in-up ${isVisible ? "in-view" : ""}`}
             ref={sectionRef}>
             {heading && (
                 <div className="flex items-center justify-between">
