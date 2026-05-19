@@ -13,15 +13,16 @@ export const ACHIEVEMENTS: Achievement[] = [
     {
         id: "npm-users",
         title: "1000+ Weekly npm Users",
+        organization: "Product Goal",
         description:
             "Published reusable frontend tooling actively used by developers.",
         type: "Product",
     },
     {
         id: "tecza-web-design",
-        title: "Winner — Web Designing Competition",
-        organization: "Tecza Inter-University Fest",
+        title: "Winner - Web Designing Competition",
+        organization: "Tecza Inter-University Fest - The Cochin College",
         type: "Competition",
-        description: "",
+        description: "Won 1st prize in the design to code competition got 3K prize money and certificate.",
     },
 ];
