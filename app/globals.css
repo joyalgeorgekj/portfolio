@@ -74,9 +74,23 @@ div.clip-div {
     }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* When element is visible in viewport */
-.fadeIn.in-view {
+.fade-in-up.in-view {
     animation: fadeInUp 0.8s ease-out forwards;
+}
+.fade-in.in-view {
+    animation: fadeIn 0.8s ease-out forwards;
 }
 
 @theme inline {
