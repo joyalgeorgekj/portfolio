@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import BlogCard from "@/components/cards/BlogCard";
 import { Blog } from "@/types/blog.type";
 import { BLOGS } from "@/content/blog/blog";
+import Section from "@/components/layout/Section";
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -25,9 +26,9 @@ export default function BlogPage() {
     // ];
 
     return (
-        <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
+        <Section id="blogs" sectionClass="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
             {/* Hero */}
-            <div className="max-w-3xl">
+            <Section id="blog-hero" sectionClass="max-w-3xl">
                 <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
                     Writing
                 </p>
@@ -44,7 +45,7 @@ export default function BlogPage() {
                     performance, product thinking, open source, and building
                     real software.
                 </p>
-            </div>
+            </Section>
 
             {/* Search + Filters
         <div className="mt-10 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -67,7 +68,7 @@ export default function BlogPage() {
         </div> */}
 
             {/* Featured Post */}
-            <section className="card mt-10 rounded-3xl border border-typography/10 bg-background p-8 grid gap-4">
+            <Section id="featured-post" sectionClass="card mt-10 rounded-3xl border border-typography/10 bg-background p-8 grid gap-4">
                 <p className="text-sm uppercase tracking-[0.2em] text-primary">
                     Featured Article
                 </p>
@@ -93,17 +94,17 @@ export default function BlogPage() {
                     className="btn btn-primary">
                     Read Article
                 </Link>
-            </section>
+            </Section>
 
             {/* Posts Grid */}
-            <section className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <Section id="blog-cards" sectionClass="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {posts.map((post, ind) => (
                     <BlogCard post={post} key={ind} />
                 ))}
-            </section>
+            </Section>
 
             {/* Newsletter */}
-            <section className="mt-14 rounded-3xl border border-typography/10 bg-background p-8 md:p-10">
+            <Section id="newsletter" sectionClass="mt-14 rounded-3xl border border-typography/10 bg-background p-8 md:p-10">
                 <div className="max-w-2xl">
                     <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
                         Newsletter
@@ -128,7 +129,7 @@ export default function BlogPage() {
                         <button className="btn btn-primary">Subscribe</button>
                     </div>
                 </div>
-            </section>
-        </section>
+            </Section>
+        </Section>
     );
 }

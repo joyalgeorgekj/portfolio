@@ -13,6 +13,7 @@ import { PROJECTS } from "@/content/projects/projects";
 import { SKILLS } from "@/content/skills/skills";
 import { Skill } from "@/types/skill.type";
 import SkillCard from "@/components/cards/SkillCard";
+import Section from "@/components/layout/Section";
 
 export default function Home() {
     const stats = [
@@ -68,7 +69,7 @@ export default function Home() {
     return (
         <>
             {/* Hero */}
-            <section className="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6 ">
+            <Section id="hero" sectionClass="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6 ">
                 {/* Left Content */}
                 <div className="grid gap-4 *:w-fit">
                     <p className="inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-sm text-primary">
@@ -182,10 +183,10 @@ export default function Home() {
                     {/* Glow Ring */}
                     <div className="absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
                 </div>
-            </section>
+            </Section>
 
             {/* Preview Sections */}
-            <section className="relative mx-auto max-w-7xl px-4 pb-24 md:px-6">
+            <Section id="preview" sectionClass="relative mx-auto max-w-7xl px-4 pb-24 md:px-6">
                 <div className="mb-10">
                     <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                         Explore
@@ -224,10 +225,10 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-            </section>
+            </Section>
 
             {/* Bottom CTA */}
-            <section className="mx-auto max-w-7xl px-4 pb-28 md:px-6">
+            <Section id="cta" sectionClass="mx-auto max-w-7xl px-4 pb-28 md:px-6">
                 <div className="rounded-3xl border border-typography/10 bg-background p-8 md:p-12">
                     <div className="max-w-2xl flex flex-col gap-4">
                         <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
@@ -260,7 +261,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Section>
         </>
     );
 }

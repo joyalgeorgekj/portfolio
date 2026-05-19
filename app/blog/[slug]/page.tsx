@@ -6,6 +6,8 @@ import { blogStructuredData } from "@/lib/structured-data";
 import { Blog } from "@/types/blog.type";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import "./markdown.css";
+import Section from "@/components/layout/Section";
 
 interface Props {
     params: Promise<{
@@ -51,9 +53,9 @@ export default async function BlogSlugPage({ params }: Props) {
 
     return (
         <>
-            <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
+            <Section id="blog" sectionClass="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
                 <BlogCard post={blog} body={extractor(blog.id + ".md")} />
-            </section>
+            </Section>
 
             <script
                 type="application/ld+json"

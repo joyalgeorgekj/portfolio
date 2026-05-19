@@ -65,9 +65,9 @@ export default function Portfolio() {
             {/* Content */}
             <div className="space-y-10">
                 {/* Hero */}
-                <section
+                <Section
                     id="about"
-                    className="rounded-3xl bg-background p-8 flex flex-col gap-4">
+                    sectionClass="rounded-3xl bg-background p-8 flex flex-col gap-4">
                     <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                         About
                     </p>
@@ -102,7 +102,7 @@ export default function Portfolio() {
                             </div>
                         ))}
                     </div>
-                </section>
+                </Section>
 
                 {/* Skills */}
                 <Section
@@ -264,9 +264,9 @@ export default function Portfolio() {
                 </Section>
 
                 {/* Contact */}
-                <section
+                <Section
                     id="contact"
-                    className="rounded-3xl border border-typography/10 bg-background p-8 scroll-mt-28 grid gap-4 sticky">
+                    sectionClass="rounded-3xl border border-typography/10 bg-background p-8 scroll-mt-28 grid gap-4 sticky">
                     <h2 className="text-3xl font-semibold">
                         Need a frontend engineer who ships?
                     </h2>
@@ -290,7 +290,7 @@ export default function Portfolio() {
                             LinkedIn
                         </Link>
                     </div>
-                </section>
+                </Section>
             </div>
         </div>
     );
