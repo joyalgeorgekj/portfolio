@@ -14,13 +14,14 @@ import { SKILLS } from "@/content/skills/skills";
 import { Skill } from "@/types/skill.type";
 import SkillCard from "@/components/cards/SkillCard";
 import Section from "@/components/layout/Section";
+import { OPENSOURCE } from "@/content/opensource/opensource";
 
 export default function Home() {
     const stats = [
         new Date().getFullYear() -
             new Date("2023").getFullYear() +
             "+ Years Experience",
-        "1000+ Weekly npm Users",
+        "1500+ Weekly npm Users",
         "Open Source Contributor",
         "Production React Apps",
     ];
@@ -71,17 +72,17 @@ export default function Home() {
             {/* Hero */}
             <Section id="hero" sectionClass="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6 ">
                 {/* Left Content */}
-                <div className="grid gap-4 *:w-fit">
-                    <p className="inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-sm text-primary">
+                <div className="grid gap-4">
+                    <p className="w-fit inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-xs text-primary">
                         <span className="animate-pulse bg-primary w-2 h-2 rounded-full"></span>{" "}
                         Available for Frontend Opportunities
                     </p>
 
-                    <h1 className="text-5xl font-semibold leading-tight tracking-tight md:text-7xl">
+                    <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
                         Joyal George K J <br />
                     </h1>
-                    <h2 className="text-3xl bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
-                        Product-Focused Frontend Engineer
+                    <h2 className="text-2xl bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
+                        Javascript / Typescript Developer
                     </h2>
 
                     <p className=" max-w-xl text-base leading-7 text-typography/75 md:text-lg">
@@ -91,7 +92,7 @@ export default function Home() {
                     </p>
 
                     {/* CTA */}
-                    <div className="flex flex-wrap gap-4">
+                    <div className="w-full grid md:grid-cols-3 grid-cols-1 *:w-full *:text-center gap-4">
                         <Link href="/portfolio" className="btn btn-primary">
                             Explore Portfolio
                         </Link>
@@ -126,7 +127,7 @@ export default function Home() {
                                 <p className="text-xs uppercase tracking-widest text-typography/75">
                                     Current Stack
                                 </p>
-                                <div className="mt-2 flex justify-between text-sm text-zinc-200">
+                                <div className="mt-2 grid md:grid-cols-7 grid-cols-3 gap-2 justify-between text-sm text-zinc-200">
                                     {stack.map((skill) => (
                                         <SkillCard
                                             skill={skill}
@@ -142,7 +143,7 @@ export default function Home() {
                                         Weekly Users
                                     </p>
                                     <p className="mt-2 text-3xl font-semibold text-primary">
-                                        1000+
+                                        1500+
                                     </p>
                                 </div>
 
@@ -151,7 +152,7 @@ export default function Home() {
                                         OSS Repos
                                     </p>
                                     <p className="mt-2 text-3xl font-semibold text-violet-300">
-                                        6+
+                                        {OPENSOURCE.length}+
                                     </p>
                                 </div>
                             </div>
@@ -181,7 +182,6 @@ export default function Home() {
                     </div>
 
                     {/* Glow Ring */}
-                    <div className="absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
                 </div>
             </Section>
 
