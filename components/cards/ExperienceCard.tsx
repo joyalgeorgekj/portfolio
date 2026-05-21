@@ -14,14 +14,18 @@ export default function ExperienceCard({
     const isVisible = useViewportCheck(cardRef);
 
     return (
-        <div className={`relative pl-10 opacity-0 fade-in ${isVisible ? "in-view" : ""}`} ref={cardRef}>
+        <div
+            className={`relative pl-10 opacity-0 fade-in ${isVisible ? "in-view" : ""}`}
+            ref={cardRef}>
             {/* Timeline Dot */}
             <div className="absolute left-0 top-2 h-5.5 w-5.5 rounded-full border border-primary/30 p-1">
                 <div className="h-full w-full rounded-full bg-primary" />
             </div>
 
             {/* Card */}
-            <div className="card flex flex-col gap-4 rounded-3xl border border-typography/10 p-6 " aria-label={"Experience as " + experience.role}>
+            <div
+                className="card flex flex-col gap-4 rounded-3xl border border-typography/10 p-6 "
+                aria-label={"Experience as " + experience.role}>
                 {/* Top Row */}
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                     <div>

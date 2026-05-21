@@ -1,13 +1,13 @@
 "use client";
 
 import useViewportCheck from "@/hooks/useViewportCheck";
-import { Skill} from "@/types/skill.type";
+import { Skill } from "@/types/skill.type";
 import { useRef } from "react";
 import SkillCard from "./SkillCard";
 
 interface Props {
     category: string;
-    skills: Skill[]
+    skills: Skill[];
 }
 
 export default function SkillCategoryCard({ category, skills }: Props) {

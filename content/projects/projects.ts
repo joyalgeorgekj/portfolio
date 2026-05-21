@@ -17,7 +17,16 @@ export const PROJECTS: Project[] = [
     },
     {
         title: "Melodri",
-        stack: ["React", "Node.js", "Tailwind", "Express.js", "N8N", "Docker", "Gemini API", "Linux"],
+        stack: [
+            "React",
+            "Node.js",
+            "Tailwind",
+            "Express.js",
+            "N8N",
+            "Docker",
+            "Gemini API",
+            "Linux",
+        ],
         desc: "Melodri is a media processing pipeline that uses Gemini 3 as a reasoning engine to identify soundtracks within video files.",
         metric: "Google Gemini AI Hackathon",
         url: "https://github.com/joyalgeorgekj/melodri",
@@ -25,7 +34,7 @@ export const PROJECTS: Project[] = [
     {
         title: "Senku.io",
         stack: ["Next.js", "Git", "CI/CD", "Markdown"],
-        desc: "An open-source knowledge store and dependency engine. We map the technological \"Tech Tree\" of humanity from the first stone tool to modern semicon",
+        desc: 'An open-source knowledge store and dependency engine. We map the technological "Tech Tree" of humanity from the first stone tool to modern semicon',
         metric: "Founder Project",
         url: "https://github.com/senku-io",
         featured: true,

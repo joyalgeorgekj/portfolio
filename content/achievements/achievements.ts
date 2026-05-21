@@ -23,6 +23,7 @@ export const ACHIEVEMENTS: Achievement[] = [
         title: "Winner - Web Designing Competition",
         organization: "Tecza Inter-University Fest - The Cochin College",
         type: "Competition",
-        description: "Won 1st prize in the design to code competition got 3K prize money and certificate.",
+        description:
+            "Won 1st prize in the design to code competition got 3K prize money and certificate.",
     },
 ];

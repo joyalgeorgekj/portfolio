@@ -53,7 +53,9 @@ export default async function BlogSlugPage({ params }: Props) {
 
     return (
         <>
-            <Section id="blog" sectionClass="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
+            <Section
+                id="blog"
+                sectionClass="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
                 <BlogCard post={blog} body={extractor(blog.id + ".md")} />
             </Section>
 
