@@ -1,13 +1,5 @@
 // app/page.tsx
 import Link from "next/link";
-import {
-    FlaskConicalIcon,
-    GitPullRequestIcon,
-    LibraryBigIcon,
-    LuggageIcon,
-    StarsIcon,
-    WrenchIcon,
-} from "lucide-react";
 import ProjectCard from "../components/cards/ProjectCard";
 import { PROJECTS } from "@/content/projects/projects";
 import { SKILLS } from "@/content/skills/skills";
@@ -15,53 +7,40 @@ import { Skill } from "@/types/skill.type";
 import SkillCard from "@/components/cards/SkillCard";
 import Section from "@/components/layout/Section";
 import { OPENSOURCE } from "@/content/opensource/opensource";
+import ExploreCard from "@/components/cards/ExploreCard";
+import { stats } from "@/constants/stats";
 
 export default function Home() {
-    const stats = [
-        new Date().getFullYear() -
-            new Date("2023").getFullYear() +
-            "+ Years Experience",
-        "1500+ Weekly npm Users",
-        "Open Source Contributor",
-        "Production React Apps",
-    ];
-
     const stack: Skill[] = SKILLS.core;
 
     const highlights = [
         {
             title: "Featured Projects",
-            icon: StarsIcon,
             desc: "Scalable products, polished UI systems, real-world impact.",
             route: "/portfolio#projects",
         },
         {
             title: "Open Source",
-            icon: GitPullRequestIcon,
             desc: "Contributions to Appwrite, Docker Docs, BuildKit and more.",
             route: "/portfolio#opensource",
         },
         {
             title: "Skills",
-            icon: WrenchIcon,
             desc: "React, Next.js, TypeScript, Performance, Architecture.",
             route: "/portfolio#skills",
         },
         {
             title: "Experience",
-            icon: LuggageIcon,
             desc: "Freelance, contract, production-focused frontend delivery.",
             route: "/portfolio#experience",
         },
         {
             title: "Blog",
-            icon: LibraryBigIcon,
             desc: "Engineering insights, architecture, frontend workflows.",
             route: "/blog",
         },
         {
             title: "Lab",
-            icon: FlaskConicalIcon,
             desc: "Experiments, mini games, interactive playground.",
             route: "/lab",
         },
@@ -70,7 +49,9 @@ export default function Home() {
     return (
         <>
             {/* Hero */}
-            <Section id="hero" sectionClass="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6 ">
+            <Section
+                id="hero"
+                sectionClass="relative mx-auto grid min-h-[88dvh] max-w-7xl items-center gap-14 px-4 py-10 md:grid-cols-2 md:px-6 ">
                 {/* Left Content */}
                 <div className="grid gap-4">
                     <p className="w-fit inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-xs text-primary">
@@ -81,7 +62,7 @@ export default function Home() {
                     <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
                         Joyal George K J <br />
                     </h1>
-                    <h2 className="text-2xl bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
+                    <h2 className="text-2xl md:text-3xl bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
                         Javascript / Typescript Developer
                     </h2>
 
@@ -186,7 +167,9 @@ export default function Home() {
             </Section>
 
             {/* Preview Sections */}
-            <Section id="preview" sectionClass="relative mx-auto max-w-7xl px-4 pb-24 md:px-6">
+            <Section
+                id="preview"
+                sectionClass="relative mx-auto max-w-7xl px-4 pb-24 md:px-6">
                 <div className="mb-10">
                     <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
                         Explore
@@ -197,38 +180,16 @@ export default function Home() {
                 </div>
 
                 <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    {highlights.map((item) => (
-                        <div
-                            key={item.title}
-                            className="card group rounded-3xl border border-typography/10 bg-background p-6  flex flex-col gap-4">
-                            <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
-                                <item.icon
-                                    height={24}
-                                    width={24}
-                                    className="rounded-2xl group-hover:text-primary"
-                                />
-                            </div>
-
-                            <h3 className="text-lg font-semibold text-typography">
-                                {item.title}
-                            </h3>
-
-                            <p className="text-sm leading-6 text-typography/75">
-                                {item.desc}
-                            </p>
-
-                            <Link
-                                href={item.route}
-                                className="text-sm text-primary transition group-hover:translate-x-1">
-                                Explore →
-                            </Link>
-                        </div>
+                    {highlights.map((item, ind) => (
+                        <ExploreCard explore={item} key={ind} />
                     ))}
                 </div>
             </Section>
 
             {/* Bottom CTA */}
-            <Section id="cta" sectionClass="mx-auto max-w-7xl px-4 pb-28 md:px-6">
+            <Section
+                id="cta"
+                sectionClass="mx-auto max-w-7xl px-4 pb-28 md:px-6">
                 <div className="rounded-3xl border border-typography/10 bg-background p-8 md:p-12">
                     <div className="max-w-2xl flex flex-col gap-4">
                         <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
@@ -245,7 +206,7 @@ export default function Home() {
                             experiences.
                         </p>
 
-                        <div className="flex flex-wrap gap-4">
+                        <div className="grid grid-cols-2 *:w-full *:text-center md:w-fit gap-4">
                             <Link
                                 href="mailto:joyalgeorgekj@gmail.com"
                                 className="btn btn-primary">
