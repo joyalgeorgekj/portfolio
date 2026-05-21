@@ -9,5 +9,5 @@ export interface OpenSource {
         | "Feature"
         | "Refactor";
     stack?: string[];
-    url?: string;
+    url: string;
 }
