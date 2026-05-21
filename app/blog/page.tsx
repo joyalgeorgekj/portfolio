@@ -26,7 +26,9 @@ export default function BlogPage() {
     // ];
 
     return (
-        <Section id="blogs" sectionClass="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
+        <div
+            id="blogs"
+            className="relative mx-auto max-w-7xl px-4 py-12 md:px-6">
             {/* Hero */}
             <Section id="blog-hero" sectionClass="max-w-3xl">
                 <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
@@ -68,43 +70,46 @@ export default function BlogPage() {
         </div> */}
 
             {/* Featured Post */}
-            <Section id="featured-post" sectionClass="card mt-10 rounded-3xl border border-typography/10 bg-background p-8 grid gap-4">
-                <p className="text-sm uppercase tracking-[0.2em] text-primary">
-                    Featured Article
-                </p>
-
-                <h2 className="max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
-                    {featuredPost.title}
-                </h2>
-
-                <p className="max-w-2xl leading-7 text-typography/75">
-                    {featuredPost.prevDescription}
-                </p>
-
-                <div className="flex flex-wrap gap-4 text-sm text-typography/75">
-                    <span>{featuredPost.category}</span>
-                    <span>•</span>
-                    <span>{featuredPost.readingTime}</span>
-                    <span>•</span>
-                    <span>{featuredPost.publishedAt}</span>
-                </div>
-
+            <Section id="featured-post" sectionClass="mt-10 gap-4">
                 <Link
-                    href={"blog/" + featuredPost.id}
-                    className="btn btn-primary">
-                    Read Article
+                    href={"/blog/" + featuredPost.id}
+                    aria-label="Featured Blog"
+                    className="group card mt-10 rounded-3xl border border-typography/10 bg-background p-8 grid gap-4">
+                    <p className="text-sm uppercase tracking-[0.2em] text-primary">
+                        Featured Article
+                    </p>
+                    <h2 className="max-w-3xl text-3xl font-semibold tracking-tight md:text-5xl">
+                        {featuredPost.title}
+                    </h2>
+                    <p className="max-w-2xl leading-7 text-typography/75">
+                        {featuredPost.prevDescription}
+                    </p>
+                    <div className="flex flex-wrap gap-4 text-sm text-typography/75">
+                        <span>{featuredPost.category}</span>
+                        <span>•</span>
+                        <span>{featuredPost.readingTime}</span>
+                        <span>•</span>
+                        <span>{featuredPost.publishedAt}</span>
+                    </div>
+                    <span className="btn btn-primary transition group-hover:translate-x-1">
+                        Read Article
+                    </span>
                 </Link>
             </Section>
 
             {/* Posts Grid */}
-            <Section id="blog-cards" sectionClass="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <Section
+                id="blog-cards"
+                sectionClass="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                 {posts.map((post, ind) => (
                     <BlogCard post={post} key={ind} />
                 ))}
             </Section>
 
             {/* Newsletter */}
-            <Section id="newsletter" sectionClass="mt-14 rounded-3xl border border-typography/10 bg-background p-8 md:p-10">
+            <Section
+                id="newsletter"
+                sectionClass="mt-14 rounded-3xl border border-typography/10 bg-background p-8 md:p-10">
                 <div className="max-w-2xl">
                     <p className="text-sm uppercase tracking-[0.22em] text-typography/75">
                         Newsletter
@@ -126,10 +131,12 @@ export default function BlogPage() {
                             className="w-full rounded-2xl border border-typography/10 bg-white/5 px-5 py-3 text-sm text-typography outline-none placeholder:text-typography/75"
                         />
 
-                        <button className="btn btn-primary">Subscribe</button>
+                        <button className="btn btn-primary w-full md:w-fit">
+                            Subscribe
+                        </button>
                     </div>
                 </div>
             </Section>
-        </Section>
+        </div>
     );
 }
