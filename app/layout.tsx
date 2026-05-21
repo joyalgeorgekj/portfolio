@@ -122,7 +122,10 @@ export default function RootLayout({
                         <div className="absolute bottom-10 left-1/3 h-64 w-64 rounded-full bg-blue-900/30 blur-3xl" />
                     </div>
 
-                    <div className="isolate">{children}</div>
+                    {/* Mouse Tracer */}
+                    <MouseTrack />
+
+                    <div>{children}</div>
                 </main>
                 <Footer />
 
