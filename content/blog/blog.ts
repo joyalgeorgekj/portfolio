@@ -27,7 +27,7 @@ export const BLOGS: Blog[] = [
         readingTime: "5 min read",
         publishedAt: "Dec 2025",
         prevDescription: "",
-        id: "something",
+        id: "something1",
     },
     {
         title: "How I Built an Internal Tool That Solved Real Problems",
@@ -35,7 +35,7 @@ export const BLOGS: Blog[] = [
         readingTime: "7 min read",
         publishedAt: "Dec 2025",
         prevDescription: "",
-        id: "something",
+        id: "something2",
     },
     {
         title: "Open Source Contributions as a Growth Strategy",
@@ -43,7 +43,7 @@ export const BLOGS: Blog[] = [
         readingTime: "5 min read",
         publishedAt: "Nov 2025",
         prevDescription: "",
-        id: "something",
+        id: "something3",
     },
     {
         title: "Designing Better UI Systems With Components",
@@ -51,7 +51,7 @@ export const BLOGS: Blog[] = [
         readingTime: "9 min read",
         publishedAt: "Nov 2025",
         prevDescription: "",
-        id: "something",
+        id: "something4",
     },
     {
         title: "Why Tailwind + Next.js Is Still a Strong Stack",
@@ -59,6 +59,6 @@ export const BLOGS: Blog[] = [
         readingTime: "4 min read",
         publishedAt: "Oct 2025",
         prevDescription: "",
-        id: "something",
+        id: "something5",
     },
 ];
