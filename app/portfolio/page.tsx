@@ -1,6 +1,5 @@
 // app/portfolio/page.tsx
 import Link from "next/link";
-import Section from "../../components/layout/Section";
 import type { Metadata } from "next";
 import { SKILLS } from "@/content/skills/skills";
 import { PROJECTS } from "@/content/projects/projects";
@@ -11,7 +10,11 @@ import { OPENSOURCE } from "@/content/opensource/opensource";
 import { ACHIEVEMENTS } from "@/content/achievements/achievements";
 import { BLOGS } from "@/content/blog/blog";
 import BlogCard from "@/components/cards/BlogCard";
-import Image from "next/image";
+import AchievementCard from "@/components/cards/AchievementCard";
+import OpenSourceCard from "@/components/cards/OpenSourceCard";
+import SkillCategoryCard from "@/components/cards/SkillCategoryCard";
+import AboutCard from "@/components/cards/AboutCard";
+import Section from "@/components/layout/Section";
 
 export const metadata: Metadata = {
     title: "Portfolio",
@@ -34,8 +37,8 @@ export default function Portfolio() {
     return (
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 md:grid-cols-[260px_1fr] md:px-6">
             {/* Sidebar */}
-            <aside className="top-28 h-fit md:sticky self-start">
-                <div className="rounded-3xl bg-background p-5 ">
+            <aside className="md:top-28 h-fit grid sticky self-start bg-background rounded-3xl">
+                <div className="bg-background p-5 ">
                     <p className="mb-5 text-xs uppercase tracking-[0.25em] text-typography/75">
                         Portfolio
                     </p>
@@ -68,40 +71,7 @@ export default function Portfolio() {
                 <Section
                     id="about"
                     sectionClass="rounded-3xl bg-background p-8 flex flex-col gap-4">
-                    <p className="text-sm uppercase tracking-[0.2em] text-typography/75">
-                        About
-                    </p>
-
-                    <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-                        Joyal George K J
-                    </h1>
-
-                    <p className="text-lg text-primary">
-                        Product-Focused Frontend Engineer
-                    </p>
-
-                    <p className="max-w-3xl leading-7 text-typography/75">
-                        Frontend engineer with 3+ years of experience building
-                        scalable, performant, and maintainable React / Next.js
-                        applications. Strong focus on UI architecture, product
-                        quality, state management, and shipping features that
-                        users actually need.
-                    </p>
-
-                    <div className="grid gap-4 md:grid-cols-4">
-                        {[
-                            "3+ Years Experience",
-                            "1000+ npm Users",
-                            "OSS Contributor",
-                            "Production Apps",
-                        ].map((item) => (
-                            <div
-                                key={item}
-                                className="card rounded-2xl border border-typography/10 px-4 py-4 text-sm text-typography/75">
-                                &gt; {item}
-                            </div>
-                        ))}
-                    </div>
+                    <AboutCard />
                 </Section>
 
                 {/* Skills */}
@@ -113,39 +83,11 @@ export default function Portfolio() {
                     {Object.entries(SKILLS)
                         .slice(1)
                         .map(([group, items]) => (
-                            <div
+                            <SkillCategoryCard
+                                category={group}
+                                skills={items}
                                 key={group}
-                                className="group card rounded-2xl p-5">
-                                <h3 className="capitalize text-sm font-semibold text-typography/75">
-                                    {group}
-                                </h3>
-
-                                <div className="mt-4 flex flex-wrap gap-2">
-                                    {items.map((item) => (
-                                        <div
-                                            key={item.title}
-                                            className="bg-white/5 p-4 rounded border border-typography/10 flex justify-center items-center group-hover:border-primary/30 "
-                                            title={item.title}>
-                                            {item.icon ? (
-                                                <Image
-                                                    width={32}
-                                                    height={32}
-                                                    alt={item.title}
-                                                    src={
-                                                        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
-                                                        item.icon
-                                                    }
-                                                    className="w-8 h-8 rounded"
-                                                />
-                                            ) : (
-                                                <span className="rounded-full border-typography/10 px-3 py-1 text-sm text-typography/75 cursor-pointer">
-                                                    {item.title}
-                                                </span>
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+                            />
                         ))}
                 </Section>
 
@@ -192,25 +134,10 @@ export default function Portfolio() {
                     heading="Open Source Contributions"
                     container="mt-6 grid gap-5 md:grid-cols-2">
                     {OPENSOURCE.map((contribution) => (
-                        <div
-                            key={contribution.project}
-                            className="card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2">
-                            <div className="flex flex-wrap items-center gap-3">
-                                <h3 className="text-xl font-semibold">
-                                    {contribution.project}
-                                </h3>
-
-                                <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs text-primary">
-                                    {contribution.type}
-                                </span>
-                            </div>
-                            <p className="text-sm text-typography/75">
-                                {contribution.stack?.join(", ")}
-                            </p>
-                            <p className="text-sm leading-6 text-typography/75">
-                                {contribution.description}
-                            </p>
-                        </div>
+                        <OpenSourceCard
+                            opensource={contribution}
+                            key={contribution.id}
+                        />
                     ))}
                 </Section>
 
@@ -221,34 +148,7 @@ export default function Portfolio() {
                     heading="Achievements"
                     container="mt-6 grid gap-5 md:grid-cols-1">
                     {ACHIEVEMENTS.map((item) => (
-                        <div
-                            key={item.id}
-                            className="card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2">
-                            {/* Left */}
-                            <div className="max-w-2xl flex flex-col gap-2">
-                                {item.organization && (
-                                    <p className="text-sm text-typography/75 uppercase">
-                                        {item.organization}
-                                    </p>
-                                )}
-
-                                <div className="flex flex-wrap items-center gap-3">
-                                    <h3 className="text-lg font-semibold">
-                                        {item.title}
-                                    </h3>
-
-                                    <span className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs text-primary">
-                                        {item.type}
-                                    </span>
-                                </div>
-
-                                {item.description && (
-                                    <p className="leading-7 text-typography/75">
-                                        {item.description}
-                                    </p>
-                                )}
-                            </div>
-                        </div>
+                        <AchievementCard achievement={item} key={item.id} />
                     ))}
                 </Section>
 
