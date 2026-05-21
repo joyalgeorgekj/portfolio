@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { useEffect, useRef } from "react";
 
 export default function MouseTrack() {
     const cursorRef = useRef<HTMLDivElement>(null);
-    const [desktop, setDesktop] = useState<number | null>(null);
+    const desktop = useMediaQuery("(pointer: fine)");
 
     useEffect(() => {
         const moveCursor = (e: MouseEvent) => {
@@ -14,14 +15,12 @@ export default function MouseTrack() {
             }
         };
 
-        setDesktop(window.innerWidth);
-
-        if (desktop && desktop > 800) {
+        if (desktop) {
             window.addEventListener("mousemove", moveCursor);
 
             return () => window.removeEventListener("mousemove", moveCursor);
         }
-    }, [desktop]);
+    });
 
     return (
         <div
@@ -30,7 +29,6 @@ export default function MouseTrack() {
                  rounded-full bg-typography mix-blend-difference"
             style={{
                 // Use transform for hardware acceleration (smoother than top/left)
-                // transform: `translate3d(calc(var(--x) - 20px), calc(var(--y) - 20px), 0)`,
                 top: "calc(var(--y) - 20px)",
                 left: "calc(var(--x) - 20px)",
             }}

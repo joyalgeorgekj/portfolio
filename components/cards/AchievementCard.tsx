@@ -2,8 +2,6 @@
 
 import useViewportCheck from "@/hooks/useViewportCheck";
 import { Achievement } from "@/types/achievements.type";
-import { Project } from "@/types/projects.type";
-import Link from "next/link";
 import { useRef } from "react";
 
 interface Props {
