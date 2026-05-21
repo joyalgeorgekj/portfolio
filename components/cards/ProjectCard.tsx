@@ -3,7 +3,7 @@
 import useViewportCheck from "@/hooks/useViewportCheck";
 import { Project } from "@/types/projects.type";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 interface Props {
     project: Project;
@@ -12,12 +12,13 @@ interface Props {
 export default function ProjectCard({ project }: Props) {
     const cardRef = useRef<HTMLAnchorElement | null>(null);
     const isVisible = useViewportCheck(cardRef);
-    
+
     return (
         <Link
             href={project.url}
-            key={project.title}
             ref={cardRef}
+            aria-label={'Project "' + project.title + '"'}
+            target="_blank"
             className={`group card rounded-2xl border border-typography/10 p-5 flex flex-col gap-4 h-fit opacity-0 fade-in ${isVisible ? "in-view" : ""}`}>
             <p className="text-xs uppercase tracking-[0.2em] text-typography/75">
                 {project.metric}
