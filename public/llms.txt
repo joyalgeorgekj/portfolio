@@ -1,0 +1,25 @@
+# Joyal George K J
+
+Developer portfolio and technical blog focused on JavaScript, TypeScript, frontend engineering, automation tooling, and open source exploration.
+
+## Main Sections
+
+- /portfolio
+- /blog
+- /lab
+
+## Topics
+
+- JavaScript
+- TypeScript
+- React
+- Next.js
+- Frontend Architecture
+- Automation
+- Open Source
+- Developer Tooling
+- Performance
+
+## Blog
+
+Technical writing and engineering reflections covering frontend systems, real-world debugging, architecture decisions, and developer workflows.

@@ -100,6 +100,7 @@ export const metadata: Metadata = {
     verification: {
         google: "google-site-verification-code",
     },
+    manifest: "/manifest.webmanifest"
 };
 
 export default function RootLayout({
