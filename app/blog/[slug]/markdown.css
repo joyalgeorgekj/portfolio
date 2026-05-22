@@ -1,9 +1,26 @@
-/* Markdown IT */
+/* Markdown Body */
 
 .markdown-body {
+    max-width: 70ch;
     color: rgb(161 161 170);
     font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* First Paragraph */
+
+.markdown-body > p:first-of-type {
+    margin-top: 0;
+    font-size: 1.15rem;
     line-height: 1.9;
+    color: rgb(212 212 216);
+}
+
+/* Paragraphs */
+
+.markdown-body p {
+    margin-top: 1.6rem;
+    color: rgb(161 161 170);
 }
 
 /* Headings */
@@ -14,60 +31,46 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
-    color: rgb(255, 255, 255);
+    color: rgb(250 250 250);
     font-weight: 600;
     line-height: 1.2;
-    letter-spacing: -0.03em;
 }
 
 .markdown-body h1 {
     margin-top: 4rem;
     margin-bottom: 1.5rem;
-    font-size: 3rem;
+    font-size: 2.7rem;
 }
 
 .markdown-body h2 {
     margin-top: 4rem;
     margin-bottom: 1.25rem;
-    font-size: 2.25rem;
+    font-size: 2rem;
 }
 
 .markdown-body h3 {
     margin-top: 3rem;
     margin-bottom: 1rem;
-    font-size: 1.75rem;
+    font-size: 1.55rem;
 }
 
 .markdown-body h4 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    font-size: 1.35rem;
+    font-size: 1.2rem;
 }
 
-.markdown-body h5 {
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-    font-size: 1.15rem;
-}
-
+.markdown-body h5,
 .markdown-body h6 {
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     font-size: 1rem;
-    color: rgb(161 161 170);
-}
-
-/* Paragraphs */
-
-.markdown-body p {
-    margin-top: 1.5rem;
-    color: rgb(161 161 170);
 }
 
 /* Strong */
 
 .markdown-body strong {
-    color: white;
+    color: rgb(250 250 250);
     font-weight: 600;
 }
 
@@ -82,6 +85,10 @@
 
 .markdown-body a {
     color: rgb(103 232 249);
+    text-decoration: underline;
+    text-decoration-color: rgba(103, 232, 249, 0.35);
+    text-underline-offset: 4px;
+    transition: 200ms;
 }
 
 .markdown-body a:hover {
@@ -92,21 +99,22 @@
 
 .markdown-body ul,
 .markdown-body ol {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+    padding-left: 1.4rem;
 }
 
 .markdown-body ul {
-    list-style-type: disc;
+    list-style: disc;
 }
 
 .markdown-body ol {
-    list-style-type: decimal;
+    list-style: decimal;
 }
 
 .markdown-body li {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+    padding-left: 0.35rem;
     color: rgb(161 161 170);
 }
 
@@ -114,33 +122,50 @@
     color: rgb(103 232 249);
 }
 
-/* Nested Lists */
-
-.markdown-body li > ul,
-.markdown-body li > ol {
-    margin-top: 0.5rem;
-}
-
 /* Blockquote */
 
 .markdown-body blockquote {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     border-left: 3px solid rgb(34 211 238);
-    padding-left: 1.25rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 1rem 1rem 0;
     color: rgb(212 212 216);
-    font-size: 1.1rem;
+    backdrop-filter: blur(14px);
 }
 
-/* Code Inline */
+/* Inline Code */
+
+.markdown-body code {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.2rem 0.45rem;
+    border-radius: 0.45rem;
+    color: rgb(196 181 253);
+    font-size: 0.92rem;
+}
+
+/* Code Blocks */
+
+.markdown-body pre {
+    overflow-x: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 10, 15, 0.7);
+    padding: 1.4rem;
+    border-radius: 1.25rem;
+    backdrop-filter: blur(18px);
+}
 
 .markdown-body pre code {
     border: none;
     background: transparent;
     padding: 0;
-    color: inherit;
-    font-size: 0.95rem;
-    line-height: 1.8;
+    color: rgb(228 228 231);
+    font-size: 0.94rem;
+    line-height: 1.7;
 }
 
 /* Horizontal Rule */
@@ -162,16 +187,18 @@
     border-collapse: collapse;
     border-radius: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(14px);
 }
 
 .markdown-body thead {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .markdown-body th {
     padding: 1rem;
     text-align: left;
-    color: white;
+    color: rgb(250 250 250);
     font-weight: 600;
 }
 
@@ -184,14 +211,12 @@
 /* Images */
 
 .markdown-body img {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     width: 100%;
     border-radius: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
-/* Keyboard */
 
 /* Details */
 
@@ -199,39 +224,16 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 1rem;
     background: rgba(255, 255, 255, 0.03);
+    border-radius: 1rem;
     padding: 1rem 1.25rem;
+    backdrop-filter: blur(14px);
 }
 
 .markdown-body summary {
     cursor: pointer;
+    color: rgb(250 250 250);
     font-weight: 600;
-    color: white;
-}
-
-/* Definition Lists */
-
-.markdown-body dl {
-    margin-top: 2rem;
-}
-
-.markdown-body dt {
-    font-weight: 600;
-    color: white;
-}
-
-.markdown-body dd {
-    margin-top: 0.5rem;
-    margin-left: 1.5rem;
-    color: rgb(161 161 170);
-}
-
-/* Sup/Sub */
-
-.markdown-body sup,
-.markdown-body sub {
-    font-size: 0.75rem;
 }
 
 /* Selection */
@@ -248,7 +250,7 @@
 
 .markdown-body pre::-webkit-scrollbar-thumb {
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
 }
 
 /* Responsive */
@@ -256,24 +258,24 @@
 @media (max-width: 768px) {
     .markdown-body {
         font-size: 1rem;
-        line-height: 1.8;
+        line-height: 1.75;
     }
 
     .markdown-body h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .markdown-body h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .markdown-body h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .markdown-body pre {
-        border-radius: 1rem;
         padding: 1rem;
+        border-radius: 1rem;
     }
 
     .markdown-body table {
