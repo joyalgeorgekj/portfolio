@@ -71,7 +71,7 @@ export default function Portfolio() {
                 {/* Hero */}
                 <Section
                     id="about"
-                    sectionClass="rounded-3xl bg-background p-8 flex flex-col gap-4">
+                    sectionClass="rounded-3xl bg-background flex flex-col gap-4">
                     <AnimateCard className="rounded-3xl bg-background p-8 flex flex-col gap-4">
                         <AboutCard />
                     </AnimateCard>
