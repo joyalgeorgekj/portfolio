@@ -1,19 +1,13 @@
 "use client";
 
-import useViewportCheck from "@/hooks/useViewportCheck";
 import { Skill } from "@/types/skill.type";
 import Image from "next/image";
-import { useRef } from "react";
 
 export default function SkillCard({ skill }: { skill: Skill }) {
-    const cardRef = useRef<HTMLDivElement | null>(null);
-    const isVisible = useViewportCheck(cardRef);
-
     return (
         <div
             key={skill.title}
-            ref={cardRef}
-            className={`bg-white/5 p-4 rounded border border-typography/10 flex justify-center items-center group-hover:border-primary/30 opacity-0 fade-in ${isVisible ? "in-view" : ""}`}
+            className={`bg-white/5 p-4 rounded border border-typography/10 flex justify-center items-center group-hover:border-primary/30`}
             title={skill.title}>
             {skill.icon ? (
                 <Image

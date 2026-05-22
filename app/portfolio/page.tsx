@@ -15,6 +15,7 @@ import OpenSourceCard from "@/components/cards/OpenSourceCard";
 import SkillCategoryCard from "@/components/cards/SkillCategoryCard";
 import AboutCard from "@/components/cards/AboutCard";
 import Section from "@/components/layout/Section";
+import AnimateCard from "@/components/ui/AnimateCard";
 
 export const metadata: Metadata = {
     title: "Portfolio",
@@ -71,7 +72,9 @@ export default function Portfolio() {
                 <Section
                     id="about"
                     sectionClass="rounded-3xl bg-background p-8 flex flex-col gap-4">
-                    <AboutCard />
+                    <AnimateCard>
+                        <AboutCard />
+                    </AnimateCard>
                 </Section>
 
                 {/* Skills */}
@@ -82,12 +85,13 @@ export default function Portfolio() {
                     container="mt-6 grid gap-5 md:grid-cols-2">
                     {Object.entries(SKILLS)
                         .slice(1)
-                        .map(([group, items]) => (
-                            <SkillCategoryCard
-                                category={group}
-                                skills={items}
-                                key={group}
-                            />
+                        .map(([group, items], ind) => (
+                            <AnimateCard key={group} delayTimes={ind}>
+                                <SkillCategoryCard
+                                    category={group}
+                                    skills={items}
+                                />
+                            </AnimateCard>
                         ))}
                 </Section>
 
@@ -97,13 +101,14 @@ export default function Portfolio() {
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/projects/"
                     heading="Featured Projects"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {PROJECTS.map((project) => (
-                        <ProjectCard
-                            project={project}
+                    {PROJECTS.map((project, ind) => (
+                        <AnimateCard
+                            delayTimes={ind}
                             key={project.title
                                 .replaceAll(" ", "")
-                                .toLowerCase()}
-                        />
+                                .toLowerCase()}>
+                            <ProjectCard project={project} />
+                        </AnimateCard>
                     ))}
                 </Section>
 
@@ -117,11 +122,12 @@ export default function Portfolio() {
                         <div className="absolute left-2.75 top-0 h-full w-px bg-white/10" />
 
                         <div className="space-y-8">
-                            {EXPERIENCE.map((experience) => (
-                                <ExperienceCard
-                                    experience={experience}
+                            {EXPERIENCE.map((experience, ind) => (
+                                <AnimateCard
                                     key={experience.id}
-                                />
+                                    delayTimes={ind}>
+                                    <ExperienceCard experience={experience} />
+                                </AnimateCard>
                             ))}
                         </div>
                     </div>
@@ -133,11 +139,10 @@ export default function Portfolio() {
                     link="https://www.linkedin.com/in/joyalgeorgekj/details/volunteering-experiences/"
                     heading="Open Source Contributions"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {OPENSOURCE.map((contribution) => (
-                        <OpenSourceCard
-                            opensource={contribution}
-                            key={contribution.id}
-                        />
+                    {OPENSOURCE.map((contribution, ind) => (
+                        <AnimateCard key={contribution.id} delayTimes={ind}>
+                            <OpenSourceCard opensource={contribution} />
+                        </AnimateCard>
                     ))}
                 </Section>
 
@@ -147,8 +152,10 @@ export default function Portfolio() {
                     linkNeeded={false}
                     heading="Achievements"
                     container="mt-6 grid gap-5 md:grid-cols-1">
-                    {ACHIEVEMENTS.map((item) => (
-                        <AchievementCard achievement={item} key={item.id} />
+                    {ACHIEVEMENTS.map((item, ind) => (
+                        <AnimateCard key={item.id} delayTimes={ind}>
+                            <AchievementCard achievement={item} />
+                        </AnimateCard>
                     ))}
                 </Section>
 
@@ -158,9 +165,13 @@ export default function Portfolio() {
                     heading="Latest Writing"
                     id="blog"
                     container="mt-6 grid gap-5 md:grid-cols-2">
-                    {BLOGS.slice(startIndex, startIndex + 4).map((blog) => (
-                        <BlogCard key={blog.id} post={blog} />
-                    ))}
+                    {BLOGS.slice(startIndex, startIndex + 4).map(
+                        (blog, ind) => (
+                            <AnimateCard key={blog.id} delayTimes={ind}>
+                                <BlogCard post={blog} />
+                            </AnimateCard>
+                        )
+                    )}
                 </Section>
 
                 {/* Contact */}

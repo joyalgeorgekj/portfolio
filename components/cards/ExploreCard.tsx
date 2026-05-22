@@ -1,6 +1,5 @@
 "use client";
 
-import useViewportCheck from "@/hooks/useViewportCheck";
 import {
     FlaskConicalIcon,
     GitPullRequestIcon,
@@ -11,7 +10,6 @@ import {
     WrenchIcon,
 } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
 
 interface Props {
     title: string;
@@ -29,18 +27,14 @@ const ICONS: Record<string, LucideIcon> = {
 };
 
 export default function ExploreCard({ explore }: { explore: Props }) {
-    const cardRef = useRef<HTMLAnchorElement | null>(null);
-    const isVisible = useViewportCheck(cardRef);
-
     const Icons = ICONS[explore.title];
 
     return (
         <Link
-            ref={cardRef}
             aria-label={'explore "' + explore.title + '"'}
             target="_blank"
             href={explore.route}
-            className={`card group rounded-3xl border border-typography/10 bg-background p-6  flex flex-col gap-4 opacity-0 fade-in ${isVisible ? "in-view" : ""}`}>
+            className={`card group rounded-3xl border border-typography/10 bg-background p-6  flex flex-col gap-4`}>
             <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                 <Icons
                     height={24}

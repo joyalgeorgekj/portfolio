@@ -1,27 +1,22 @@
 "use client";
 
-import useViewportCheck from "@/hooks/useViewportCheck";
 import { OpenSource } from "@/types/opensource.type";
 import Link from "next/link";
-import { useRef } from "react";
 
 interface Props {
     opensource: OpenSource;
 }
 
 export default function OpenSourceCard({ opensource }: Props) {
-    const cardRef = useRef<HTMLAnchorElement | null>(null);
-    const isVisible = useViewportCheck(cardRef);
 
     return (
         <Link
             href={opensource.url}
-            ref={cardRef}
             aria-label={
                 'Open Source Contributior to "' + opensource.project + '"'
             }
             target="_blank"
-            className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2 opacity-0 fade-in ${isVisible ? "in-view" : ""}`}>
+            className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2`}>
             <div className="flex flex-wrap items-center gap-3">
                 <h3 className="text-xl font-semibold">{opensource.project}</h3>
 

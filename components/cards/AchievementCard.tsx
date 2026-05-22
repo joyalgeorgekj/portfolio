@@ -1,23 +1,18 @@
 "use client";
 
-import useViewportCheck from "@/hooks/useViewportCheck";
 import { Achievement } from "@/types/achievements.type";
-import { useRef } from "react";
 
 interface Props {
     achievement: Achievement;
 }
 
 export default function AchievementCard({ achievement }: Props) {
-    const cardRef = useRef<HTMLDivElement | null>(null);
-    const isVisible = useViewportCheck(cardRef);
 
     return (
         <div
             key={achievement.id}
-            ref={cardRef}
             aria-label={'Project "' + achievement.title + '"'}
-            className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2 opacity-0 fade-in ${isVisible ? "in-view" : ""}`}>
+            className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2`}>
             {/* Left */}
             <div className="max-w-2xl flex flex-col gap-2">
                 {achievement.organization && (
