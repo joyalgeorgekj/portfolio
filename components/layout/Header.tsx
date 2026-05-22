@@ -20,7 +20,7 @@ export default function Header() {
         {
             url: "mailto:joyalgeorgekj@gmail.com",
             title: "Hire Me",
-            label: "Open Gmail with reciver set as my email",
+            label: "Send an email to Joyal George K J",
             className: "btn btn-secondary",
         },
     ];
