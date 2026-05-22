@@ -9,8 +9,7 @@ interface Props {
 
 export default function SkillCategoryCard({ category, skills }: Props) {
     return (
-        <div
-            className={`group card rounded-2xl p-5`}>
+        <div className={`group card rounded-2xl p-5`}>
             <h3 className="capitalize text-sm font-semibold text-typography/75">
                 {category}
             </h3>

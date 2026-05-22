@@ -6,7 +6,7 @@ import { ReactNode, useRef } from "react";
 export default function AnimateCard({
     children,
     delayTimes,
-    className
+    className,
 }: {
     children: ReactNode;
     delayTimes?: number;

@@ -16,8 +16,7 @@ export default function ExperienceCard({
             </div>
 
             {/* Card */}
-            <div
-                className="card flex flex-col gap-4 rounded-3xl border border-typography/10 p-6 ">
+            <div className="card flex flex-col gap-4 rounded-3xl border border-typography/10 p-6 ">
                 {/* Top Row */}
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                     <div>

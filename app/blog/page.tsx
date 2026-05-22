@@ -86,7 +86,10 @@ export default function BlogPage() {
                         {featuredPost.prevDescription}
                     </p>
                     <div className="flex flex-wrap gap-4 text-sm text-typography/75">
-                        <span><span className="text-primary">#</span>{" " + featuredPost.category}</span>
+                        <span>
+                            <span className="text-primary">#</span>
+                            {" " + featuredPost.category}
+                        </span>
                         <div className="flex flex-wrap items-center gap-5 text-sm text-typography/60">
                             <div className="flex items-center gap-2">
                                 <Clock3Icon size={16} />

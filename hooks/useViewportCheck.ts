@@ -1,4 +1,4 @@
-import { RefObject, useEffect, useState } from 'react'
+import { RefObject, useEffect, useState } from "react";
 
 function useViewportCheck(cardRef: RefObject<HTMLElement | null>) {
     const [isVisible, setIsVisible] = useState(false);
@@ -15,7 +15,7 @@ function useViewportCheck(cardRef: RefObject<HTMLElement | null>) {
             { threshold: 0.2 }
         );
 
-        const current = cardRef.current
+        const current = cardRef.current;
 
         if (current) {
             observer.observe(current);
@@ -28,7 +28,7 @@ function useViewportCheck(cardRef: RefObject<HTMLElement | null>) {
         };
     }, [cardRef]);
 
-  return isVisible
+    return isVisible;
 }
 
-export default useViewportCheck
+export default useViewportCheck;
