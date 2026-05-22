@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
 import { BLOGS } from "@/content/blog/blog";
-import { baseUrl } from "@/constants/base";
+import { BASE_URL } from "@/constants/basic";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const blogRoutes = BLOGS.map((post) => ({
-        url: `${baseUrl}/blog/${post.id}`,
+        url: `${BASE_URL}/blog/${post.id}`,
         lastModified: new Date(),
         changeFrequency: "weekly" as const,
         priority: 0.8,
@@ -12,25 +12,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return [
         {
-            url: baseUrl,
+            url: BASE_URL,
             lastModified: new Date(),
             changeFrequency: "weekly",
             priority: 1,
         },
         {
-            url: `${baseUrl}/portfolio`,
+            url: `${BASE_URL}/portfolio`,
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 0.9,
         },
         {
-            url: `${baseUrl}/lab`,
+            url: `${BASE_URL}/lab`,
             lastModified: new Date(),
             changeFrequency: "weekly",
             priority: 0.7,
         },
         {
-            url: `${baseUrl}/blog`,
+            url: `${BASE_URL}/blog`,
             lastModified: new Date(),
             changeFrequency: "weekly",
             priority: 0.8,
