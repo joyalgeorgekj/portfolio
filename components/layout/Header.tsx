@@ -2,6 +2,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function Header() {
@@ -24,6 +25,8 @@ export default function Header() {
         },
     ];
 
+    const currentPathname = usePathname();
+
     return (
         <>
             <header className="sticky top-0 inset-x-0 z-50 transition-all duration-300 border-b border-typography/10 bg-background">
@@ -36,17 +39,21 @@ export default function Header() {
                     </Link>
                     {/* Desktop Nav */}
                     <nav className="hidden items-center gap-8 md:flex">
-                        {navLinks.map((item) => (
-                            <Link
-                                key={item.label}
-                                href={item.href}
-                                aria-label={
-                                    "Navigate to " + item.label + " page"
-                                }
-                                className="text-sm text-typography/75 transition hover:text-typography">
-                                {item.label}
-                            </Link>
-                        ))}
+                        {navLinks.map((item) => {
+                            const isActive = currentPathname === item.href;
+
+                            return (
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    aria-label={
+                                        "Navigate to " + item.label + " page"
+                                    }
+                                    className={`text-sm text-typography/75 transition hover:text-typography ${isActive ? "font-bold" : ""}`}>
+                                    {item.label}
+                                </Link>
+                            );
+                        })}
                     </nav>
                     {/* Desktop Right */}
                     <div className="hidden items-center gap-8 md:flex">
