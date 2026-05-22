@@ -11,9 +11,7 @@ export default function AboutCard() {
                 {NAME}
             </h1>
 
-            <p className="text-lg text-primary">
-                {TITLE}
-            </p>
+            <p className="text-lg text-primary">{TITLE}</p>
 
             <p className="max-w-3xl leading-7 text-typography/75">
                 {DESCRIPTION}

@@ -7,7 +7,6 @@ interface Props {
 }
 
 export default function AchievementCard({ achievement }: Props) {
-
     return (
         <div
             key={achievement.id}

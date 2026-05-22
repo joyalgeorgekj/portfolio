@@ -8,7 +8,6 @@ interface Props {
 }
 
 export default function OpenSourceCard({ opensource }: Props) {
-
     return (
         <Link
             href={opensource.url}

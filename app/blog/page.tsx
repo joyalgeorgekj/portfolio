@@ -128,7 +128,9 @@ export default function BlogPage() {
                     </p>
 
                     <div className="mt-8 flex flex-col gap-3 md:flex-row">
-                        <label htmlFor="email-input" className="sr-only">Enter email you want to get newsletters</label>
+                        <label htmlFor="email-input" className="sr-only">
+                            Enter email you want to get newsletters
+                        </label>
                         <input
                             type="email"
                             id="email-input"

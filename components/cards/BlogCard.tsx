@@ -12,7 +12,6 @@ interface Props {
 }
 
 export default function BlogCard({ post, body }: Props) {
-
     if (!post || body === "") notFound();
 
     if (body)
