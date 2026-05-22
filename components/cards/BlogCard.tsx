@@ -4,7 +4,6 @@ import { Blog } from "@/types/blog.type";
 import { BookOpenIcon, CalendarDaysIcon, Clock3Icon } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Section from "../layout/Section";
 
 interface Props {
     post: Blog;
