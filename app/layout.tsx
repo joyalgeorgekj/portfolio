@@ -5,34 +5,33 @@ import {
 import MouseTrack from "../components/ui/MouseTrack";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import { baseUrl } from "@/constants/base";
 import type { Metadata } from "next";
 import "./globals.css";
 import "./cursor.css";
+import { BASE_URL, DESCRIPTION, NAME, TITLE } from "@/constants/basic";
 
 export const metadata: Metadata = {
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(BASE_URL),
     title: {
-        default: "Joyal George K J - JavaScript / TypeScript Developer",
-        template: "%s | Joyal George K J",
+        default: `${NAME} - ${TITLE}`,
+        template: `%s | ${NAME}`,
     },
-    description:
-        "JavaScript / TypeScript Developer specializing in React.js, Next.js, scalable web applications, frontend architecture, UI engineering, and performance optimization.",
-    applicationName: "Joyal George K J Portfolio",
+    description: DESCRIPTION,
+    applicationName: `${NAME} Portfolio`,
     referrer: "origin-when-cross-origin",
     authors: [
         {
-            name: "Joyal George K J",
-            url: baseUrl,
+            name: NAME,
+            url: BASE_URL,
         },
     ],
-    creator: "Joyal George K J",
-    publisher: "Joyal George K J",
+    creator: NAME,
+    publisher: NAME,
     category: "Technology",
     keywords: [
         "Joyal",
         "Joyal George",
-        "Joyal George K J",
+        NAME,
         "Frontend Engineer",
         "Frontend Developer",
         "React Developer",
@@ -58,25 +57,23 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "en_US",
-        url: baseUrl,
-        siteName: "Joyal George K J Portfolio",
-        title: "Joyal George K J - Javascript/Typescript Developer",
-        description:
-            "JavaScript / TypeScript Developer building scalable and performant web applications using React.js and Next.js.",
+        url: BASE_URL,
+        siteName: `${NAME} Portfolio`,
+        title: `${NAME} - ${TITLE}`,
+        description: DESCRIPTION,
         images: [
             {
                 url: "/og-image.png",
                 width: 1200,
                 height: 630,
-                alt: "Joyal George K J Portfolio Landing Page",
+                alt: `${NAME} Portfolio Landing Page`,
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Joyal George K J - JavaScript / TypeScript Developer",
-        description:
-            "JavaScript / TypeScript Developer building scalable and performant web applications using React.js and Next.js.",
+        title: `${NAME} - ${TITLE}`,
+        description: DESCRIPTION,
         creator: "@joyalgeorgekj",
         images: ["/og-image.png"],
     },
@@ -93,7 +90,7 @@ export const metadata: Metadata = {
         },
     },
     alternates: {
-        canonical: baseUrl,
+        canonical: BASE_URL,
     },
     icons: {
         icon: "/favicon.ico",

@@ -8,7 +8,8 @@ import SkillCard from "@/components/cards/SkillCard";
 import Section from "@/components/layout/Section";
 import { OPENSOURCE } from "@/content/opensource/opensource";
 import ExploreCard from "@/components/cards/ExploreCard";
-import { stats } from "@/constants/stats";
+import AnimateCard from "@/components/ui/AnimateCard";
+import { DESCRIPTION, NAME, STATS, TITLE } from "@/constants/basic";
 
 export default function Home() {
     const stack: Skill[] = SKILLS.core;
@@ -60,16 +61,14 @@ export default function Home() {
                     </p>
 
                     <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
-                        Joyal George K J <br />
+                        {NAME} <br />
                     </h1>
                     <h2 className="text-2xl md:text-3xl bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
-                        Javascript / Typescript Developer
+                        {TITLE}
                     </h2>
 
                     <p className=" max-w-xl text-base leading-7 text-typography/75 md:text-lg">
-                        Building scalable, performant, and production-ready web
-                        experiences using React, Next.js, and TypeScript.
-                        Helping teams ship polished products users love.
+                        {DESCRIPTION}
                     </p>
 
                     {/* CTA */}
@@ -110,53 +109,56 @@ export default function Home() {
                                 </p>
                                 <div className="mt-2 grid md:grid-cols-7 grid-cols-3 gap-2 justify-between text-sm text-zinc-200">
                                     {stack.map((skill) => (
-                                        <SkillCard
-                                            skill={skill}
-                                            key={skill.title}
-                                        />
+                                        <AnimateCard key={skill.title}>
+                                            <SkillCard skill={skill} />
+                                        </AnimateCard>
                                     ))}
                                 </div>
                             </div>
 
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="card rounded-2xl border border-typography/10 bg-background p-4">
-                                    <p className="text-xs uppercase tracking-widest text-typography/75">
-                                        Weekly Users
-                                    </p>
-                                    <p className="mt-2 text-3xl font-semibold text-primary">
-                                        1500+
-                                    </p>
-                                </div>
+                                <AnimateCard>
+                                    <div className="card rounded-2xl border border-typography/10 bg-background p-4">
+                                        <p className="text-xs uppercase tracking-widest text-typography/75">
+                                            Weekly Users
+                                        </p>
+                                        <p className="mt-2 text-3xl font-semibold text-primary">
+                                            1500+
+                                        </p>
+                                    </div>
+                                </AnimateCard>
 
-                                <div className="card rounded-2xl border border-typography/10 bg-background p-4">
-                                    <p className="text-xs uppercase tracking-widest text-typography/75">
-                                        OSS Repos
-                                    </p>
-                                    <p className="mt-2 text-3xl font-semibold text-violet-300">
-                                        {OPENSOURCE.length}+
-                                    </p>
-                                </div>
+                                <AnimateCard>
+                                    <div className="card rounded-2xl border border-typography/10 bg-background p-4">
+                                        <p className="text-xs uppercase tracking-widest text-typography/75">
+                                            OSS Repos
+                                        </p>
+                                        <p className="mt-2 text-3xl font-semibold text-violet-300">
+                                            {OPENSOURCE.length}+
+                                        </p>
+                                    </div>
+                                </AnimateCard>
                             </div>
 
                             {PROJECTS.filter((val) => val.featured).map(
                                 (val) => (
-                                    <ProjectCard
-                                        project={val}
+                                    <AnimateCard
                                         key={val.title
                                             .replaceAll(" ", "")
-                                            .toLowerCase()}
-                                    />
+                                            .toLowerCase()}>
+                                        <ProjectCard project={val} />
+                                    </AnimateCard>
                                 )
                             )}
 
                             {/* Stats */}
                             <div className="mt-4 grid grid-cols-2 gap-3 md:grid-cols-4">
-                                {stats.map((item) => (
-                                    <div
-                                        key={item}
-                                        className="card rounded-2xl border border-typography/10 bg-background px-4 py-4 text-sm text-typography/75 ">
-                                        {item}
-                                    </div>
+                                {STATS.map((item) => (
+                                    <AnimateCard key={item}>
+                                        <div className="card rounded-2xl border border-typography/10 bg-background px-4 py-4 text-sm text-typography/75 ">
+                                            {item}
+                                        </div>
+                                    </AnimateCard>
                                 ))}
                             </div>
                         </div>
@@ -181,7 +183,9 @@ export default function Home() {
 
                 <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
                     {highlights.map((item, ind) => (
-                        <ExploreCard explore={item} key={ind} />
+                        <AnimateCard key={ind} delayTimes={ind}>
+                            <ExploreCard explore={item} />
+                        </AnimateCard>
                     ))}
                 </div>
             </Section>

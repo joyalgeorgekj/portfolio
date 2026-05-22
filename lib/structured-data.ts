@@ -1,4 +1,4 @@
-import { baseUrl } from "@/constants/base";
+import { BASE_URL } from "@/constants/basic";
 import { Blog } from "@/types/blog.type";
 
 export function websiteStructuredData() {
@@ -6,7 +6,7 @@ export function websiteStructuredData() {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: "Joyal George K J",
-        url: baseUrl,
+        url: BASE_URL,
         description: "JavaScript / TypeScript Developer Portfolio",
         inLanguage: "en",
     };
@@ -17,8 +17,8 @@ export function personStructuredData() {
         "@context": "https://schema.org",
         "@type": "Person",
         name: "Joyal George K J",
-        url: baseUrl,
-        image: baseUrl + "/og-image.png",
+        url: BASE_URL,
+        image: BASE_URL + "/og-image.png",
         jobTitle: "JavaScript / TypeScript Developer",
         sameAs: [
             "https://github.com/joyalgeorgekj",
@@ -49,10 +49,10 @@ export function blogStructuredData(post: Blog) {
             "@type": "Person",
             name: "Joyal George K J",
         },
-        mainEntityOfPage: `${baseUrl}/blog/${post.id}`,
-        url: `${baseUrl}/blog/${post.id}`,
+        mainEntityOfPage: `${BASE_URL}/blog/${post.id}`,
+        url: `${BASE_URL}/blog/${post.id}`,
         datePublished: post.publishedAt,
         dateModified: post.publishedAt,
-        image: `${baseUrl}/blog/${post.id}/opengraph-image`,
+        image: `${BASE_URL}/blog/${post.id}/opengraph-image`,
     };
 }

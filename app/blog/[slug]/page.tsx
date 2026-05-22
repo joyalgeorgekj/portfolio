@@ -1,5 +1,4 @@
 import BlogCard from "@/components/cards/BlogCard";
-import { baseUrl } from "@/constants/base";
 import { BLOGS } from "@/content/blog/blog";
 import { extractor } from "@/lib/extract";
 import { blogStructuredData } from "@/lib/structured-data";
@@ -8,6 +7,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import "./markdown.css";
 import Section from "@/components/layout/Section";
+import { BASE_URL } from "@/constants/basic";
 
 interface Props {
     params: Promise<{
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         openGraph: {
             title: blog.title,
             description: blog.prevDescription,
-            url: `${baseUrl}/blog/${blog.id}`,
+            url: `${BASE_URL}/blog/${blog.id}`,
             images: `/blog/${blog.id}/opengraph-image`,
         },
     };
