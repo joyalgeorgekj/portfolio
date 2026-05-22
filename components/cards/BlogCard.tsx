@@ -58,7 +58,7 @@ export default function BlogCard({ post, body }: Props) {
                     </header>
 
                     {/* Divider */}
-                    <div className="mb-14 h-px w-full bg-gradient-to-r from-transparent via-typography/10 to-transparent" />
+                    <div className="mb-14 h-px w-full bg-linear-to-r from-transparent via-typography/10 to-transparent" />
 
                     {/* Markdown */}
                     <div
