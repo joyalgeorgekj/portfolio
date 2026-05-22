@@ -72,7 +72,7 @@ export default function Portfolio() {
                 <Section
                     id="about"
                     sectionClass="rounded-3xl bg-background p-8 flex flex-col gap-4">
-                    <AnimateCard>
+                    <AnimateCard className="rounded-3xl bg-background p-8 flex flex-col gap-4">
                         <AboutCard />
                     </AnimateCard>
                 </Section>
