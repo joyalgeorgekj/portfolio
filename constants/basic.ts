@@ -5,7 +5,7 @@ export const TITLE =
     "JavaScript / TypeScript Developer";
 
 export const DESCRIPTION =
-    "Product-focused frontend engineer specializing in React, Next.js, and TypeScript.";
+    "JavaScript and TypeScript developer building production-ready web applications, automation systems, developer tooling, and reusable packages. Passionate about solving problems, improving user experience, and contributing fixes to open source software.";
 
 export const BASE_URL = process.env.HOSTED_URL
         ? `${process.env.HOSTED_URL}`
@@ -13,7 +13,7 @@ export const BASE_URL = process.env.HOSTED_URL
 
 export const STATS = [
         `${new Date().getFullYear() - 2023}+ Years Experience`,
-        "1500+ Weekly npm Users",
-        "Open Source Contributor",
-        "Production React Apps",
+        "1500+ npm Users",
+        "OSS Contributor",
+        "Production Apps",
     ];
