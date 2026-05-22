@@ -10,7 +10,6 @@ interface Props {
 export default function SkillCategoryCard({ category, skills }: Props) {
     return (
         <div
-            aria-label={'Skill Category "' + category + '"'}
             className={`group card rounded-2xl p-5`}>
             <h3 className="capitalize text-sm font-semibold text-typography/75">
                 {category}

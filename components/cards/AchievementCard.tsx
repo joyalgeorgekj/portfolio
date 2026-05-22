@@ -10,7 +10,6 @@ export default function AchievementCard({ achievement }: Props) {
     return (
         <div
             key={achievement.id}
-            aria-label={'Project "' + achievement.title + '"'}
             className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2`}>
             {/* Left */}
             <div className="max-w-2xl flex flex-col gap-2">

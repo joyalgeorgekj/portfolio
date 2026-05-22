@@ -11,9 +11,6 @@ export default function OpenSourceCard({ opensource }: Props) {
     return (
         <Link
             href={opensource.url}
-            aria-label={
-                'Open Source Contributior to "' + opensource.project + '"'
-            }
             target="_blank"
             className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2`}>
             <div className="flex flex-wrap items-center gap-3">

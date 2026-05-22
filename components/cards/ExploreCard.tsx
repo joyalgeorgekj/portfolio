@@ -31,7 +31,6 @@ export default function ExploreCard({ explore }: { explore: Props }) {
 
     return (
         <Link
-            aria-label={'explore "' + explore.title + '"'}
             target="_blank"
             href={explore.route}
             className={`card group rounded-3xl border border-typography/10 bg-background p-6  flex flex-col gap-4`}>

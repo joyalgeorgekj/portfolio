@@ -74,7 +74,6 @@ export default function BlogPage() {
             <Section id="featured-post" sectionClass="mt-10 gap-4">
                 <Link
                     href={"/blog/" + featuredPost.id}
-                    aria-label="Featured Blog"
                     className="group card mt-10 rounded-3xl border border-typography/10 bg-background p-8 grid gap-4">
                     <p className="text-sm uppercase tracking-[0.2em] text-primary">
                         Featured Article

@@ -14,6 +14,7 @@ export default function SkillCard({ skill }: { skill: Skill }) {
                     width={32}
                     height={32}
                     alt={skill.title}
+                    aria-label={skill.title}
                     src={
                         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
                         skill.icon
