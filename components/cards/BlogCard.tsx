@@ -108,10 +108,16 @@ export default function BlogCard({ post, body }: Props) {
                 {post.prevDescription}
             </p>
 
-            <div className="flex items-center gap-3 text-sm text-typography/75">
-                <span>{post.readingTime}</span>
-                <span>•</span>
-                <span>{post.publishedAt}</span>
+            <div className="flex flex-wrap items-center gap-5 text-sm text-typography/60">
+                <div className="flex items-center gap-2">
+                    <Clock3Icon size={16} />
+                    <span>{post.readingTime}</span>
+                </div>
+
+                <div className="flex items-center gap-2">
+                    <CalendarDaysIcon size={16} />
+                    <time dateTime={post.publishedAt}>{post.publishedAt}</time>
+                </div>
             </div>
             <p className="inline-flex text-sm text-primary transition group-hover:translate-x-1">
                 Read More →

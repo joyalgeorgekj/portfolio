@@ -6,6 +6,7 @@ import { Blog } from "@/types/blog.type";
 import { BLOGS } from "@/content/blog/blog";
 import Section from "@/components/layout/Section";
 import AnimateCard from "@/components/ui/AnimateCard";
+import { CalendarDaysIcon, Clock3Icon } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -36,7 +37,7 @@ export default function BlogPage() {
                     Writing
                 </p>
 
-                <h1 className="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">
+                <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-7xl">
                     Engineering Thoughts,{" "}
                     <span className="bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent">
                         Lessons & Systems
@@ -85,11 +86,20 @@ export default function BlogPage() {
                         {featuredPost.prevDescription}
                     </p>
                     <div className="flex flex-wrap gap-4 text-sm text-typography/75">
-                        <span>{featuredPost.category}</span>
-                        <span>•</span>
-                        <span>{featuredPost.readingTime}</span>
-                        <span>•</span>
-                        <span>{featuredPost.publishedAt}</span>
+                        <span><span className="text-primary">#</span>{" " + featuredPost.category}</span>
+                        <div className="flex flex-wrap items-center gap-5 text-sm text-typography/60">
+                            <div className="flex items-center gap-2">
+                                <Clock3Icon size={16} />
+                                <span>{featuredPost.readingTime}</span>
+                            </div>
+
+                            <div className="flex items-center gap-2">
+                                <CalendarDaysIcon size={16} />
+                                <time dateTime={featuredPost.publishedAt}>
+                                    {featuredPost.publishedAt}
+                                </time>
+                            </div>
+                        </div>
                     </div>
                     <span className="btn btn-primary transition group-hover:translate-x-1">
                         Read Article
