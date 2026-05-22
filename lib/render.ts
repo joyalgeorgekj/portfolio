@@ -7,7 +7,5 @@ const renderer = new MarkdownIt({
 });
 
 export function render(md: string) {
-    console.log("Markdown: ", md);
-
     return renderer.render(md);
 }
