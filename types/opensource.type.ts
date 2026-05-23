@@ -7,7 +7,8 @@ export interface OpenSource {
         | "UI Improvement"
         | "Documentation"
         | "Feature"
-        | "Refactor";
+        | "Refactor"
+        | "UX Improvement";
     stack?: string[];
     url: string;
 }
