@@ -7,6 +7,7 @@ import { BLOGS } from "@/content/blog/blog";
 import Section from "@/components/layout/Section";
 import AnimateCard from "@/components/ui/AnimateCard";
 import { CalendarDaysIcon, Clock3Icon } from "lucide-react";
+import NewsletterForm from "@/components/cards/NewsletterCard";
 
 export const metadata: Metadata = {
     title: "Blog",
@@ -139,21 +140,7 @@ export default function BlogPage() {
                         performance, architecture, and building products.
                     </p>
 
-                    <div className="mt-8 flex flex-col gap-3 md:flex-row">
-                        <label htmlFor="email-input" className="sr-only">
-                            Enter email you want to get newsletters
-                        </label>
-                        <input
-                            type="email"
-                            id="email-input"
-                            placeholder="Enter your email"
-                            className="w-full rounded-2xl border border-typography/10 bg-white/5 px-5 py-3 text-sm text-typography outline-none placeholder:text-typography/75"
-                        />
-
-                        <button className="btn btn-primary w-full md:w-fit">
-                            Subscribe
-                        </button>
-                    </div>
+                    <NewsletterForm />
                 </div>
             </Section>
         </div>

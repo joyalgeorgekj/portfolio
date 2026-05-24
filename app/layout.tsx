@@ -108,6 +108,8 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/health`);
+
     return (
         <html lang="en">
             <body className={`antialiased`}>
