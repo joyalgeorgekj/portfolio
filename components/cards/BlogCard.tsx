@@ -36,7 +36,7 @@ export default function BlogCard({ post, body }: Props) {
                             </h1>
 
                             {post.prevDescription && (
-                                <p className="max-w-2xl text-lg leading-8 text-typography/75">
+                                <p className="max-w-2xl text-lg leading-8 text-typography/85">
                                     {post.prevDescription}
                                 </p>
                             )}

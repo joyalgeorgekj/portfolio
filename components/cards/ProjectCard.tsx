@@ -23,12 +23,12 @@ export default function ProjectCard({ project }: Props) {
                 {project.stack.map((tech) => (
                     <span
                         key={tech}
-                        className="rounded-full border border-typography/10 px-3 py-1 text-xs text-typography/75">
+                        className="rounded-full border border-typography/10 px-3 py-1 text-xs text-typography/60">
                         {tech}
                     </span>
                 ))}
             </div>
-            <p className="text-sm leading-6 text-typography/75">
+            <p className="text-sm leading-6 text-typography/85">
                 {project.desc}
             </p>
 

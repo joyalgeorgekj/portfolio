@@ -20,10 +20,10 @@ export default function OpenSourceCard({ opensource }: Props) {
                     {opensource.type}
                 </span>
             </div>
-            <p className="text-sm text-typography/75">
+            <p className="text-sm text-typography/60">
                 {opensource.stack?.join(", ")}
             </p>
-            <p className="text-sm leading-6 text-typography/75">
+            <p className="text-sm leading-6 text-typography/85">
                 {opensource.description}
             </p>
         </Link>
