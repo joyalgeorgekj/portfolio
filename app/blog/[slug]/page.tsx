@@ -36,11 +36,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: blog.prevDescription,
         },
         openGraph: {
+            type: "website",
             title: blog.title,
             description: blog.prevDescription,
             url: `${BASE_URL}/blog/${blog.id}`,
             images: `/blog/${blog.id}/opengraph-image`,
-        },
+        }
     };
 }
 
