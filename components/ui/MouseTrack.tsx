@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 export default function MouseTrack() {
     const cursorRef = useRef<HTMLDivElement>(null);
     const desktop = useMediaQuery("(pointer: fine)");
+    const isReducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
 
     useEffect(() => {
         const moveCursor = (e: MouseEvent) => {
@@ -21,6 +22,8 @@ export default function MouseTrack() {
             return () => window.removeEventListener("mousemove", moveCursor);
         }
     });
+
+    if (isReducedMotion) return <></>;
 
     return (
         <div

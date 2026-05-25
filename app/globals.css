@@ -93,6 +93,16 @@ div.clip-div {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
+/* Disable/Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up.in-view {
+        animation: fadeInUp 0.1s ease-in-out forwards;
+    }
+    .fade-in.in-view {
+        animation: fadeIn 0.1s ease-in-out forwards;
+    }
+}
+
 @theme inline {
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
