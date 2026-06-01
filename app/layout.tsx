@@ -120,6 +120,18 @@ export default function RootLayout({
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "x097n0tbjg");`}
                 </script>
+
+                {/* <!-- Google tag (gtag.js) --> */}
+                <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-GCNKNRKWZB"></script>
+                <script>
+                    {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCNKNRKWZB');`}
+                </script>
             </head>
             <body className={`antialiased`}>
                 <Header />
