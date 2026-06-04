@@ -75,6 +75,16 @@ export default function Footer() {
                             Email
                         </Link>
                     </div>
+                    <h4 className="mt-8 text-sm font-semibold text-typography">
+                        Legal
+                    </h4>
+                    <div className="mt-4 space-y-3 text-sm text-typography/75">
+                        <Link
+                            className=" mt-4 space-y-3 text-sm text-typography/75 block hover:text-typography"
+                            href={"/privacy"}>
+                            Privacy Policy
+                        </Link>
+                    </div>
                 </div>
 
                 {/* CTA */}
