@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 export async function POST() {
     try {
         // 1. Fetch your live sitemap
-        const sitemapResponse = await fetch(`${BASE_URL}sitemap.xml`);
+        const sitemapResponse = await fetch(`${BASE_URL}/sitemap.xml`);
         const sitemapXml = await sitemapResponse.text();
 
         // 2. Extract URLs
@@ -26,7 +26,7 @@ export async function POST() {
                 body: JSON.stringify({
                     host: new URL(BASE_URL).host,
                     key: process.env.INDEXNOW_KEY,
-                    keyLocation: `${BASE_URL}${process.env.INDEXNOW_KEY}.txt`,
+                    keyLocation: `${BASE_URL}/${process.env.INDEXNOW_KEY}.txt`,
                     urlList: urlList,
                 }),
             }
@@ -45,6 +45,8 @@ export async function POST() {
             );
         }
     } catch (error) {
-        return NextResponse.json({ error }, { status: 500 });
+        const errorMessage =
+            error instanceof Error ? error.message : String(error);
+        return NextResponse.json({ error: errorMessage }, { status: 500 });
     }
 }
