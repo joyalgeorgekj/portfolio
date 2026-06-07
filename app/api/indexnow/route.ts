@@ -1,19 +1,14 @@
 import { BASE_URL } from "@/constants/basic";
+import { BLOGS } from "@/content/blog/blog";
 import { NextResponse } from "next/server";
 
 export async function POST() {
     try {
-        // 1. Fetch your live sitemap
-        const sitemapResponse = await fetch(`${BASE_URL}/sitemap.xml`);
-        const sitemapXml = await sitemapResponse.text();
+        const COMMON_URL = [BASE_URL, `${BASE_URL}/portfolio`, `${BASE_URL}/lab`, `${BASE_URL}/blog`];
+        const BLOG_URLS = BLOGS.map((post) => `${BASE_URL}/blog/${post.id}`)
+        const URL_LIST = [...COMMON_URL, ...BLOG_URLS];
 
-        // 2. Extract URLs
-        const urlMatches = sitemapXml.match(/<loc>(.*?)<\/loc>/g) || [];
-        const urlList = urlMatches.map((tag) =>
-            tag.replace(/<\/?loc>/g, "").trim()
-        );
-
-        if (urlList.length === 0) {
+        if (URL_LIST.length === 0) {
             return NextResponse.json({ message: "Sitemap is empty." });
         }
 
@@ -27,7 +22,7 @@ export async function POST() {
                     host: new URL(BASE_URL).host,
                     key: process.env.INDEXNOW_KEY,
                     keyLocation: `${BASE_URL}/${process.env.INDEXNOW_KEY}.txt`,
-                    urlList: urlList,
+                    urlList: URL_LIST,
                 }),
             }
         );
@@ -35,7 +30,7 @@ export async function POST() {
         if (indexNowResponse.ok) {
             return NextResponse.json({
                 success: true,
-                urlsSubmitted: urlList.length,
+                urlsSubmitted: URL_LIST.length,
             });
         } else {
             const errorText = await indexNowResponse.text();
