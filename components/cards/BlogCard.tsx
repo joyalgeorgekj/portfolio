@@ -1,9 +1,11 @@
 "use client";
 
+import { BASE_URL } from "@/constants/basic";
 import { Blog } from "@/types/blog.type";
 import { BookOpenIcon, CalendarDaysIcon, Clock3Icon } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import SocialShare from "../ui/SocialShare";
 
 interface Props {
     post: Blog;
@@ -71,7 +73,13 @@ export default function BlogCard({ post, body }: Props) {
                     {/* Footer */}
                     {post.tags && post.tags.length > 0 && (
                         <footer className="mt-16 border-t border-typography/10 pt-8">
-                            <div className="flex flex-wrap gap-3">
+                            <div className="mb-6">
+                                <SocialShare
+                                    title={post.title}
+                                    url={`${BASE_URL}/blog/${post.id}`}
+                                />
+                            </div>
+                            <div className="flex flex-wrap gap-3 justify-center">
                                 {post.tags.map((tag) => (
                                     <span
                                         key={tag}
