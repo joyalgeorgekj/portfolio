@@ -12,7 +12,7 @@ function LabCard({
 }) {
     return (
         <Link
-            href={"/lab/" + game.title.split(" ").join("-").toLowerCase()}
+            href={"/lab/" + game.id}
             key={game.title}
             className="group bg-background rounded-3xl border border-typography/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 grid gap-3">
             <div className="flex items-start justify-between gap-4">

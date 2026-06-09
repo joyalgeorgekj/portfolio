@@ -1,48 +1,48 @@
-"use client";
-
+import WelcomeLinkGenerator from "@/components/lab/WelcomeLinkGenerator";
 import SocialShare from "@/components/ui/SocialShare";
 import { BASE_URL } from "@/constants/basic";
 import { EXPERIMENTS } from "@/content/lab/experiments";
-import { useMemo, useState } from "react";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-function encode(value: string) {
-    return btoa(value.trim())
-        .replace(/\+/g, "-")
-        .replace(/\//g, "_")
-        .replace(/=+$/, "");
+export async function generateMetadata(): Promise<Metadata> {
+    const post = EXPERIMENTS.find(
+        (blog) =>
+            blog.id ===
+            "welcome-links-generator"
+    );
+
+    if (!post) notFound();
+
+    return {
+        title: post.title,
+        description: post.desc,
+        alternates: {
+            canonical: `/lab/${post.id}`,
+        },
+        twitter: {
+            images: `/lab/${post.id}/opengraph-image`,
+            card: "summary_large_image",
+            creator: "joyalgeorgekj",
+            title: post.title,
+            description: post.desc,
+        },
+        openGraph: {
+            type: "website",
+            title: post.title,
+            description: post.desc,
+            url: `${BASE_URL}/lab/${post.id}`,
+            images: `/lab/${post.id}/opengraph-image`,
+        },
+    };
 }
 
-export default function WelcomeLinkGenerator() {
+export default function Page() {
     const experiment = EXPERIMENTS.filter(
         (val) =>
-            val.title.split(" ").join("-").toLowerCase() ===
+            val.id ===
             "welcome-links-generator"
     )[0];
-
-    const [name, setName] = useState("");
-
-    const [copied, setCopied] = useState(false);
-
-    const generatedLink = useMemo(() => {
-        if (!name.trim()) return "";
-
-        return `${BASE_URL}/welcome?u=${encode(name)}`;
-    }, [name]);
-
-    async function handleCopy() {
-        if (!generatedLink) return;
-
-        try {
-            await navigator.clipboard.writeText(generatedLink);
-            setCopied(true);
-
-            setTimeout(() => {
-                setCopied(false);
-            }, 2000);
-        } catch (error) {
-            console.log(error);
-        }
-    }
 
     return (
         <section className="relative mx-auto max-w-6xl px-4 py-16 md:px-6 rounded-xl bg-background my-8">
@@ -69,61 +69,13 @@ export default function WelcomeLinkGenerator() {
                     </div>
                 </header>
 
-                <div className="flex flex-col gap-6">
-                    <label htmlFor="visitor-name" className="sr-only">
-                        Visitor Name
-                    </label>
-
-                    <input
-                        id="visitor-name"
-                        type="text"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        placeholder="Enter visitor name"
-                        className="w-full rounded-2xl border border-typography/10 bg-white/5 px-5 py-4 text-sm text-typography outline-none placeholder:text-typography/50"
-                    />
-
-                    {generatedLink ? (
-                        <div className="overflow-hidden rounded-2xl border border-typography/10 bg-white/5">
-                            <div className="border-b border-typography/10 px-5 py-3">
-                                <p className="text-sm text-typography/60">
-                                    Generated Link
-                                </p>
-                            </div>
-
-                            <div className="overflow-x-auto px-5 py-4">
-                                <code className="text-sm text-typography/80">
-                                    {generatedLink}
-                                </code>
-                            </div>
-                        </div>
-                    ) : null}
-
-                    <div className="flex flex-col gap-3 md:flex-row">
-                        <button
-                            type="button"
-                            disabled={!generatedLink}
-                            onClick={handleCopy}
-                            className="btn btn-primary w-full md:w-fit disabled:cursor-not-allowed disabled:bg-primary/50 disabled:opacity-50">
-                            {copied ? "Copied" : "Copy Link"}
-                        </button>
-
-                        {generatedLink ? (
-                            <a
-                                href={generatedLink}
-                                target="_blank"
-                                className="btn btn-secondary w-full md:w-fit">
-                                Open Preview
-                            </a>
-                        ) : null}
-                    </div>
-                </div>
+                <WelcomeLinkGenerator />
 
                 <footer className="mt-16 border-t border-typography/10 pt-8">
                     <div>
                         <SocialShare
                             title={experiment.title}
-                            url={`${BASE_URL}/blog/${experiment.title.split(" ").join("-").toLowerCase()}`}
+                            url={`${BASE_URL}/blog/${experiment.id}`}
                         />
                     </div>
                 </footer>
