@@ -3,11 +3,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-interface WelcomeLoaderProps {
-    duration?: number;
-}
-
-export default function WelcomeLoader({ duration = 2000 }: WelcomeLoaderProps) {
+export default function WelcomeLoader() {
     const searchParams = useSearchParams();
     const [visitorName, setVisitorName] = useState<string | null>(null);
     const [showLoader, setShowLoader] = useState(true);
@@ -24,11 +20,6 @@ export default function WelcomeLoader({ duration = 2000 }: WelcomeLoaderProps) {
                 setShowLoader(true);
 
                 // 3. Scrub the URL parameter immediately so it doesn't re-trigger on refresh
-                window.history.replaceState(
-                    {},
-                    document.title,
-                    window.location.pathname
-                );
             } catch (error) {
                 console.error(
                     "WelcomeLoader: Failed to decode 'u' parameter.",
@@ -37,16 +28,6 @@ export default function WelcomeLoader({ duration = 2000 }: WelcomeLoaderProps) {
             }
         }
     }, [searchParams]);
-
-    useEffect(() => {
-        // 4. Automatically close the loader after the specified duration
-        if (showLoader) {
-            const timer = setTimeout(() => {
-                setShowLoader(false);
-            }, duration);
-            return () => clearTimeout(timer);
-        }
-    }, [showLoader, duration]);
 
     // If the loader shouldn't be showing, render nothing
     if (!showLoader) return null;
