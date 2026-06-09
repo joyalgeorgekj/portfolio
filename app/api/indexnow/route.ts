@@ -4,8 +4,13 @@ import { NextResponse } from "next/server";
 
 export async function POST() {
     try {
-        const COMMON_URL = [BASE_URL, `${BASE_URL}/portfolio`, `${BASE_URL}/lab`, `${BASE_URL}/blog`];
-        const BLOG_URLS = BLOGS.map((post) => `${BASE_URL}/blog/${post.id}`)
+        const COMMON_URL = [
+            BASE_URL,
+            `${BASE_URL}/portfolio`,
+            `${BASE_URL}/lab`,
+            `${BASE_URL}/blog`,
+        ];
+        const BLOG_URLS = BLOGS.map((post) => `${BASE_URL}/blog/${post.id}`);
         const URL_LIST = [...COMMON_URL, ...BLOG_URLS];
 
         if (URL_LIST.length === 0) {
