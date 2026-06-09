@@ -71,7 +71,7 @@ export default function Page() {
 
                 <WelcomeLinkGenerator />
 
-                <footer className="mt-16 border-t border-typography/10 pt-8">
+                <footer className="mt-8 border-t border-typography/10 pt-8">
                     <div>
                         <SocialShare
                             title={experiment.title}
