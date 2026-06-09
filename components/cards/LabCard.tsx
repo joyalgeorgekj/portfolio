@@ -29,9 +29,13 @@ function LabCard({
                 </span>
             </div>
 
-            <h3 className="text-2xl font-semibold leading-tight transition group-hover:text-primary">{game.title}</h3>
+            <h3 className="text-2xl font-semibold leading-tight transition group-hover:text-primary">
+                {game.title}
+            </h3>
 
-            <p className="max-w-2xl leading-7 text-typography/75">{game.desc}</p>
+            <p className="max-w-2xl leading-7 text-typography/75">
+                {game.desc}
+            </p>
 
             <span className="inline-flex text-sm text-primary transition group-hover:translate-x-1">
                 Interact →

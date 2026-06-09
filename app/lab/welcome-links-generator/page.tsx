@@ -3,7 +3,7 @@
 import SocialShare from "@/components/ui/SocialShare";
 import { BASE_URL } from "@/constants/basic";
 import { EXPERIMENTS } from "@/content/lab/experiments";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 function encode(value: string) {
     return btoa(value.trim())
@@ -13,7 +13,7 @@ function encode(value: string) {
 }
 
 export default function WelcomeLinkGenerator() {
-    let experiment = EXPERIMENTS.filter(
+    const experiment = EXPERIMENTS.filter(
         (val) =>
             val.title.split(" ").join("-").toLowerCase() ===
             "welcome-links-generator"

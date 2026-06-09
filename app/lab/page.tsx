@@ -9,7 +9,6 @@ export const metadata: Metadata = {
 };
 
 export default function Lab() {
-
     return (
         <section className="relative mx-auto max-w-7xl px-4 py-12 md:px-6 flex flex-col gap-10">
             {/* Hero */}

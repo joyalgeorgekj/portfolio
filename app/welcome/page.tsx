@@ -4,12 +4,12 @@ import WelcomeLoader from "@/components/ui/Welcome";
 import { useRouter } from "next/navigation";
 import { Suspense } from "react";
 
-function page() {
+function WelcomePage() {
     const router = useRouter();
 
     setTimeout(() => {
-        router.push('/')
-    }, 2000)
+        router.push("/");
+    }, 2000);
 
     return (
         <Suspense fallback={null}>
@@ -18,4 +18,4 @@ function page() {
     );
 }
 
-export default page;
+export default WelcomePage;
