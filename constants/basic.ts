@@ -2,10 +2,10 @@ export const NAME =
     "Joyal George K J";
 
 export const TITLE =
-    "JavaScript / TypeScript Developer";
+    "Software Engineer";
 
 export const DESCRIPTION =
-    "JavaScript and TypeScript developer building production-ready web applications, automation systems, developer tooling, and reusable packages. Passionate about solving problems, improving user experience, and contributing fixes to open source software.";
+    "Passionate about solving problems, improving user experience, and contributing fixes to open source software.";
 
 export const BASE_URL = process.env.HOSTED_URL
         ? `${process.env.HOSTED_URL}`

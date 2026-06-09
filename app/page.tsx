@@ -59,13 +59,14 @@ export default function Home() {
                 <div className="grid gap-4">
                     <p className="w-fit inline-flex justify-center items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1 text-xs text-primary">
                         <span className="animate-pulse bg-primary w-2 h-2 rounded-full"></span>{" "}
-                        Available for Frontend Opportunities
+                        Available for Opportunities
                     </p>
 
                     <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-7xl">
-                        {NAME} <br />
+                        {NAME}
                     </h1>
-                    <h2 className="text-2xl md:text-3xl bg-linear-to-r from-primary via-blue-400 to-violet-400 bg-clip-text text-transparent font-bold">
+
+                    <h2 className="text-2xl md:text-4xl capitalize text-primary font-extrabold">
                         {TITLE}
                     </h2>
 
@@ -83,12 +84,6 @@ export default function Home() {
                             href="/portfolio#projects"
                             className="btn btn-common">
                             View Projects
-                        </Link>
-
-                        <Link
-                            href="mailto:joyalgeorgekj@gmail.com"
-                            className="btn btn-common">
-                            Contact Me
                         </Link>
                     </div>
                 </div>
