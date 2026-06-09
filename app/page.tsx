@@ -10,8 +10,6 @@ import { OPENSOURCE } from "@/content/opensource/opensource";
 import ExploreCard from "@/components/cards/ExploreCard";
 import AnimateCard from "@/components/ui/AnimateCard";
 import { DESCRIPTION, NAME, STATS, TITLE } from "@/constants/basic";
-import WelcomeLoader from "@/components/ui/Welcome";
-import { Suspense } from "react";
 
 export default function Home() {
     const stack: Skill[] = SKILLS.core;
@@ -51,9 +49,6 @@ export default function Home() {
 
     return (
         <>
-            <Suspense fallback={null}>
-                <WelcomeLoader />
-            </Suspense>
             {/* Hero */}
             <Section
                 id="hero"
