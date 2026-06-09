@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./cursor.css";
 import { BASE_URL, DESCRIPTION, NAME, TITLE } from "@/constants/basic";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
     metadataBase: new URL(BASE_URL),
@@ -122,16 +123,7 @@ export default function RootLayout({
                 </script>
 
                 {/* <!-- Google tag (gtag.js) --> */}
-                <script
-                    async
-                    src="https://www.googletagmanager.com/gtag/js?id=G-GCNKNRKWZB"></script>
-                <script>
-                    {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GCNKNRKWZB');`}
-                </script>
+                <GoogleAnalytics gaId="G-GCNKNRKWZBu" />
             </head>
             <body className={`antialiased`}>
                 <Header />
