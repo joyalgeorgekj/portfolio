@@ -1,14 +1,11 @@
+import { Experiment } from "@/types/lab.type";
 import { Gamepad2Icon } from "lucide-react";
 import Link from "next/link";
 
 function LabCard({
     game,
 }: {
-    game: {
-        title: string;
-        desc: string;
-        status: string;
-    };
+    game: Experiment;
 }) {
     return (
         <Link

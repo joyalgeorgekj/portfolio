@@ -2,6 +2,7 @@
 
 import { ImageResponse } from "next/og";
 import { EXPERIMENTS } from "@/content/lab/experiments";
+import { Experiment } from "@/types/lab.type";
 
 export const size = {
     width: 1200,
@@ -11,7 +12,7 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function OGImage() {
-    const post = EXPERIMENTS.find(
+    const post: Experiment | undefined = EXPERIMENTS.find(
         (blog) => blog.id === "welcome-links-generator"
     );
 

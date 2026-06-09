@@ -1,4 +1,6 @@
-export const EXPERIMENTS = [
+import { Experiment } from "@/types/lab.type";
+
+export const EXPERIMENTS: Experiment[] = [
     {
         id: "welcome-links-generator",
         title: "Welcome Links Generator",

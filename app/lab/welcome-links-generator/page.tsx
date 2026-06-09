@@ -2,11 +2,12 @@ import WelcomeLinkGenerator from "@/components/lab/WelcomeLinkGenerator";
 import SocialShare from "@/components/ui/SocialShare";
 import { BASE_URL } from "@/constants/basic";
 import { EXPERIMENTS } from "@/content/lab/experiments";
+import { Experiment } from "@/types/lab.type";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
-    const post = EXPERIMENTS.find(
+    const post: Experiment | undefined = EXPERIMENTS.find(
         (blog) => blog.id === "welcome-links-generator"
     );
 
