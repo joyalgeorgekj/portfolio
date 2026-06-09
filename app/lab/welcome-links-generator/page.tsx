@@ -7,9 +7,7 @@ import { notFound } from "next/navigation";
 
 export async function generateMetadata(): Promise<Metadata> {
     const post = EXPERIMENTS.find(
-        (blog) =>
-            blog.id ===
-            "welcome-links-generator"
+        (blog) => blog.id === "welcome-links-generator"
     );
 
     if (!post) notFound();
@@ -39,9 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
     const experiment = EXPERIMENTS.filter(
-        (val) =>
-            val.id ===
-            "welcome-links-generator"
+        (val) => val.id === "welcome-links-generator"
     )[0];
 
     return (

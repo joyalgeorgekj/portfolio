@@ -12,9 +12,7 @@ export const contentType = "image/png";
 
 export default async function OGImage() {
     const post = EXPERIMENTS.find(
-        (blog) =>
-            blog.id ===
-            "welcome-links-generator"
+        (blog) => blog.id === "welcome-links-generator"
     );
 
     if (!post) {
