@@ -101,11 +101,12 @@ function page() {
 
                             <p className=" text-typography/75">
                                 If you have questions regarding this privacy
-                                policy or your data, you can contact: 
+                                policy or your data, you can contact:
                                 <a
                                     href="mailto:joyalgeorgekj@gmail.com"
                                     className="text-primary transition hover:opacity-80">
-                                    {" "}joyalgeorgekj@gmail.com
+                                    {" "}
+                                    joyalgeorgekj@gmail.com
                                 </a>
                             </p>
                         </div>

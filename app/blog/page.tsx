@@ -137,7 +137,8 @@ export default function BlogPage() {
 
                     <p className="mt-4 text-typography/75">
                         No spam. Only valuable notes on frontend systems,
-                        performance, architecture, and building products. You can unsubscribe at any time.
+                        performance, architecture, and building products. You
+                        can unsubscribe at any time.
                     </p>
 
                     <NewsletterForm />
