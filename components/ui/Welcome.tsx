@@ -56,13 +56,11 @@ export default function WelcomeLoader({ duration = 2000 }: WelcomeLoaderProps) {
             <div className="max-w-xl space-y-8">
                 {/* Loading Spinner */}
                 <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-primary/20 border-t-primary"></div>
-
                 {/* Personal Message */}
                 <div className="space-y-4">
                     <h1 className="text-4xl font-semibold tracking-tight text-typography md:text-5xl">
                         Hi {visitorName ?? "Visitor"},
                     </h1>
-
                     <p className="mx-auto text-base leading-8 text-typography/70 md:text-lg">
                         Thanks for stopping by and taking the time to explore my
                         work.
