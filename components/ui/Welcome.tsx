@@ -1,19 +1,21 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function WelcomeLoader() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     let visitorName = "________";
 
     const encodedUser = searchParams.get("u");
 
     if (encodedUser) {
         try {
-            // 2. Decode the Base64 string safely
             visitorName = atob(encodedUser);
 
-            // 3. Scrub the URL parameter immediately so it doesn't re-trigger on refresh
+            setTimeout(() => {
+                router.push("/")
+            }, 2000);
         } catch (error) {
             console.error(
                 "WelcomeLoader: Failed to decode 'u' parameter.",
@@ -21,6 +23,8 @@ export default function WelcomeLoader() {
             );
         }
     }
+
+
 
     return (
         <div className="fixed inset-0 z-9999 flex min-h-screen items-center justify-center bg-background px-6 text-center text-typography transition-opacity duration-500">

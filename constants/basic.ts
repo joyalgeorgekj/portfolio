@@ -12,8 +12,8 @@ export const BASE_URL = process.env.HOSTED_URL
         : "http://www.joyalgeorgekj.com";
 
 export const STATS = [
-        `${new Date().getFullYear() - 2023}+ Years Experience`,
-        "1500+ npm Users",
-        "OSS Contributor",
-        "Production Apps",
-    ];
+    `${new Date().getFullYear() - 2023}+ Years Experience`,
+    "1500+ npm Users",
+    "OSS Contributor",
+    "Production Apps",
+];
