@@ -14,7 +14,7 @@ export default function WelcomeLoader() {
             visitorName = atob(encodedUser);
 
             setTimeout(() => {
-                router.push("/")
+                router.push("/");
             }, 2000);
         } catch (error) {
             console.error(
@@ -23,8 +23,6 @@ export default function WelcomeLoader() {
             );
         }
     }
-
-
 
     return (
         <div className="fixed inset-0 z-9999 flex min-h-screen items-center justify-center bg-background px-6 text-center text-typography transition-opacity duration-500">

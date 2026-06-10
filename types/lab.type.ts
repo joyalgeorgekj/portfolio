@@ -5,5 +5,5 @@ export type Experiment = {
     title: string;
     desc: string;
     status: string;
-    Component: () => JSX.Element
+    Component: () => JSX.Element;
 };
