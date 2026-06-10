@@ -11,12 +11,20 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default async function OGImage() {
-    const post: Experiment | undefined = EXPERIMENTS.find(
-        (blog) => blog.id === "welcome-links-generator"
+interface Props {
+    params: Promise<{
+        slug: string;
+    }>;
+}
+
+export default async function OGImage({ params }: Props) {
+    const { slug } = await params;
+
+    const experiment: Experiment | undefined = EXPERIMENTS.find(
+        (exp) => exp.id === slug
     );
 
-    if (!post) {
+    if (!experiment) {
         return new ImageResponse(
             <div
                 style={{
@@ -108,7 +116,7 @@ export default async function OGImage() {
                             letterSpacing: "0.12em",
                             textTransform: "uppercase",
                         }}>
-                        {post.status}
+                        {experiment.status}
                     </span>
                 </div>
 
@@ -122,7 +130,7 @@ export default async function OGImage() {
                         maxWidth: "900px",
                         margin: 0,
                     }}>
-                    {post.title}
+                    {experiment.title}
                 </h1>
 
                 {/* Description */}
@@ -134,7 +142,7 @@ export default async function OGImage() {
                         maxWidth: "850px",
                         margin: 0,
                     }}>
-                    {post.desc}
+                    {experiment.desc}
                 </p>
             </div>
 
