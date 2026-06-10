@@ -83,7 +83,7 @@ export default async function Page({ params }: Props) {
                     <div>
                         <SocialShare
                             title={experiment.title}
-                            url={`${BASE_URL}/blog/${experiment.id}`}
+                            url={`${BASE_URL}/lab/${experiment.id}`}
                         />
                     </div>
                 </footer>
