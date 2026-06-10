@@ -1,4 +1,3 @@
-import WelcomeLinkGenerator from "@/components/lab/WelcomeLinkGenerator";
 import SocialShare from "@/components/ui/SocialShare";
 import { BASE_URL } from "@/constants/basic";
 import { EXPERIMENTS } from "@/content/lab/experiments";
