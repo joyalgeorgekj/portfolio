@@ -1,3 +1,4 @@
+import WelcomeLinkGenerator from "@/components/lab/WelcomeLinkGenerator";
 import { Experiment } from "@/types/lab.type";
 
 export const EXPERIMENTS: Experiment[] = [
@@ -6,5 +7,6 @@ export const EXPERIMENTS: Experiment[] = [
         title: "Welcome Links Generator",
         desc: "A lightweight personalization experiment that generates custom portfolio welcome links without databases, sessions, or authentication.",
         status: "Interactive",
+        Component: WelcomeLinkGenerator,
     },
 ];
