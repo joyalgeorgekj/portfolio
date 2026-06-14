@@ -7,7 +7,7 @@ function LabCard({ game }: { game: Experiment }) {
         <Link
             href={"/lab/" + game.id}
             key={game.title}
-            className="group bg-background rounded-3xl border border-typography/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 grid gap-3">
+            className="group bg-background rounded-3xl border border-typography/10 p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 grid gap-3 *:cursor-pointer">
             <div className="flex items-start justify-between gap-4">
                 <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                     <Gamepad2Icon

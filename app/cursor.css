@@ -91,3 +91,19 @@ select,
 option {
     cursor: inherit !important;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        animation: none;
+    }
+    a,
+    button,
+    input,
+    textarea,
+    label,
+    [role="button"],
+    select,
+    option {
+        cursor: auto !important;
+    }
+}

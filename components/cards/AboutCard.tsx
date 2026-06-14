@@ -21,7 +21,7 @@ export default function AboutCard() {
                 {STATS.map((item) => (
                     <div
                         key={item}
-                        className="card rounded-2xl border border-typography/10 px-4 py-4 text-sm text-typography/75">
+                        className="card rounded-2xl border border-typography/10 px-4 py-4 text-sm text-typography/75 cursor-pointer">
                         &gt; {item}
                     </div>
                 ))}

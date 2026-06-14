@@ -12,7 +12,7 @@ export default function OpenSourceCard({ opensource }: Props) {
         <Link
             href={opensource.url}
             target="_blank"
-            className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2`}>
+            className={`card rounded-2xl border border-typography/10 p-5 flex flex-col gap-2 *:cursor-pointer`}>
             <div className="flex flex-wrap items-center gap-3">
                 <h3 className="text-xl font-semibold">{opensource.project}</h3>
 
