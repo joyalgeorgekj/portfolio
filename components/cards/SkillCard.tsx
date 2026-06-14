@@ -19,7 +19,7 @@ export default function SkillCard({ skill }: { skill: Skill }) {
                         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" +
                         skill.icon
                     }
-                    className="w-8 h-8 rounded"
+                    className="rounded"
                 />
             ) : (
                 <span className="rounded-full border-typography/10 px-3 py-1 text-sm text-typography/75 cursor-pointer">
