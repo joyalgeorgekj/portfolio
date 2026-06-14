@@ -1,7 +1,7 @@
-<center>
-<h1>Joyal George K J Portfolio (2026)</h1>
+<h1 align="center">Joyal George K J Portfolio (2026)</h1>
+<img width="1900" height="900" alt="Screenshot_20260614_173449" src="https://github.com/user-attachments/assets/05779fa3-e4bc-42eb-a825-bfe8ece19e92" />
 
-A modern portfolio built with Next.js, focused on software engineering, technical writing, open source contributions, experimentation, accessibility, and long-term maintainability.
+<p align="center">A modern portfolio built with Next.js, focused on software engineering, technical writing, open source contributions, experimentation, accessibility, and long-term maintainability.</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
@@ -19,7 +19,9 @@ A modern portfolio built with Next.js, focused on software engineering, technica
     <img src="https://img.shields.io/badge/LinkedIn-Joyal_George_K_J-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </p>
-</center>
+
+---
+
 
 <h2>Overview</h2>
 
