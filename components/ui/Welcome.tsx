@@ -12,10 +12,6 @@ export default function WelcomeLoader() {
     if (encodedUser) {
         try {
             visitorName = atob(encodedUser);
-
-            setTimeout(() => {
-                router.push("/");
-            }, 2000);
         } catch (error) {
             console.error(
                 "WelcomeLoader: Failed to decode 'u' parameter.",
@@ -23,6 +19,10 @@ export default function WelcomeLoader() {
             );
         }
     }
+
+    setTimeout(() => {
+        router.push("/");
+    }, 2000);
 
     return (
         <div className="fixed inset-0 z-9999 flex min-h-screen items-center justify-center bg-background px-6 text-center text-typography transition-opacity duration-500">
