@@ -1,5 +1,6 @@
 "use client";
 
+import useConsoleUI from "@/hooks/useConsoleUI";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useEffect, useRef } from "react";
 
@@ -7,6 +8,7 @@ export default function MouseTrack() {
     const cursorRef = useRef<HTMLDivElement>(null);
     const desktop = useMediaQuery("(pointer: fine)");
     const isReducedMotion = useMediaQuery("(prefers-reduced-motion: reduce)");
+    useConsoleUI();
 
     useEffect(() => {
         const moveCursor = (e: MouseEvent) => {
