@@ -1,201 +1,67 @@
-# Joyal George K J Portfolio (2026)
+<center>
+<h1>Joyal George K J Portfolio (2026)</h1>
 
-A modern developer portfolio built with Next.js, focused on performance, accessibility, technical writing, open source contributions, and long-term scalability.
+A modern portfolio built with Next.js, focused on software engineering, technical writing, open source contributions, experimentation, accessibility, and long-term maintainability.
 
-## Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Microsoft_Clarity-0078D4?style=for-the-badge&logo=microsoft&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  <a href="https://www.joyalgeorgekj.com">
+    <img src="https://img.shields.io/badge/Portfolio-Visit-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  <a href="https://github.com/joyalgeorgekj">
+    <img src="https://img.shields.io/badge/GitHub-joyalgeorgekj-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/joyalgeorgekj">
+    <img src="https://img.shields.io/badge/LinkedIn-Joyal_George_K_J-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+</p>
+</center>
 
-This project is a complete rebuild of my previous React portfolio. The goal was to move away from a static showcase website and build a platform that could grow alongside my work in software engineering, open source, experimentation, and technical writing.
+<h2>Overview</h2>
 
-The portfolio now includes:
-
-- Multi-page architecture
-- Blog system
-- RSS feed
-- Newsletter infrastructure
-- Open source contribution showcase
-- SEO improvements
-- Accessibility support
-- Modern metadata and social sharing support
-
----
-
-# Tech Stack
-
-## Frontend
-
-- Next.js
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-
-## Backend / Infrastructure
-
-- Express.js
-- MongoDB Atlas
-- Resend
-- Vercel
-- Render
-
-## Analytics
-
-- Microsoft Clarity
+This project is a complete rebuild of my previous portfolio and serves as a platform for showcasing projects, open source contributions, technical articles, and engineering experiments.
 
 ---
 
-# Features
+## Features
 
-## Blog System
-
-- Dynamic blog pages
-- SEO-friendly metadata
-- RSS feed generation
-- Canonical URLs
-- Open Graph and Twitter metadata
-- Social sharing support
-
-## Newsletter System
-
-Custom-built newsletter infrastructure using:
-
-- Express server
-- MongoDB persistence
-- Resend email delivery
-
-Features include:
-
-- Email verification flow
-- Subscribe/unsubscribe routes
-- JWT-based verification
-- Rate limiting
-- Manual newsletter batching
-- Monthly newsletter tracking
-- Secure unsubscribe handling
-
-## Open Source Showcase
-
-Dedicated section highlighting contributions to projects including:
-
-- Appwrite
-- Docker Docs
-- BuildKit
-- Self.so
-
-Contributions include:
-
-- Bug fixes
-- Documentation improvements
-- UX enhancements
-- AI integration improvements
-- Maintainer collaboration
-
-## Accessibility
-
-The portfolio includes accessibility-focused improvements such as:
-
-- Reduced motion support
-- Semantic HTML
-- ARIA labels
-- Keyboard accessibility
-- Motion preference detection
-- Responsive layouts
-
-## SEO Improvements
-
-Implemented modern SEO practices including:
-
-- Dynamic metadata
-- Sitemap generation
-- Robots configuration
-- Canonical URLs
-- Structured Open Graph metadata
-- RSS feed
-- Social preview optimization
+| Area                 | Description                                        |
+| -------------------- | -------------------------------------------------- |
+| Blog                 | Technical writing, RSS feed, metadata generation   |
+| Lab                  | Experiments, prototypes, and developer tools       |
+| Open Source          | Contribution showcase                              |
+| Accessibility        | Reduced motion, semantic HTML, keyboard navigation |
+| SEO                  | Sitemap, robots.txt, Open Graph, Twitter Cards     |
+| UX                   | Social sharing, welcome links, responsive design   |
+| Developer Experience | Console introduction and easter eggs               |
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```txt
 src/
 ├── app/
 ├── components/
+├── content/
 ├── constants/
 ├── hooks/
 ├── lib/
-├── content/
-├── types/
-```
-
-Backend newsletter service structure:
-
-```txt
-src/
-├── middleware/
-├── routes/
-├── scripts/
-├── lib/
-├── templates/
 └── types/
 ```
 
 ---
 
-# Deployment
+## Why This Portfolio Exists
 
-## Frontend
-
-Hosted on Vercel.
-
-## Newsletter Backend
-
-Hosted separately using Render.
-
-## Database
-
-MongoDB Atlas.
-
----
-
-# Performance and UX Goals
-
-This project focuses heavily on:
-
-- Fast loading times
-- Minimal client-side overhead
-- Clean user experience
-- Accessibility-first interactions
-- Reduced animation for motion-sensitive users
-- Scalable architecture
-
----
-
-# Why This Portfolio Exists
-
-This portfolio is designed to act as more than a visual resume.
-
-It serves as:
+This portfolio is more than a visual resume. It acts as:
 
 - A technical writing platform
-- An archive of experiments and projects
 - A showcase for open source contributions
-- A place to document engineering decisions and learnings
-- A long-term platform that can evolve over time
-
----
-
-# Future Plans
-
-- Dynamic OG image generation
-- Search functionality
-- Additional technical articles
-- More open source contribution tracking
-- Improved analytics dashboards
-- Advanced newsletter tooling
-
----
-
-# Contact
-
-- Portfolio: https://www.joyalgeorgekj.com
-- GitHub: https://github.com/joyalgeorgekj
-- LinkedIn: https://linkedin.com/in/joyalgeorgekj
+- A home for experiments and ideas
+- A place to document engineering learnings
+- A platform that can evolve alongside my career
