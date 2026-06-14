@@ -12,7 +12,7 @@ export default function ProjectCard({ project }: Props) {
         <Link
             href={project.url}
             target="_blank"
-            className={`group card rounded-2xl border border-typography/10 p-5 flex flex-col gap-4 h-fit *:cursor-pointer`}>
+            className={`group card rounded-2xl border border-typography/10 p-5 flex flex-col gap-4 h-fit`}>
             <p className="text-xs uppercase tracking-[0.2em] text-typography/75">
                 {project.metric}
             </p>

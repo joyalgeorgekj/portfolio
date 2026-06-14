@@ -9,7 +9,7 @@ export default function ExperienceCard({
     experience: Experience;
 }) {
     return (
-        <div className={`relative pl-10 *:cursor-pointer`}>
+        <div className={`relative pl-10`}>
             {/* Timeline Dot */}
             <div className="absolute left-0 top-2 h-5.5 w-5.5 rounded-full border border-primary/30 p-1">
                 <div className="h-full w-full rounded-full bg-primary" />

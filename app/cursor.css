@@ -98,12 +98,14 @@ option {
     }
     a,
     button,
-    input,
     textarea,
-    label,
     [role="button"],
     select,
     option {
+        cursor: pointer !important;
+    }
+    label,
+    input {
         cursor: auto !important;
     }
 }

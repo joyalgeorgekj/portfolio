@@ -98,7 +98,7 @@ export default function BlogCard({ post, body }: Props) {
         <Link
             key={post.title}
             href={"blog/" + post.id}
-            className={`group rounded-3xl border border-typography/10 bg-background p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 flex flex-col gap-4 *:cursor-pointer`}>
+            className={`group rounded-3xl border border-typography/10 bg-background p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 flex flex-col gap-4`}>
             <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex flex-col justify-center items-center">
                 <BookOpenIcon width={24} height={24} />
             </div>

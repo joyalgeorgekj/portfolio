@@ -33,7 +33,7 @@ export default function ExploreCard({ explore }: { explore: Props }) {
         <Link
             target="_blank"
             href={explore.route}
-            className={`card group rounded-3xl border border-typography/10 bg-background p-6  flex flex-col gap-4 *:cursor-pointer`}>
+            className={`card group rounded-3xl border border-typography/10 bg-background p-6  flex flex-col gap-4`}>
             <div className="h-12 w-12 rounded-2xl bg-linear-to-br from-primary/20 to-violet-400/20 flex justify-center items-center">
                 <Icons
                     height={24}
