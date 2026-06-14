@@ -1,6 +1,7 @@
 import SocialShare from "@/components/ui/SocialShare";
 import { BASE_URL } from "@/constants/basic";
 import { EXPERIMENTS } from "@/content/lab/experiments";
+import { labStructuredData } from "@/lib/structured-data";
 import { Experiment } from "@/types/lab.type";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -51,6 +52,7 @@ export default async function Page({ params }: Props) {
     if (!experiment) return notFound();
 
     const { Component } = experiment;
+    const structuredData = labStructuredData(experiment);
 
     return (
         <section className="relative mx-auto max-w-6xl px-4 py-16 md:px-6 rounded-xl bg-background my-8">
@@ -88,6 +90,13 @@ export default async function Page({ params }: Props) {
                     </div>
                 </footer>
             </div>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(structuredData),
+                }}
+            />
         </section>
     );
 }

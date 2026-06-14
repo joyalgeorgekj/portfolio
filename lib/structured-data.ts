@@ -1,13 +1,14 @@
-import { BASE_URL } from "@/constants/basic";
+import { BASE_URL, DESCRIPTION, NAME, TITLE } from "@/constants/basic";
 import { Blog } from "@/types/blog.type";
+import { Experiment } from "@/types/lab.type";
 
 export function websiteStructuredData() {
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: "Joyal George K J",
+        name: NAME,
         url: BASE_URL,
-        description: "JavaScript / TypeScript Developer Portfolio",
+        description: `${TITLE} - ${DESCRIPTION}`,
         inLanguage: "en",
     };
 }
@@ -16,13 +17,16 @@ export function personStructuredData() {
     return {
         "@context": "https://schema.org",
         "@type": "Person",
-        name: "Joyal George K J",
+        name: NAME,
         url: BASE_URL,
         image: BASE_URL + "/og-image.png",
-        jobTitle: "JavaScript / TypeScript Developer",
+        jobTitle: TITLE,
         sameAs: [
             "https://github.com/joyalgeorgekj",
             "https://linkedin.com/in/joyalgeorgekj",
+            "https://www.instagram.com/joyalgeorgekj",
+            "https://x.com/joyalgeorgekj",
+            "https://www.youtube.com/@joyalgeorgekj",
         ],
         knowsAbout: [
             "JavaScript",
@@ -43,16 +47,36 @@ export function blogStructuredData(post: Blog) {
         description: post.prevDescription,
         author: {
             "@type": "Person",
-            name: "Joyal George K J",
+            name: NAME,
         },
         publisher: {
             "@type": "Person",
-            name: "Joyal George K J",
+            name: NAME,
         },
         mainEntityOfPage: `${BASE_URL}/blog/${post.id}`,
         url: `${BASE_URL}/blog/${post.id}`,
         datePublished: post.publishedAt,
         dateModified: post.publishedAt,
         image: `${BASE_URL}/blog/${post.id}/opengraph-image`,
+    };
+}
+
+export function labStructuredData(exp: Experiment) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "labPosting",
+        headline: exp.title,
+        description: exp.desc,
+        author: {
+            "@type": "Person",
+            name: NAME,
+        },
+        publisher: {
+            "@type": "Person",
+            name: NAME,
+        },
+        mainEntityOfPage: `${BASE_URL}/lab/${exp.id}`,
+        url: `${BASE_URL}/lab/${exp.id}`,
+        image: `${BASE_URL}/lab/${exp.id}/opengraph-image`,
     };
 }
