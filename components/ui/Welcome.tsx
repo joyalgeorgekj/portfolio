@@ -23,7 +23,7 @@ export default function WelcomeLoader() {
 
     useEffect(() => {
         const timeout = setTimeout(() => {
-            router.push("/");
+            router.replace("/");
         }, 2000);
 
         return () => clearTimeout(timeout);
