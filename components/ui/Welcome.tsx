@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 
 export default function WelcomeLoader() {
     const searchParams = useSearchParams();
@@ -20,9 +21,13 @@ export default function WelcomeLoader() {
         }
     }
 
-    setTimeout(() => {
-        router.push("/");
-    }, 2000);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            router.push("/");
+        }, 2000);
+
+        return () => clearTimeout(timeout);
+    }, [router]);
 
     return (
         <div className="fixed inset-0 z-9999 flex min-h-screen items-center justify-center bg-background px-6 text-center text-typography transition-opacity duration-500">
