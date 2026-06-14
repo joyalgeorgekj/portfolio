@@ -50,7 +50,7 @@ If you have feedback, suggestions, found a bug, or just want to say hi, I'd genu
 By
 Joyal George K J
 Software Developer`);
-        console.log("Psst... try /lab/welcome-links-generator");
+        console.log(`Psst... try ${BASE_URL}/lab/welcome-links-generator`);
         console.groupEnd();
     }, []);
 }
